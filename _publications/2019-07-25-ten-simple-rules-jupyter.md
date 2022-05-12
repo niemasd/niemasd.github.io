@@ -7,7 +7,7 @@ excerpt: 'Ten simple rules for writing and sharing computational analyses in Jup
 date: 2019-07-25
 venue: 'PLoS Computational Biology'
 paperurl: 'https://doi.org/10.1371/journal.pcbi.1007007'
-citation: 'Rule A, Birmingham A, Zuniga C, Altintas I, Huang SC, Knight R, <b>Moshiri N</b>, Nguyen M, Rosenthal SB, Perez F, Rose P (2019). "Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks." <i>PLoS Computational Biology</i>. <a href="https://doi.org/10.1371/journal.pcbi.1007007" target="_blank">doi:10.1371/journal.pcbi.1007007</a>'
+citation: 'Rule A, Birmingham A, Zuniga C, Altintas I, Huang SC, Knight R, <b>Moshiri N</b>, Nguyen M, Rosenthal SB, Perez F, Rose P (2019). "Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks." <i>PLoS Computational Biology</i>. 15(7):e1007007. <a href="https://doi.org/10.1371/journal.pcbi.1007007" target="_blank">doi:10.1371/journal.pcbi.1007007</a>'
 ---
 As studies grow in scale and complexity, it has become increasingly difficult to provide clear descriptions and open access to the methods and data needed to understand and reproduce computational research. Numerous papers, including several in the Ten Simple Rules collection, have highlighted the need for robust and reproducible analyses in computational research, described the difficulty of achieving these standards, and enumerated best practices. We aim to augment this existing wellspring of advice by addressing the unique challenges and opportunities that arise when using computational notebooks, especially Jupyter Notebooks, for research.
 
