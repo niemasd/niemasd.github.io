@@ -7,7 +7,7 @@ excerpt: 'Data Structures'
 date: 2016-09-01
 venue: 'Stepik'
 paperurl: 'https://stepik.org/579'
-citation: '<b>Moshiri N</b>, Izhikevich L (2016). "Data Structures." <i>Stepik</i>. <a href="https://stepik.org/579" target="_blank">https://stepik.org/579</a>
+citation: '<b>Moshiri N</b>, Izhikevich L (2016). "Data Structures." <i>Stepik</i>. <a href="https://stepik.org/579" target="_blank">https://stepik.org/579</a>'
 ---
 This interactive textbook was written with the intention of teaching Computer Science students about various data structures as well as the applications in which each data structure would be appropriate to use. It is currently being used at the [University of California, San Diego (UCSD)](http://ucsd.edu/).
 
