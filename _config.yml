@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Niema Moshiri"
   avatar           : "profile.png"
-  bio              : "Assistant Teaching Professor<br><a href='http://cse.ucsd.edu/' target='_blank'>Comp. Sci. & Engineering</a><br><a href='https://ucsd.edu/' target='_blank'>UC San Diego</a>"
+  bio              : "<b>Assistant Teaching Professor</b><br><a href='http://cse.ucsd.edu/' target='_blank'>Comp. Sci. & Engineering</a><br><a href='https://ucsd.edu/' target='_blank'>UC San Diego</a>"
   location         : #"La Jolla, CA, USA"
   employer         : #"UC San Diego"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=niema+moshiri"
