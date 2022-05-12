@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is (Alexander) Niema Moshiri, and I am an Assistant Teaching Professor in the [Computer Science & Engineering Department](https://cse.ucsd.edu/) at the [University of California, San Diego (UCSD)](https://ucsd.edu/). I work on computational biology, with a research focus on viral phylogenetics and epidemiology. I also place a heavy emphasis on teaching, namely on the development of online educational content, primarily Massive Adaptive Interactive Texts (MAITs), and I recently gave a TEDx talk on the subject (below). You can watch my Ph.D. defense [here](http://bit.ly/niema-phd-defense), and you can read my Ph.D. dissertation [here](https://escholarship.org/uc/item/62s7q92d).
+My name is (Alexander) Niema Moshiri, and I am an Assistant Teaching Professor in the [Computer Science & Engineering Department](https://cse.ucsd.edu/) at the [University of California, San Diego (UCSD)](https://ucsd.edu/). I work on computational biology, with a research focus on viral phylogenetics and epidemiology. I also place a heavy emphasis on teaching, namely on the development of online educational content, primarily Massive Adaptive Interactive Texts (MAITs), and I recently gave a TEDx talk on the subject, which you can find [here](https://youtu.be/5JKgUoY9pTg). You can watch my Ph.D. defense [here](http://bit.ly/niema-phd-defense), and you can read my Ph.D. dissertation [here](https://escholarship.org/uc/item/62s7q92d).
 
 In addition to my appointment in the Computer Science & Engineering Department at UCSD, I have the following affiliations:
 * [Bioinformatics and Systems Biology Graduate Program](https://bioinformatics.ucsd.edu/)
