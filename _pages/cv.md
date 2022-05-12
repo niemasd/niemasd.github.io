@@ -11,17 +11,18 @@ redirect_from:
 
 Academic Positions
 ======
-* **2019–Present — Assistant Teaching Professor**
+* **Assistant Teaching Professor (2019–Present)**
   * [Computer Science & Engineering](https://cse.ucsd.edu/)
   * [University of California, San Diego](https://ucsd.edu/)
 
 Education
 ======
-* **2015–2019 — Ph.D. in Bioinformatics and Systems Biology**
+* **Ph.D. in Bioinformatics and Systems Biology (2015–2019)**
   * [University of California, San Diego](https://ucsd.edu/)
-* **2011–2015 — B.S. in Bioengineering: Bioinformatics**
+  * Advisors: Siavash Mirarab and Pavel Pevzner
+* **B.S. in Bioengineering: Bioinformatics (2011–2015)**
+  * [University of California, San Diego](https://ucsd.edu/)
   * Minor in Economics
-  * [University of California, San Diego](https://ucsd.edu/)
 
 Publications
 ======
