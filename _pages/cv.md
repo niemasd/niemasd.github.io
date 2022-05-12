@@ -11,15 +11,15 @@ redirect_from:
 
 Academic Positions
 ======
-* **2019–Present: Assistant Teaching Professor**
+* **2019–Present | Assistant Teaching Professor**
   * [Computer Science & Engineering](https://cse.ucsd.edu/)
   * [University of California, San Diego](https://ucsd.edu/)
 
 Education
 ======
-* **2015–2019: Ph.D. in Bioinformatics and Systems Biology**
+* **2015–2019 | Ph.D. in Bioinformatics and Systems Biology**
   * [University of California, San Diego](https://ucsd.edu/)
-* **2011–2015: B.S. in Bioengineering: Bioinformatics**
+* **2011–2015 | B.S. in Bioengineering: Bioinformatics**
   * Minor in Economics
   * [University of California, San Diego](https://ucsd.edu/)
 
