@@ -12,8 +12,8 @@ author_profile: true
 {% include base_path %}
 
 <h2>Textbooks</h2>
-<ul>{% for post in site.publications reversed %}
+<ol reversed>{% for post in site.publications reversed %}
   {% if post.pubtype == 'textbook' %}
     {% include archive-single-cv.html %}
   {% endif %}
-{% endfor %}</ul>
+{% endfor %}</ol>
