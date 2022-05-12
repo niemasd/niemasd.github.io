@@ -6,7 +6,7 @@ permalink: /publication/2018-04-23-favites-hiv-dynamics
 excerpt: 'FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences'
 date: 2018-04-23
 venue: '25th International HIV Dynamics & Evolution'
-citation: '<b>Moshiri N</b>, Ragonnet-Cronin M, Wertheim JO, Mirarab S (2019). "FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences." <i>25th International HIV Dynamics & Evolution</i>. Talk.'
+citation: '<b>Moshiri N</b>, Ragonnet-Cronin M, Wertheim JO, Mirarab S (2018). "FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences." <i>25th International HIV Dynamics & Evolution</i>. Talk.'
 ---
 ### Motivation
 The ability to simulate epidemics as a function of model parameters allows insights that are unobtainable from real datasets. Further, reconstructing transmission networks for fast-evolving viruses like Human Immunodeficiency Virus (HIV) may have the potential to greatly enhance epidemic intervention, but transmission network reconstruction methods have been inadequately studied, largely because it is difficult to obtain ‘truth’ sets on which to test them and properly measure their performance.
