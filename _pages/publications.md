@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<a href="#textbooks">Textbooks</a> – <a href="#papers-articles">Papers/Articles</a> – <a href="#conference-presentations">Conference Presentations</a>
+<center><a href="#textbooks">Textbooks</a> – <a href="#papers-articles">Papers/Articles</a> – <a href="#conference-presentations">Conference Presentations</a></center>
 
 {% include base_path %}
 
