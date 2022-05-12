@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Niema Moshiri"
   avatar           : "profile.png"
-  bio              : "Assistant\_Teaching\_Professor\nComp.\_Sci.\_&\_Engineering\nUniversity\_of\_California,\_San\_Diego"
+  bio              : "Assistant\_Teaching\_Professor\nComp.\_Sci.\_&\_Engineering\nUC\_San\_Diego"
   location         : #"La Jolla, CA, USA"
   employer         : #"UC San Diego"
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=niema+moshiri"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=niema+moshiri"
   googlescholar    : "https://scholar.google.com/citations?user=VqZJV3MAAAAJ"
   email            : "niema@ucsd.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
