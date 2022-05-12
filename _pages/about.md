@@ -1,14 +1,19 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
-excerpt: "About me"
+title: "About"
+excerpt: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+My name is (Alexander) Niema Moshiri, and I am an Assistant Teaching Professor in the [Computer Science & Engineering Department](https://cse.ucsd.edu/) at the [University of California, San Diego (UCSD)](https://ucsd.edu/). I work on computational biology, with a research focus on viral phylogenetics and epidemiology. I also place a heavy emphasis on teaching, namely on the development of online educational content, primarily Massive Adaptive Interactive Texts (MAITs), and I recently gave a TEDx talk on the subject (below). You can watch my Ph.D. defense [here](http://bit.ly/niema-phd-defense), and you can read my Ph.D. dissertation [here](https://escholarship.org/uc/item/62s7q92d).
+
+In addition to my appointment in the Computer Science & Engineering Department at UCSD, I have the following affiliations:
+* [Bioinformatics and Systems Biology Graduate Program](https://bioinformatics.ucsd.edu/)
+* [Department of Biomedical Informatics](http://dbmi.ucsd.edu/) ([UCSD School of Medicine](https://medschool.ucsd.edu/))
+* [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
 A data-driven personal website
 ======
