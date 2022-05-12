@@ -17,3 +17,10 @@ author_profile: true
     {% include archive-single-cv.html %}
   {% endif %}
 {% endfor %}</ol>
+
+<h2>Papers/Articles</h2>
+<ol reversed>{% for post in site.publications reversed %}
+  {% if post.pubtype == 'paper' %}
+    {% include archive-single-cv.html %}
+  {% endif %}
+{% endfor %}</ol>
