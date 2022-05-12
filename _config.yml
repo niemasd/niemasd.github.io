@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Niema Moshiri"
   avatar           : "profile.png"
-  bio              : "Assistant\_Teaching\_Professor\nComp.\_Sci.\_&\_Engineering\nUC\_San\_Diego"
+  bio              : "Assistant\_Teaching\_Professor\nComp.\_Sci.\_&\_Engineering\nUniversity\_of\_California,\_San\_Diego"
   location         : #"La Jolla, CA, USA"
   employer         : #"UC San Diego"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=niema+moshiri"
@@ -102,7 +102,7 @@ author:
   instagram        : #"niemasd"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/niemamoshiri"
+  linkedin         : #"https://www.linkedin.com/in/niemamoshiri"
   orcid            : "https://orcid.org/0000-0003-2209-8128"
   pinterest        :
   soundcloud       :
