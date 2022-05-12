@@ -19,7 +19,7 @@ Education
 ======
 * **Ph.D. in Bioinformatics and Systems Biology (2015–2019)**
   * [University of California, San Diego](https://ucsd.edu/)
-  * Advisors: Siavash Mirarab and Pavel Pevzner
+  * Co-advised by Siavash Mirarab and Pavel Pevzner
 * **B.S. in Bioengineering: Bioinformatics (2011–2015)**
   * [University of California, San Diego](https://ucsd.edu/)
   * Minor in Economics
