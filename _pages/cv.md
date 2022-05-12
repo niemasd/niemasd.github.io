@@ -24,12 +24,6 @@ Education
   * [University of California, San Diego](https://ucsd.edu/)
   * Minor in Economics
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
 Talks
 ======
   <ul>{% for post in site.talks %}
