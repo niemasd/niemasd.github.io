@@ -7,5 +7,5 @@ excerpt: 'An interactive text-based game for learning and practicing how to prog
 date: 2022-02-21
 venue: 'Steam'
 paperurl: 'https://store.steampowered.com/app/1882420'
-citation: '<b>Moshiri N</b> (2015). "Learn Programming: Python – Remake." <i>Steam</i>. <a href="https://store.steampowered.com/app/1882420" target="_blank">Steam App: 1882420</a>'
+citation: '<b>Moshiri N</b> (2022). "Learn Programming: Python – Remake." <i>Steam</i>. <a href="https://store.steampowered.com/app/1882420" target="_blank">Steam App: 1882420</a>'
 ---
