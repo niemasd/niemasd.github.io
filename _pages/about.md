@@ -16,9 +16,24 @@ In addition to my appointment in the Computer Science & Engineering Department a
 * [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
 <details>
-<summary><h2>Current Students</h2></summary>
+<summary><h1>Current Students</h1></summary>
 <ul>
-<li><b><a href="https://www.linkedin.com/in/anniejiaqiliu/" target="_blank">Annie Liu</a> — Undergraduate Regents Scholar (2021-2022)</li>
+<li><a href="https://www.linkedin.com/in/anniejiaqiliu/" target="_blank"><b>Annie Liu</b></a> — Undergraduate Regents Scholar (2021-2022)</li>
+<li><a href="http://cseweb.ucsd.edu/~bkhalegh/" target="_blank"><b>Behnam Khaleghi</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
+<li><a href="https://www.linkedin.com/in/derek-jones-20212b52/" target="_blank"><b>Derek Jones</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2020-Present)</li>
+<li><a href="https://www.linkedin.com/in/grant-cheng-52171b205/" target="_blank"><b>Grant Cheng</b></a> — Undergraduate Regents Scholar (2021-2022)</li>
+<li><a href="https://scholar.google.com/citations?user=OKyN6OIAAAAJ" target="_blank"><b>Isaac Shamie</b></a> — Ph.D. Student (Advisor: <a href="http://lewislab.ucsd.edu/n/" target="_blank">Nathan Lewis</a>) (2019-Present)</li>
+<li><a href="https://tycheyoung.github.io/" target="_blank"><b>Jaeyoung Kang</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
+<li><a href="https://www.linkedin.com/in/jennifer-havens-a051ab11a" target="_blank"><b>Jennifer Havens</b></a> — Ph.D. Student (Advisor: <a href="https://profiles.ucsd.edu/joel.wertheim" target="_blank">Joel Wertheim</a>) (2021-Present)</li>
+<li><a href="https://medschool.ucsd.edu/som/dbmi/people/students/Pages/Jonathan-Pekar.aspx" target="_blank"><b>Jonathan Pekar</b></a> — Ph.D. Student (Advisor: <a href="https://profiles.ucsd.edu/joel.wertheim" target="_blank">Joel Wertheim</a>) (2019-Present)</li>
+<li><a href="http://crossboy.xyz/" target="_blank"><b>Josh Cross</b></a> — Undergraduate Researcher (2021-2022)</li>
+<li><a href="http://acsweb.ucsd.edu/~j1morris/" target="_blank"><b>Justin Morris</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
+<li><a href="https://kizhikevich.github.io/" target="_blank"><b>Katherine Izhikevich</b></a> — Undergraduate Researcher (2021-Present)</li>
+<li><a href="https://www.linkedin.com/in/katelyn-chu-110a92202/" target="_blank"><b>Katy Chu</b></a> — <a href="https://sfp.caltech.edu/undergraduate-research/programs/surf" target="_blank">Caltech Summer Undergraduate Research Fellowships (SURF) Trainee</a> (2022)</li>
+<li><a href="https://liangdeli.github.io/" target="_blank"><b>Liangde Li</b></a> — M.S. Student (Advisor: <a href="https://cseweb.ucsd.edu/~arunkk/" target="_blank">Arun Kumar</a>) (2021-Present)</li>
+<li><a href="https://stormhub.io/" target="_blank"><b>Matei-Alexandru Gărduș</b></a> — Undergraduate Researcher (2022)</li>
+<li><a href="https://minxuanz.weebly.com/" target="_blank"><b>Minxuan Zhou</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
+<li><a href="https://www.linkedin.com/in/rachel-kunowski" target="_blank"><b>Rachel Kunowski</b></a> — Undergraduate Researcher (Primary Advisor: Natasha Martin) (2021-Present)</li>
 </ul>
 </details>
 
