@@ -14,11 +14,11 @@ author_profile: true
   {% if post.awardtype == 'funding' %}
     <li>
       <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }} ({{ post.amount }})</b></a>
-      <ul>
+      <p class="archive__item-excerpt" itemprop="description"><ul>
         <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
         <li><u>Title</u>: {{ post.title }}</li>
         <li><u>Team</u>: {{ post.team }}</li>
-      </ul>
+      </ul></p>
     </li>
   {% endif %}
 {% endfor %}</ul>
