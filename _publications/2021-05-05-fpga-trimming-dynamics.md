@@ -1,0 +1,11 @@
+---
+title: "FPGA-based acceleration of primer trimming"
+collection: publications
+pubtype: conference
+permalink: /publication/2021-05-05-fpga-trimming-dynamics
+excerpt: 'FPGA-based acceleration of primer trimming'
+date: 2021-05-05
+venue: '28th International Dynamics & Evolution of Human Viruses'
+citation: 'Khaleghi B, Akel A, Curewitz K, Eno J, Eilert S, <b>Moshiri N</b>, Rosing T (2021). "FPGA-based acceleration of primer trimming." <i>28th International Dynamics & Evolution of Human Viruses</i>. Talk.'
+---
+Primer trimming is typically one of the first steps of standard viral sequence analysis workflows, but while significant effort has been made in hardware acceleration of read mapping, trimming typically relies on software solutions. As a result, primer trimming is often a computational bottleneck in viral sequence analysis workflows; for example, trimming takes more than 40% of the execution time of the best practice iVar SARS-CoV-2 analysis pipeline. In this work, we present an FPGA-based architecture to perform trimming, which can be seamlessly integrated into the rest of the software pipeline. Following an algorithm similar to iVar software though enhanced for efficient hardware implementation, our developed architecture first removes primers from a sorted alignment file based on the given BED file that contains the position of primers in the reference. Then, it uses a sliding window to remove low-quality bases below a given threshold according to the Phred quality score. Our developed tool is generic in terms of read size, reading technology, etc., as it receives and outputs standard BAM files and is also configurable in terms of window length and threshold score. We implemented the proposed architecture on Xilinx Alveo U280 data center FPGA and verified the results against the iVar golden model using SARS-CoV-2 sequence data collected using the Swift v2 sequencing protocol. Using 60% of FPGA resources (similar power budget of Intel Core i7-8700 CPU), our implementation can process 3 Million aligned reads per second, which is 500x faster than the CPU version of iVar that trims ~6,000 mapped reads per second. The high performance stems from FPGA-suitable fine-grained parallelism inherent in the algorithm as well as deploying multiple compute engines that run simultaneously.
