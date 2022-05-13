@@ -12,7 +12,14 @@ author_profile: true
 <h2 id="funding">Funding</h2>
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'funding' %}
-    <li><b>{{ post.awarder }} ({{ post.amount }})</b>
+    <li>
+      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }}</b></a>
+      <ul>
+        <li><u>Amount</u>: {{ post.amount }}
+        <li><u>Start Date</u>: {{ post.startdate }}</li>
+        <li><u>End Date</u>: {{ post.enddate }}</li>
+        <li><u>Title</u>: {{ post.title }}</li>
+      </ul>
     </li>
   {% endif %}
 {% endfor %}</ul>
