@@ -19,6 +19,7 @@ author_profile: true
         <li><u>Start Date</u>: {{ post.startdate }}</li>
         <li><u>End Date</u>: {{ post.enddate }}</li>
         <li><u>Title</u>: {{ post.title }}</li>
+        <li><u>Team</u>: {{ post.team }}</li>
       </ul>
     </li>
   {% endif %}
