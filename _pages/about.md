@@ -39,7 +39,7 @@ In addition to my appointment in the Computer Science & Engineering Department a
 
 <details>
   <summary><b>Past Students</b></summary>
-  <blockquote>
+  <blockquote style="font-style:normal !important">
   <details>
     <summary><b>2022</b></summary>
     <ul style="font-size:0.75em">
