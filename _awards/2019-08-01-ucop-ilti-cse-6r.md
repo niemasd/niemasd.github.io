@@ -7,5 +7,5 @@ enddate: 2024-07-31
 awarder: 'UCOP Innovative Learning Technology Initiative'
 amount: '$71,000'
 awardurl: 'https://www.ucop.edu/innovative-learning-technology-initiative/'
-team: '<b>Niema Moshiri (PI)</b>, Leo Porter (co-PI), Beth Simon (co-PI)'
+team: '<b>Niema Moshiri</b> (PI), Leo Porter (co-PI), Beth Simon (co-PI)'
 ---
