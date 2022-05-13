@@ -16,9 +16,9 @@ In addition to my appointment in the Computer Science & Engineering Department a
 * [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
 <details>
-<summary><b>Current Students</b></summary>
+<summary><h2>Current Students</h2></summary>
 <ul>
-<li>Annie Liu — Undergraduate Regents Scholar (2021-2022)</li>
+<li><b><a href="https://www.linkedin.com/in/anniejiaqiliu/" target="_blank">Annie Liu</a> — Undergraduate Regents Scholar (2021-2022)</li>
 </ul>
 </details>
 
