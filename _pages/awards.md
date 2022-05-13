@@ -15,7 +15,7 @@ author_profile: true
     <li>
       <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }}</b></a>
       <ul>
-        <li><u>Amount</u>: {{ post.amount }}
+        <li><u>Amount</u>: {{ post.amount }}</li>
         <li><u>Start Date</u>: {{ post.startdate }}</li>
         <li><u>End Date</u>: {{ post.enddate }}</li>
         <li><u>Title</u>: {{ post.title }}</li>
