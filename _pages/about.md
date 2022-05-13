@@ -16,8 +16,8 @@ In addition to my appointment in the Computer Science & Engineering Department a
 * [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
 <details>
-<summary><h1>Current Students</h1></summary>
-<ul>
+<summary><h2>Current Students</h2></summary>
+<ul style="font-size:0.75em">
 <li><a href="https://www.linkedin.com/in/anniejiaqiliu/" target="_blank"><b>Annie Liu</b></a> — Undergraduate Regents Scholar (2021-2022)</li>
 <li><a href="http://cseweb.ucsd.edu/~bkhalegh/" target="_blank"><b>Behnam Khaleghi</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
 <li><a href="https://www.linkedin.com/in/derek-jones-20212b52/" target="_blank"><b>Derek Jones</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2020-Present)</li>
