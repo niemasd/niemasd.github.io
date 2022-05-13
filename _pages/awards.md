@@ -10,28 +10,29 @@ author_profile: true
 {% include base_path %}
 
 <h2 id="funding">Funding</h2>
-<ol reversed>{% for post in site.awards reversed %}
+<ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'funding' %}
-    {% include archive-single-cv.html %}
+    <li>{{ post.awarder }}
+    </li>
   {% endif %}
-{% endfor %}</ol>
+{% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="honors-awards">Honors/Awards</h2>
-<ol reversed>{% for post in site.awards reversed %}
+<ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'honor' %}
     {% include archive-single-cv.html %}
   {% endif %}
-{% endfor %}</ol>
+{% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="conference-awards">Conference Awards</h2>
-<ol reversed>{% for post in site.awards reversed %}
+<ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'conference' %}
     {% include archive-single-cv.html %}
   {% endif %}
-{% endfor %}</ol>
+{% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
