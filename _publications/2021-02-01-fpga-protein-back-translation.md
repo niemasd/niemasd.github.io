@@ -1,7 +1,7 @@
 ---
 title: "FPGA Acceleration of Protein Back-Translation and Alignment"
 collection: publications
-pubtype: conference
+pubtype: paper
 permalink: /publication/2021-02-01-fpga-protein-back-translation
 excerpt: 'FPGA Acceleration of Protein Back-Translation and Alignment'
 date: 2021-02-01
