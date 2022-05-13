@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<center><a href="#textbooks">Textbooks</a> – <a href="#papers-articles">Papers/Articles</a> – <a href="#conference-presentations">Conference Presentations</a></center>
+<center><a href="#textbooks">Textbooks</a> – <a href="#papers-articles">Papers/Articles</a> – <a href="#conference-presentations">Conference Presentations</a> – <a href="#preprints">Preprints</a></center>
 
 {% include base_path %}
 
@@ -26,6 +26,13 @@ author_profile: true
 <h2 id="conference-presentations">Conference Presentations</h2>
 <ol reversed>{% for post in site.publications reversed %}
   {% if post.pubtype == 'conference' %}
+    {% include archive-single-cv.html %}
+  {% endif %}
+{% endfor %}</ol>
+
+<h2 id="preprints">Preprints</h2>
+<ol reversed>{% for post in site.publications reversed %}
+  {% if post.pubtype == 'preprint' %}
     {% include archive-single-cv.html %}
   {% endif %}
 {% endfor %}</ol>
