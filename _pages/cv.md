@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+You can download a PDF of my CV [here](https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf).
+
 Academic Positions
 ======
 * **Assistant Teaching Professor (2019–Present)**
