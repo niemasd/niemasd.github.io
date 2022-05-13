@@ -15,12 +15,12 @@ In addition to my appointment in the Computer Science & Engineering Department a
 * [Department of Biomedical Informatics](http://dbmi.ucsd.edu/) ([UCSD School of Medicine](https://medschool.ucsd.edu/))
 * [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
-<button class="accordion">Current Students</button>
-<div class="panel">
+<details>
+<summary><b>Current Students</b></summary>
 <ul>
 <li>Annie Liu — Undergraduate Regents Scholar (2021-2022)</li>
 </ul>
-</div>
+</details>
 
 
 A data-driven personal website
