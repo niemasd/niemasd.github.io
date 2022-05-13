@@ -13,11 +13,9 @@ author_profile: true
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'funding' %}
     <li>
-      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }}</b></a>
+      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }} ({{ post.amount }})</b></a>
       <ul>
-        <li><u>Amount</u>: {{ post.amount }}</li>
-        <li><u>Start Date</u>: {{ post.startdate }}</li>
-        <li><u>End Date</u>: {{ post.enddate }}</li>
+        <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
         <li><u>Title</u>: {{ post.title }}</li>
         <li><u>Team</u>: {{ post.team }}</li>
       </ul>
