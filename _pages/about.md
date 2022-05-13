@@ -17,6 +17,7 @@ In addition to my appointment in the Computer Science & Engineering Department a
 
 <details>
 <summary><h2>Current Students</h2></summary>
+
 <ul style="font-size:0.75em">
 <li><a href="https://www.linkedin.com/in/anniejiaqiliu/" target="_blank"><b>Annie Liu</b></a> — Undergraduate Regents Scholar (2021-2022)</li>
 <li><a href="http://cseweb.ucsd.edu/~bkhalegh/" target="_blank"><b>Behnam Khaleghi</b></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank">Tajana Šimunić Rosing</a>) (2019-Present)</li>
