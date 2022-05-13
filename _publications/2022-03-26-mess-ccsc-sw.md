@@ -1,0 +1,11 @@
+---
+title: "A scalable approach for detecting exam similarity in CS courses"
+collection: publications
+pubtype: conference
+permalink: /publication/2022-03-26-mess-ccsc-sw
+excerpt: 'A scalable approach for detecting exam similarity in CS courses'
+date: 2022-03-26
+venue: 'Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2022'
+citation: '<b>Moshiri N</b> (2022). "A scalable approach for detecting exam similarity in CS courses." <i>Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2022</i>. Talk.'
+---
+During the COVID-19 pandemic, CS courses at many institutions faced a sudden shift to fully-online instruction. Despite this shift in modality, many courses continued to administer single-student exams to assess student learning, yet these online exams typically lacked the ability to proctor students to enforce rules against collaboration. We describe a scalable approach for detecting exam similarity in online exams. The approach involves an Exam Similarity Score we define, and it includes empirical and theoretical approaches for gauging significance in the distribution of pairwise similarity scores across the class. We then present our experiences from utilizing the approach in an Advanced Data Structures course across two quarters, with more than 400 students in each offering of the course. We show that the approach was able to successfully detect cases of exam collaboration without significant investigative effort from the course instructional staff. An open source Python implementation of the approach can be found on GitHub: [https://github.com/niemasd/MESS](https://github.com/niemasd/MESS)
