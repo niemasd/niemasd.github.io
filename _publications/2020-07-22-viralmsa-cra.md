@@ -1,7 +1,7 @@
 ---
 title: "ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes"
 collection: publications
-pubtype: paper
+pubtype: conference
 permalink: /publication/2020-07-22-viralmsa-cra
 excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2020-07-22
