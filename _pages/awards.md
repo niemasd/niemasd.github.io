@@ -15,9 +15,9 @@ author_profile: true
     <li>
       <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.awarder }} ({{ post.amount }})</b></a>
       <ul>
-        <li><p class="archive__item-excerpt" itemprop="description"><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</p></li>
-        <li><p class="archive__item-excerpt" itemprop="description"><u>Title</u>: {{ post.title }}</p></li>
-        <li><p class="archive__item-excerpt" itemprop="description"><u>Team</u>: {{ post.team }}</p></li>
+        <p class="archive__item-excerpt" itemprop="description"><li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li></p>
+        <p class="archive__item-excerpt" itemprop="description"><li><u>Title</u>: {{ post.title }}</li></p>
+        <p class="archive__item-excerpt" itemprop="description"><li><u>Team</u>: {{ post.team }}</li></p>
       </ul>
     </li>
   {% endif %}
