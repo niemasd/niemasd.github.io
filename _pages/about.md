@@ -38,7 +38,8 @@ In addition to my appointment in the Computer Science & Engineering Department a
 </details>
 
 <details>
-  <summary><b>Past Students</b></summary><blockquote>
+  <summary><b>Past Students</b></summary>
+  <blockquote>
   <details>
     <summary><b>2022</b></summary>
     <ul style="font-size:0.75em">
@@ -97,7 +98,8 @@ In addition to my appointment in the Computer Science & Engineering Department a
       <li><a href="https://www.linkedin.com/in/duanwilliam/" target="_blank" rel="noopener noreferrer"><strong>William Duan</strong></a> — Undergraduate Researcher (2020)</li>
       <li><a href="https://cell.dgist.ac.kr/professor.php" target="_blank" rel="noopener noreferrer"><strong>Yeseong Kim</strong></a> — Ph.D. Student (Advisor: <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Tajana Šimunić Rosing</a>) (2019-2020)</li>
     </ul>
-  </blockquote></details>
+  </details>
+  </blockquote>
 </details>
 
 A data-driven personal website
