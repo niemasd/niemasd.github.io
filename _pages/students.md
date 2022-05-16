@@ -29,15 +29,11 @@ author_profile: true
     {% if student_endyear != endyear %}
       {% continue %}
     {% endif %}
-    <li>
-      {% if student.url %}
-        <a href="{{ student.url }}" target="_blank">
-      {% endif %}
-      {{ student.firstname }} {{ student.lastname }}
-      {% if student.url %}
-        </a>
-      {% endif %}
-    </li>
+    {% assign tmp = "{{ student.firstname }} {{ student.lastname }}" %}
+    {% if student.url %}
+      {% assign tmp = '<a href="{{ student.url }}" target="_blank">{{ tmp }}</a>'
+    {% endif %}
+    <li>{{ tmp }}</li>
   {% endfor %}</ul>
 {% endfor %}
 
