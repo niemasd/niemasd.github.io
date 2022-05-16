@@ -14,7 +14,7 @@ author_profile: true
 <center>Students</center>
 <ul>
 {% for student in site.students %}
-  <li>{{ student.firstname }} {{ student.lastname }}
+  <li>{{ student.firstname }} {{ student.lastname }}</li>
 {% endfor %}
 </ul>
 
