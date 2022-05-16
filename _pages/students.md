@@ -33,7 +33,12 @@ author_profile: true
     {% if student.website %}
       {% assign tmp = '<a href="' | append: student.website | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
-    {% assign tmp = tmp | append: ' — ' | append: student.role %}
+    {% assign tmp = tmp | append: ' — ' %}
+    {% assign tmp2 = student.role %}
+    {% if student.rolewebsite %}
+      {% assign tmp2 = '<a href="' | append: student.rolewebsite | append: '" target="_blank">' | append: tmp2 | append: '</a>' %}
+    {% endif %}
+    {% assign tmp = tmp | append: tmp2 %}
     {% if student.advisor %}
       {% assign tmp2 = student.advisor %}
       {% if student.advisorwebsite %}
