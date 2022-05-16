@@ -14,6 +14,7 @@ author_profile: true
 <ul>
 {% for endyear in endyears reversed %}
   <li>{{ endyear }}</li>
+{% endfor %}
 </ul>
 
 <center><b>TEST ABOVE THIS</b></center>
