@@ -9,7 +9,7 @@ author_profile: true
 
 {% assign presentyear = 'now' | date: "%Y" }
 
-{% assign endyears = site.students | map: 'endyear' | uniq | sort %}
+{% assign endyears = site.students | map: "endyear" | uniq | sort | reverse %}
 
 <center>Students</center>
 <ul>
@@ -21,14 +21,14 @@ author_profile: true
 
 <center>End Years</center>
 <ul>
-{% for endyear in endyears reversed %}
+{% for endyear in endyears %}
   <li>{{ endyear }}</li>
 {% endfor %}
 </ul>
 
 <center><b>TEST ABOVE THIS</b></center>
 
-{% for endyear in endyears reversed %}
+{% for endyear in endyears %}
   {% if endyear == "Present" %}
     {% continue %}
   {% endif %}
