@@ -7,6 +7,13 @@ author_profile: true
 
 {% include base_path %}
 
+{% assign presentyear = 'now' | date: "%Y" }
+{% for post in site.students %}
+  {% if post.endyear == 'Present' %}
+    {% assign post.endyear = presentyear %}
+  {% endif %}
+{% endfor %}
+
 {% assign endyears = site.students | map: 'endyear' | uniq | sort %}
 
 {% for endyear in endyears reversed %}
@@ -14,6 +21,12 @@ author_profile: true
     {% continue %}
   {% endif %}
   <h2 id="{{ endyear }}">{{endyear}}</h2>
+  <ul>{% for post in site.students %}
+    {% if post.endyear != endyear %}
+      {% continue %}
+    {% endif %}
+    <li>{{ post.firstname }} {{ post.lastname }}</li>
+  {% endfor %}</ul>
 {% endfor %}
 
 <center><b>TODO: REMOVE EVERYTHING BELOW</b></center>
