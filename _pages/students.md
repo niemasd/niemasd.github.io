@@ -13,26 +13,9 @@ author_profile: true
 {% for student in site.students %}
   {% assign endyears = endyears | append: ' ' | append: student.endyear %}
 {% endfor %}
-{% assign endyears = endyears | lstrip | split: ' ' %}
+{% assign endyears = endyears | lstrip | split: ' ' | uniq | sort %}
 
-<center>Students</center>
-<ul>
-{% for student in site.students %}
-  <li>{{ student.firstname }} {{ student.lastname }} {{ student.endyear }}</li>
-{% endfor %}
-</ul>
-
-
-<center>End Years</center>
-<ul>
-{% for endyear in endyears %}
-  <li>{{ endyear }}</li>
-{% endfor %}
-</ul>
-
-<center><b>TEST ABOVE THIS</b></center>
-
-{% for endyear in endyears %}
+{% for endyear in endyears reversed %}
   {% if endyear == "Present" %}
     {% continue %}
   {% endif %}
@@ -46,7 +29,15 @@ author_profile: true
     {% if student_endyear != endyear %}
       {% continue %}
     {% endif %}
-    <li>{{ student.firstname }} {{ student.lastname }}</li>
+    <li>
+      {% if student.url %}
+        <a href="{{ student.url }}" target="_blank">
+      {% endif %}
+      {{ student.firstname }} {{ student.lastname }}
+      {% if student.url %}
+        </a>
+      {% endif %}
+    </li>
   {% endfor %}</ul>
 {% endfor %}
 
