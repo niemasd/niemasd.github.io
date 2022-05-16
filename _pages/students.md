@@ -11,6 +11,15 @@ author_profile: true
 
 {% assign endyears = site.students | map: 'endyear' | uniq | sort %}
 
+<center>Students</center>
+<ul>
+{% for student in site.students %}
+  <li>{{ student.firstname }} {{ student.lastname }}
+{% endfor %}
+</ul>
+
+
+<center>End Years</center>
 <ul>
 {% for endyear in endyears reversed %}
   <li>{{ endyear }}</li>
