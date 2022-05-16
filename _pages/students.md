@@ -29,9 +29,17 @@ author_profile: true
     {% if student_endyear != endyear %}
       {% continue %}
     {% endif %}
-    {% assign tmp = student.firstname | append: ' ' | append: student.lastname %}
+    {% assign tmp = '<b>' | append: student.firstname | append: ' ' | append: student.lastname | append: '</b>' %}
     {% if student.website %}
       {% assign tmp = '<a href="' | append: student.website | append: '" target="_blank">' | append: tmp | append: '</a>' %}
+    {% endif %}
+    {% assign tmp = tmp | append: ' — ' | append: student.role %}
+    {% if student.advisor %}
+      {% assign tmp2 = student.advisor %}
+      {% if student.advisorwebsite %}
+        {% assign tmp2 = '<a href="' | append: student.advisorwebsite | append: '" target="_blank">' | append: tmp2 | append: '</a>' %}
+      {% endif %}
+      {% assign tmp = tmp | append: ' (Advisor: ' | append: tmp2 | append: ')' %}
     {% endif %}
     <li>{{ tmp }}</li>
   {% endfor %}</ul>
