@@ -9,9 +9,12 @@ author_profile: true
 
 {% assign endyears = site.students | map: 'endyear' | uniq | sort %}
 
-<ul>{% for endyear in endyears reversed %}
-  <li>{{endyear}}</li>
-{% endfor %}</ul>
+{% for endyear in endyears reversed %}
+  {% if endyear == 'Present' %}
+    {% continue %}
+  {% endif %}
+  <h2 id="{{ endyear }}">{{endyear}}</h2>
+{% endfor %}
 
 <center><b>TODO: REMOVE EVERYTHING BELOW</b></center>
 
