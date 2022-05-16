@@ -30,8 +30,8 @@ author_profile: true
       {% continue %}
     {% endif %}
     {% assign tmp = "{{ student.firstname }} {{ student.lastname }}" %}
-    {% if student.url %}
-      {% assign tmp = '<a href="{{ student.url }}" target="_blank">{{ tmp }}</a>'
+    {% if student.website %}
+      {% assign tmp = '<a href="{{ student.website }}" target="_blank">{{ tmp }}</a>'
     {% endif %}
     <li>{{ tmp }}</li>
   {% endfor %}</ul>
