@@ -8,11 +8,6 @@ author_profile: true
 {% include base_path %}
 
 {% assign presentyear = 'now' | date: "%Y" }
-{% for post in site.students %}
-  {% if post.endyear == 'Present' %}
-    {% assign post.endyear = presentyear %}
-  {% endif %}
-{% endfor %}
 
 {% assign endyears = site.students | map: 'endyear' | uniq | sort %}
 
@@ -21,11 +16,11 @@ author_profile: true
     {% continue %}
   {% endif %}
   <h2 id="{{ endyear }}">{{endyear}}</h2>
-  <ul>{% for post in site.students %}
-    {% if post.endyear != endyear %}
+  <ul>{% for student in site.students %}
+    {% if student.endyear != endyear %}
       {% continue %}
     {% endif %}
-    <li>{{ post.firstname }} {{ post.lastname }}</li>
+    <li>{{ student.firstname }} {{ student.lastname }}</li>
   {% endfor %}</ul>
 {% endfor %}
 
