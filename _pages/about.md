@@ -15,6 +15,4 @@ In addition to my appointment in the Computer Science & Engineering Department a
 * [Department of Biomedical Informatics](http://dbmi.ucsd.edu/) ([UCSD School of Medicine](https://medschool.ucsd.edu/))
 * [Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute](https://prepare.ucsd.edu/)
 
-<br>
-
 <iframe style="border-width: 0;" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=niemamoshiri%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
