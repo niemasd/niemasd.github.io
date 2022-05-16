@@ -15,7 +15,7 @@ author_profile: true
   {% if endyear == "Present" %}
     {% continue %}
   {% endif %}
-  <h2 id="{{ endyear }}">{{endyear}}</h2>
+  <h2 id="{{ endyear }}">{{ endyear }}</h2>
   <ul>{% for student in site.students %}
     {% if student.endyear == 'Present' %}
       {% assign student_endyear = presentyear %}
