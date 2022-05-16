@@ -12,7 +12,7 @@ author_profile: true
 {% assign endyears = site.students | map: 'endyear' | uniq | sort %}
 
 {% for endyear in endyears reversed %}
-  {% if endyear == 'Present' %}
+  {% if endyear == "Present" %}
     {% continue %}
   {% endif %}
   <h2 id="{{ endyear }}">{{endyear}}</h2>
