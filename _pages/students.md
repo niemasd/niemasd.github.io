@@ -9,10 +9,11 @@ author_profile: true
 
 {% assign presentyear = 'now' | date: "%Y" }
 
-{% assign endyears = '' | split: '' %}
+{% assign endyears = '' %}
 {% for student in site.students %}
-  {% assign endyears = endyears | append: student.endyear %}
+  {% assign endyears = endyears | append: ',' | append: student.endyear %}
 {% endfor %}
+{% assign endyears = endyears | split: ',' %}
 
 <center>Students</center>
 <ul>
