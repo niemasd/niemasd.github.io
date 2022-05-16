@@ -44,4 +44,5 @@ author_profile: true
     {% assign tmp = tmp | append: ' (' | append: student.startyear | append: '–' | append: tmpyear | append: ')' %}
     <li>{{ tmp }}</li>
   {% endfor %}</ul>
+  <center>— <a href="#top">Top</a> —</center>
 {% endfor %}
