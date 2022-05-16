@@ -22,11 +22,11 @@ author_profile: true
   <h2 id="{{ endyear }}">{{ endyear }}</h2>
   <ul style="font-size:0.75em">{% for student in site.students %}
     {% if student.endyear == 'Present' %}
-      {% assign student_endyear = presentyear %}
+      {% assign tmpyear = presentyear %}
     {% else %}
-      {% assign student_endyear = student.endyear %}
+      {% assign tmpyear = student.endyear %}
     {% endif %}
-    {% if student_endyear != endyear %}
+    {% if tmpyear != endyear %}
       {% continue %}
     {% endif %}
     {% assign tmp = '<b>' | append: student.firstname | append: ' ' | append: student.lastname | append: '</b>' %}
@@ -41,7 +41,7 @@ author_profile: true
       {% endif %}
       {% assign tmp = tmp | append: ' (Advisor: ' | append: tmp2 | append: ')' %}
     {% endif %}
-    {% assign tmp = tmp | append: ' (' | append: student.startyear | append: '–' | append: student.endyear | append: ')' %}
+    {% assign tmp = tmp | append: ' (' | append: student.startyear | append: '–' | append: tmpyear | append: ')' %}
     <li>{{ tmp }}</li>
   {% endfor %}</ul>
 {% endfor %}
