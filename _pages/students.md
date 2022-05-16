@@ -9,7 +9,10 @@ author_profile: true
 
 {% assign presentyear = 'now' | date: "%Y" }
 
-{% assign endyears = site.students | map: "endyear" | uniq | sort | reverse %}
+{% assign endyears = '' | split: '' %}
+{% for student in site.students %}
+  {% assign endyears = endyears | concat: student.endyear %}
+{% endfor %}
 
 <center>Students</center>
 <ul>
