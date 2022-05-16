@@ -11,9 +11,9 @@ author_profile: true
 
 {% assign endyears = '' %}
 {% for student in site.students %}
-  {% assign endyears = endyears | append: ',' | append: student.endyear %}
+  {% assign endyears = endyears | append: ' ' | append: student.endyear %}
 {% endfor %}
-{% assign endyears = endyears | split: ',' %}
+{% assign endyears = endyears | lstrip | split: ' ' %}
 
 <center>Students</center>
 <ul>
