@@ -41,7 +41,11 @@ author_profile: true
       {% endif %}
       {% assign tmp = tmp | append: ' (Advisor: ' | append: tmp2 | append: ')' %}
     {% endif %}
-    {% assign tmp = tmp | append: ' (' | append: student.startyear | append: '–' | append: tmpyear | append: ')' %}
+    {% assign tmp = tmp | append: ' (' | append: student.startyear %}
+    {% if tmpyear != student.startyear %}
+      {% assign tmp = tmp | append: '–' | append: tmpyear %}
+    {% endif %}
+    {% assign tmp = tmp | append: ')' %}
     <li>{{ tmp }}</li>
   {% endfor %}</ul>
   <center>— <a href="#top">Top</a> —</center>
