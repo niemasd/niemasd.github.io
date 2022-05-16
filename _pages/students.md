@@ -29,7 +29,7 @@ author_profile: true
     {% if student_endyear != endyear %}
       {% continue %}
     {% endif %}
-    {% assign tmp = "{{ student.firstname }} {{ student.lastname }}" %}
+    {% assign tmp = student.firstname | append: ' ' | append: student.lastname %}
     {% if student.website %}
       {% assign tmp = '<a href="' | append: student.website | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
