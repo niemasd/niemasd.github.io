@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign endyears = site.students | map: 'endyear' | uniq | sort %}
+{% assign endyears = site.students | map: 'endyear' | uniq | compact | sort %}
 
 <ul>{% for endyear in endyears reversed %}
   <li>{{endyear}}</li>
