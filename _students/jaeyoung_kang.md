@@ -1,7 +1,7 @@
 ---
-firstname: "Behnam"
-lastname: "Khaleghi"
-website: "http://cseweb.ucsd.edu/~bkhalegh/"
+firstname: "Jaeyoung"
+lastname: "Kang"
+website: "https://tycheyoung.github.io/"
 role: "Ph.D. Student"
 advisor: "Tajana Šimunić Rosing"
 advisorwebsite: "https://cseweb.ucsd.edu/~trosing/"
