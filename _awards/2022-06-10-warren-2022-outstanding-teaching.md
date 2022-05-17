@@ -3,6 +3,6 @@ title: "Outstanding Teaching Award"
 collection: awards
 awardtype: honor
 startdate: 2022-06-11
-awarder: 'UC San Diego Sixth College'
-awardurl: 'https://sixth.ucsd.edu/'
+awarder: 'UC San Diego Earl Warren College'
+awardurl: 'https://warren.ucsd.edu/'
 ---
