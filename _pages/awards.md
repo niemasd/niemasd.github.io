@@ -31,8 +31,8 @@ author_profile: true
     <li>
       <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
       <ul style="font-size:0.75em">
+        <li><u>Award Date</u>: {{ post.startdate }}</li>
         <li><u>Awarder</u>: {{ post.awarder }}</li>
-        <li><u>Date</u>: {{ post.startdate }}</li>
       </ul>
     </li>
   {% endif %}
