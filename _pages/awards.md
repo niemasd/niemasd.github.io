@@ -33,6 +33,9 @@ author_profile: true
       <ul style="font-size:0.75em">
         <li><u>Award Date</u>: {{ post.startdate }}</li>
         <li><u>Awarder</u>: {{ post.awarder }}</li>
+        {% if post.videourl %}
+          <li><u>Video</u>: <a href="{{ post.videourl }}" target="_blank">{{ post.videourl }}</a></li>
+        {% endif %}
       </ul>
     </li>
   {% endif %}
