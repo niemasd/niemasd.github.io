@@ -28,7 +28,13 @@ author_profile: true
 <h2 id="honors-awards">Honors/Awards</h2>
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'honor' %}
-    {% include archive-single-cv.html %}
+    <li>
+      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <ul style="font-size:0.75em">
+        <li><u>Awarder</u>: {{ post.awarder }}</li>
+        <li><u>Date</u>: {{ post.startdate }}</li>
+      </ul>
+    </li>
   {% endif %}
 {% endfor %}</ul>
 
