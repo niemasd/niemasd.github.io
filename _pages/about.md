@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-<p style="font-size:1em">My name is (Alexander) Niema Moshiri, and I am an Assistant Teaching Professor in the <a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering Department</a> at the <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>. I work on computational biology, with a research focus on viral phylogenetics and epidemiology. I also place a heavy emphasis on teaching, namely on the development of online educational content, primarily Massive Adaptive Interactive Texts (MAITs), and I recently gave a TEDx talk on the subject, which you can find <a href="https://youtu.be/5JKgUoY9pTg" target="_blank">here</a>. You can watch my Ph.D. defense <a href="http://bit.ly/niema-phd-defense" target="_blank">here</a>, and you can read my Ph.D. dissertation <a href="https://escholarship.org/uc/item/62s7q92d" target="_blank">here</a>.</p>
+<p style="font-size:0.9em">My name is (Alexander) Niema Moshiri, and I am an Assistant Teaching Professor in the <a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering Department</a> at the <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>. I work on computational biology, with a research focus on viral phylogenetics and epidemiology. I also place a heavy emphasis on teaching, namely on the development of online educational content, primarily Massive Adaptive Interactive Texts (MAITs), and I recently gave a TEDx talk on the subject, which you can find <a href="https://youtu.be/5JKgUoY9pTg" target="_blank">here</a>. You can watch my Ph.D. defense <a href="http://bit.ly/niema-phd-defense" target="_blank">here</a>, and you can read my Ph.D. dissertation <a href="https://escholarship.org/uc/item/62s7q92d" target="_blank">here</a>.</p>
 
-<p style="font-size:1em">In addition to my appointment in the Computer Science & Engineering Department at UCSD, I have the following affiliations:</p>
+<p style="font-size:0.9em">In addition to my appointment in the Computer Science & Engineering Department at UCSD, I have the following affiliations:</p>
 
-<ul style="font-size:1em">
+<ul style="font-size:0.9em">
 <li><a href="https://bioinformatics.ucsd.edu/" target="_blank">Bioinformatics and Systems Biology Graduate Program</a></li>
 <li><a href="http://dbmi.ucsd.edu/" target="_blank">Department of Biomedical Informatics</a> (<a href="https://medschool.ucsd.edu/" target="_blank">UCSD School of Medicine</a>)</li>
 <li><a href="https://prepare.ucsd.edu/" target="_blank">Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute</a></li>
