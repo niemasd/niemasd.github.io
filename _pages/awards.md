@@ -46,7 +46,16 @@ author_profile: true
 <h2 id="conference-awards">Conference Awards</h2>
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'conference' %}
-    {% include archive-single-cv.html %}
+    <li>
+      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <ul style="font-size:0.75em">
+        <li><u>Award Date</u>: {{ post.startdate }}</li>
+        <li><u>Awarder</u>: {{ post.awarder }}</li>
+        {% if post.videourl %}
+          <li><u>Video</u>: <a href="{{ post.videourl }}" target="_blank">{{ post.videourl }}</a></li>
+        {% endif %}
+      </ul>
+    </li>
   {% endif %}
 {% endfor %}</ul>
 
