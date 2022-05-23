@@ -1,16 +1,28 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+<center><a href="#invited-talks">Invited Talks</a> – <a href="#campus-talks">Campus Talks</a></center>
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+{% include base_path %}
 
-{% endif %}
+<h2 id="invited-talks">Invited Talks</h2>
+<ol reversed>{% for post in site.talks reversed %}
+  {% if post.talktype == 'invited' %}
+    {% include archive-single-talk.html %}
+  {% endif %}
+{% endfor %}</ol>
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+<center>— <a href="#top">Top</a> —</center>
+
+<h2 id="campus-talks">Campus Talks</h2>
+<ol reversed>{% for post in site.talks reversed %}
+  {% if post.talktype == 'campus' %}
+    {% include archive-single-talk.html %}
+  {% endif %}
+{% endfor %}</ol>
+
+<center>— <a href="#top">Top</a> —</center>
