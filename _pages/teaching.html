@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: true
 ---
 
-<center><a href="#onlne">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
+<center><a href="#online">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
 
 {% include base_path %}
 
@@ -36,7 +36,11 @@ author_profile: true
 {% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | group_by: 'coursedept' | sort: 'coursenum' %}
 <ul>{% for post in ucsd_courses %}
   <li>
-    {% assign tmp = post.coursedept | append: ' ' | append: post.coursenum | append: ': ' | append: post.title %}
+    {% assign tmp = post.coursedept | append: ' ' | append: post.coursenum %}
+    {% if post.coursenumsuf %}
+      {% assign tmp = tmp | append: post.coursenumsuf %}
+    {% endif
+    {% assign tmp = tmp | append: ': ' | append: post.title %}
     {% if post.courseurl %}
       {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
