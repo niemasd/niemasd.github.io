@@ -5,6 +5,6 @@ platform: 'Coursera'
 collection: teaching
 startdate: '2022-01-17'
 enddate: 'Present'
-instructors: 'Niema Moshiri, Pavel Pevzner, Mikhail Rayko, Vikram Sirupurapu, and Sabeel Mansuri'
+instructors: '<b>Niema Moshiri</b>, Pavel Pevzner, Mikhail Rayko, Vikram Sirupurapu, and Sabeel Mansuri'
 courseurl: 'https://www.coursera.org/learn/hacking-covid-19--course-3-unraveling-origins-of-covid-19'
 ---

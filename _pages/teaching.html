@@ -33,10 +33,10 @@ author_profile: true
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="UCSD">UC San Diego</h2>
-{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | group_by: 'coursedept' | sort: 'coursenum' %}
+{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort: 'coursenum' %}
 <ul>{% for post in ucsd_courses %}
   <li>
-    {% assign tmp = post.coursenum | replace ' 0', ' ' | append: ': ' | append: post.title %}
+    {% assign tmp = post.coursenum | replace ' 00', ' ' | replace ' 0', ' ' | append: ': ' | append: post.title %}
     {% if post.courseurl %}
       {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
