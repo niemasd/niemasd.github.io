@@ -10,47 +10,45 @@ author_profile: true
 {% include base_path %}
 
 <h2 id="online">Online Courses</h2>
-<ul>{% for post in site.teaching reversed %}
-  {% if post.location == 'online' %}
-    <li>
-      {% assign tmp = post.title %}
-      {% if post.coursenum %}
-        {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
+{% assign online_courses = site.teaching | where: 'location', 'online' | sort: 'startdate' %}
+<ul>{% for post in online_courses reversed %}
+  <li>
+    {% assign tmp = post.title %}
+    {% if post.coursenum %}
+      {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
+    {% endif %}
+    {% if post.courseurl %}
+      {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
+    {% endif %}
+    <b>{{ tmp }}</b>
+    <ul style="font-size:0.75em">
+      {% if post.instructors %}
+        <li><u>Instructors</u>: {{ post.instructors }}</li>
       {% endif %}
-      {% if post.courseurl %}
-        {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
-      {% endif %}
-      <b>{{ tmp }}</b>
-      <ul style="font-size:0.75em">
-        <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
-        <li><u>Platform</u>: {{ post.platform }}</li>
-        {% if post.instructors %}
-          <li><u>Instructors</u>: {{ post.instructors }}</li>
-        {% endif %}
-      </ul>
-    </li>
-  {% endif %}
+      <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
+      <li><u>Platform</u>: {{ post.platform }}</li>
+    </ul>
+  </li>
 {% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="UCSD">UC San Diego</h2>
-<ul>{% for post in site.teaching reversed %}
-  {% if post.location == 'ucsd' %}
-    <li>
-      {% assign tmp = post.title %}
-      {% if post.coursenum %}
-        {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
-      {% endif %}
-      {% if post.courseurl %}
-        {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
-      {% endif %}
-      <b>{{ tmp }}</b>
-      <ul style="font-size:0.75em">
-        <li><u>Quarters</u>: {{ post.quarters }}</li>
-      </ul>
-    </li>
-  {% endif %}
+{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort: 'coursenum' %}
+<ul>{% for post in ucsd_courses %}
+  <li>
+    {% assign tmp = post.title %}
+    {% if post.coursenum %}
+      {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
+    {% endif %}
+    {% if post.courseurl %}
+      {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
+    {% endif %}
+    <b>{{ tmp }}</b>
+    <ul style="font-size:0.75em">
+      <li><u>Quarters</u>: {{ post.quarters }}</li>
+    </ul>
+  </li>
 {% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
