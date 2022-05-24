@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2021-11-10-digieduhack
-venue: "Genomic Epidemiology Webinar, Pan American Health Organization (PAHO)"
+venue: "Digital Education Hackathon (DigiEduHack) 2021"
 date: 2021-11-10
 location: "Ljubljana, Slovenia (virtual)"
 ---
