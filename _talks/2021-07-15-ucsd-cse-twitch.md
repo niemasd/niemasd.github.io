@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2021-07-15-ucsd-cse-twitch
-venue: "Twitch Live Stream, Computer Science & Engineering, UC San Diego
+venue: "Twitch Live Stream, Computer Science & Engineering, UC San Diego"
 date: 2021-07-15
 location: "La Jolla, California (virtual)"
 ---
