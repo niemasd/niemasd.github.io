@@ -36,7 +36,7 @@ author_profile: true
 {% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort: 'coursenum' %}
 <ul>{% for post in ucsd_courses %}
   <li>
-    {% assign tmp = '' | append: post.coursenum | replace '-00', '-' | replace '-0', '-' | append: ': ' | append: post.title %}
+    {% assign tmp = '' | append: post.coursenum | append: ': ' | append: post.title %}
     {% if post.courseurl %}
       {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
