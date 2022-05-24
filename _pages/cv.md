@@ -25,11 +25,11 @@ You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-v
   <li><b><u>Ph.D. in Bioinformatics and Systems Biology (2015–2019)</u></b></li>
   <ul style="font-size:0.9em">
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
-    <li>Co-advised by Siavash Mirarab and Pavel Pevzner</li>
+    <li>Co-advised by <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Siavash Mirarab</a> and <a href="https://bioalgorithms.ucsd.edu/" target="_blank">Pavel Pevzner</a></li>
   </ul>
   <li><b><u>B.S. in Bioengineering: Bioinformatics (2011–2015)</u></b></li>
   <ul style="font-size:0.9em">
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
-    <li>Minor in Economics</li>
+    <li>Minor in <a href="https://economics.ucsd.edu/undergraduate-program/major-minor-requirements/minors.html" target="_blank">Economics</a></li>
   </ul>
 </ul>
