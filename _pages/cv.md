@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>.
+You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions and education history below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).
 
 <h2 id="academic-positions">Academic Positions</h2>
 <ul>
