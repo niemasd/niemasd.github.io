@@ -17,9 +17,7 @@ author_profile: true
     {% if post.coursenum %}
       {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
     {% endif %}
-    {% if post.courseurl %}
-      {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
-    {% endif %}
+    {% assign tmp = '<a style="text-decoration:underline" href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     <b>{{ tmp }}</b>
     <ul style="font-size:0.75em">
       {% if post.instructors %}
