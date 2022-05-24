@@ -1,5 +1,5 @@
 ---
-title: "Intro. to Comp. Sci. and Object-Oriented Programming: Python"
+title: "Introduction to Computer Science and Object-Oriented Programming: Python"
 coursenum: 'CSE 006R'
 location: 'ucsd'
 collection: teaching
