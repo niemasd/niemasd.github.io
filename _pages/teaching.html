@@ -9,10 +9,6 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-
 <h2 id="online">Online Courses</h2>
 <ul>{% for post in site.teaching reversed %}
   {% if post.location == 'online' %}
@@ -35,3 +31,30 @@ author_profile: true
     </li>
   {% endif %}
 {% endfor %}</ul>
+
+<center>— <a href="#top">Top</a> —</center>
+
+<h2 id="UCSD">UC San Diego</h2>
+<ul>{% for post in site.teaching reversed %}
+  {% if post.location == 'ucsd' %}
+    <li>
+      {% assign tmp = post.title %}
+      {% if post.coursenum %}
+        {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
+      {% endif %}
+      {% if post.courseurl %}
+        {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
+      {% endif %}
+      <b>{{ tmp }}</b>
+      <ul style="font-size:0.75em">
+        <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
+        <li><u>Platform</u>: {{ post.platform }}</li>
+        {% if post.instructors %}
+          <li><u>Instructors</u>: {{ post.instructors }}</li>
+        {% endif %}
+      </ul>
+    </li>
+  {% endif %}
+{% endfor %}</ul>
+
+<center>— <a href="#top">Top</a> —</center>
