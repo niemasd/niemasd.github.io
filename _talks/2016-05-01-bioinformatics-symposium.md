@@ -10,3 +10,5 @@ location: "La Jolla, California"
 ---
 
 The <a href="http://ubic.org/" target="_blank">Undergraduate Bioinformatics Club (UBIC)</a> at UC San Diego hosts a yearly Bioinformatics Symposium in which faculty members, researchers, and industry professionals are invited to speak about their experiences in the field as well as to answer any questions the members of UBIC may have. I spoke as an undergraduate researcher who had gone through the graduate school application process.
+
+<center><img src="/files/2016-05-01-bioinformatics-symposium.jpg"></center>
