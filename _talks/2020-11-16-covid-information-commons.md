@@ -4,9 +4,9 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2020-11-16-covid-information-commons
-venue: "COVID Information Commons (CIC)"
+venue: "COVID Information Commons (CIC), Columbia University"
 date: 2020-11-16
-location: "San Diego, California (virtual)"
+location: "New York City, New York (virtual)"
 ---
 
 The <a href="https://covidinfocommons.datascience.columbia.edu/" target="_blank">COVID Information Commons (CIC)</a> is an open website to facilitate knowledge sharing and collaboration across various COVID research efforts, initiated by the NSF Convergence Accelerator. The initial focus of the CIC website is on NSF-funded COVID Rapid Response Research (RAPID) projects. The CIC serves as a resource for researchers, students and decision-makers from academia, government, not-for-profits and industry to identify collaboration opportunities, to leverage each other’s research findings, and to accelerate the most promising research to mitigate the broad societal impacts of the COVID-19 pandemic.
