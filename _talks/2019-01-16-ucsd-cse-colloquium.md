@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2019-01-16-ucsd-cse-colloquium
-venue: "Department of Computer Science and Engineering, UC San Diego"
+venue: "Colloquium and Distinguished Lecture Series, Computer Science and Engineering, UC San Diego"
 date: 2019-01-16
 location: "La Jolla, California"
 ---
