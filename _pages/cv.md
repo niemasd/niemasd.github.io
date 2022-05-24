@@ -40,7 +40,7 @@ You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-v
 <ul>{% for post in site.service reversed %}
   {% if post.servicetype == 'institutional' %}
     <li>
-      <a style="text-decoration:underline" href="{{ post.serviceurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <b><u>{{ post.title }}</u></b>
       <ul style="font-size:0.75em">
         <li><u>Group</u>: {{ post.group }}</li>
         <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
