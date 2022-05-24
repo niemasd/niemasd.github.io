@@ -42,9 +42,7 @@ author_profile: true
       {% assign coursenum_numstrip = coursenum_split[1] | prepend: '!' | replace: '!00', '!' | replace: '!0', '!' | remove: '!' %}
       {% assign tmp = coursenum_split[0] | append: ' ' | append: coursenum_numstrip | append: ': ' | append: post.title | replace: ' : ', ': ' %}
     {% endif %}
-    {% if post.courseurl %}
-      {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
-    {% endif %}
+    {% assign tmp = '<a style="text-decoration:underline" href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     <b>{{ tmp }}</b>
     <ul style="font-size:0.75em">
       <li><u>Quarters</u>: {{ post.quarters }}</li>

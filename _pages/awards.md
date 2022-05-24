@@ -29,7 +29,7 @@ author_profile: true
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'honor' %}
     <li>
-      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <a style="text-decoration:underline" href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
       <ul style="font-size:0.75em">
         <li><u>Award Date</u>: {{ post.startdate }}</li>
         <li><u>Awarder</u>: {{ post.awarder }}</li>
@@ -47,7 +47,7 @@ author_profile: true
 <ul>{% for post in site.awards reversed %}
   {% if post.awardtype == 'conference' %}
     <li>
-      <a href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <a style="text-decoration:underline" href="{{ post.awardurl }}" target="_blank"><b>{{ post.title }}</b></a>
       <ul style="font-size:0.75em">
         <li><u>Award Date</u>: {{ post.startdate }}</li>
         <li><u>Awarder</u>: {{ post.awarder }}</li>

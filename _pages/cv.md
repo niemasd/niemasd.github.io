@@ -9,31 +9,27 @@ redirect_from:
 
 {% include base_path %}
 
-You can download a PDF of my CV [here](https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf).
+You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>.
 
-Academic Positions
-======
-* **Assistant Teaching Professor (2019–Present)**
-  * [Computer Science & Engineering](https://cse.ucsd.edu/)
-  * [University of California, San Diego](https://ucsd.edu/)
+<h2 id="academic-positions">Academic Positions</h2>
+<ul>
+  <li><b><u>Assistant Teaching Professor (2019–Present)</u></b></li>
+  <ul>
+    <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
+    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
+  </ul>
+</ul>
 
-Education
-======
-* **Ph.D. in Bioinformatics and Systems Biology (2015–2019)**
-  * [University of California, San Diego](https://ucsd.edu/)
-  * Co-advised by Siavash Mirarab and Pavel Pevzner
-* **B.S. in Bioengineering: Bioinformatics (2011–2015)**
-  * [University of California, San Diego](https://ucsd.edu/)
-  * Minor in Economics
-
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<h2 id="education">Education</h2>
+<ul>
+  <li><b><u>Ph.D. in Bioinformatics and Systems Biology (2015–2019)</u></b></li>
+  <ul>
+    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
+    <li>Co-advised by Siavash Mirarab and Pavel Pevzner</li>
+  </ul>
+  <li><b><u>B.S. in Bioengineering: Bioinformatics (2011–2015)</u></b></li>
+  <ul>
+    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
+    <li>Minor in Economics</li>
+  </ul>
+</ul>
