@@ -16,7 +16,7 @@ In 2020, they held a <a href="http://distance.ncu.edu.jm/proposal_submission" ta
 <ol>
 <li><b>Rebuilding via Online Modalities</b> — Technologies that are being used and how they enhance or shape the future of individuals in contributing their nation’s recovery and growth globally. It is expected to incorporate areas in virtual learning related to planning and implementation for facilitators, support personnel and other stakeholder (coaches, parents, guardians and students).</li>
 <li><b>Retooling through e-Learning</b> — This track will incorporate engaging tools for facilitators, navigating the challenges that arise from the new reality, and successful strategies for successful experiential online learning for all learner populations.</li>
-<li><b>Reintegration and Inclusivity in the Online Learning Environment</b> — This track will speak to differentiating support for diverse learners across the spectrums of abilities. It will explore what survival looks like in this new normal for parents and coaches, Creating an inclusive learning environment for the special needs student as part of a learner variability toolkit.
+<li><b>Reintegration and Inclusivity in the Online Learning Environment</b> — This track will speak to differentiating support for diverse learners across the spectrums of abilities. It will explore what survival looks like in this new normal for parents and coaches, Creating an inclusive learning environment for the special needs student as part of a learner variability toolkit.</li>
 </ol>
 
 I gave a keynote talk titled Enabling scalable online learning through the development of <i>Massive Adaptive Interactive Texts (MAITs)</i>.
