@@ -26,7 +26,6 @@ author_profile: true
         <li><u>Instructors</u>: {{ post.instructors }}</li>
       {% endif %}
       <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
-      <li><u>Platform</u>: {{ post.platform }}</li>
     </ul>
   </li>
 {% endfor %}</ul>
@@ -34,13 +33,10 @@ author_profile: true
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="UCSD">UC San Diego</h2>
-{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort: 'coursenum' %}
+{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | group_by: 'coursedept' | sort: 'coursenum' %}
 <ul>{% for post in ucsd_courses %}
   <li>
-    {% assign tmp = post.title %}
-    {% if post.coursenum %}
-      {% assign tmp = post.coursenum | append: ': ' | append: tmp %}
-    {% endif %}
+    {% assign tmp = post.coursedept | append: ' ' | append: post.coursenum | append: ': ' | append: post.title %}
     {% if post.courseurl %}
       {% assign tmp = '<a href="' | append: post.courseurl | append: '" target="_blank">' | append: tmp | append: '</a>' %}
     {% endif %}
