@@ -11,15 +11,6 @@ redirect_from:
 
 You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions and education history below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).
 
-<h2 id="academic-positions">Academic Positions</h2>
-<ul>
-  <li><b><u>Assistant Teaching Professor (2019–Present)</u></b></li>
-  <ul style="font-size:0.9em">
-    <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
-    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
-  </ul>
-</ul>
-
 <h2 id="education">Education</h2>
 <ul>
   <li><b><u>Ph.D. in Bioinformatics and Systems Biology (2015–2019)</u></b></li>
@@ -31,5 +22,14 @@ You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-v
   <ul style="font-size:0.9em">
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
     <li>Minor in <a href="https://economics.ucsd.edu/undergraduate-program/major-minor-requirements/minors.html" target="_blank">Economics</a></li>
+  </ul>
+</ul>
+
+<h2 id="academic-positions">Academic Positions</h2>
+<ul>
+  <li><b><u>Assistant Teaching Professor (2019–Present)</u></b></li>
+  <ul style="font-size:0.9em">
+    <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
+    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
   </ul>
 </ul>
