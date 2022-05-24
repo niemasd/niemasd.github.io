@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<center><a href="#education">Education</a> – <a href="#academic-positions">Academic Positions</a> – <a href="#institutional-service">Institutional Service</a></center>
+
 You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions and education history below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).
 
 <h2 id="education">Education</h2>
@@ -33,3 +35,16 @@ You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-v
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
   </ul>
 </ul>
+
+<h2 id="institutional-service">Institutional Service</h2>
+<ul>{% for post in site.service reversed %}
+  {% if post.servicetype == 'institutional' %}
+    <li>
+      <a style="text-decoration:underline" href="{{ post.serviceurl }}" target="_blank"><b>{{ post.title }}</b></a>
+      <ul style="font-size:0.75em">
+        <li><u>Group</u>: {{ post.group }}</li>
+        <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
+      </ul>
+    </li>
+  {% endif %}
+{% endfor %}</ul>

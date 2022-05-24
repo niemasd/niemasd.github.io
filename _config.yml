@@ -187,6 +187,9 @@ collections:
   awards:
     output: true
     permalink: /:collection/:path/
+  service:
+    output: true
+    permalink: /:collection/:path/
   students:
     output: true
     permalink: /:collection/:path/
@@ -242,6 +245,15 @@ defaults:
   - scope:
       path: ""
       type: awards
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _service
+  - scope:
+      path: ""
+      type: service
     values:
       layout: single
       author_profile: true
