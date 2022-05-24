@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2021-05-20-tbp-sase-aapi-stem-panel
-venue: "Tau Beta Pi (TBP) and Society of Asian Scientists & Engineers (SASE)"
+venue: "Tau Beta Pi (TBP) and Society of Asian Scientists & Engineers (SASE), UC San Diego"
 date: 2021-05-20
 location: "La Jolla, California (virtual)"
 ---

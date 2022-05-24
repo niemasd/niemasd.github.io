@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2021-02-09-acm-ai-speaker-series
-venue: "ACM AI Speaker Series"
+venue: "Speaker Series, ACM AI, UC San Diego"
 date: 2021-02-09
 location: "La Jolla, California (virtual)"
 ---

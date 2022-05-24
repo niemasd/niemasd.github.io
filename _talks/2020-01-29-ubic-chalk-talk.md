@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2020-01-29-ubic-chalk-talk
-venue: "Undergraduate Bioinformatics Club (UBIC)"
+venue: "Undergraduate Bioinformatics Club (UBIC), UC San Diego"
 date: 2020-01-29
 location: "La Jolla, California"
 ---

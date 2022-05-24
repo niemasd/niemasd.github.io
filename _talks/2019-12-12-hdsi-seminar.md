@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2019-12-12-hdsi-seminar
-venue: "Seminar Series, Halıcıoğlu Data Science Institute"
+venue: "Seminar Series, Halıcıoğlu Data Science Institute, UC San Diego"
 date: 2019-12-12
 location: "La Jolla, California"
 ---

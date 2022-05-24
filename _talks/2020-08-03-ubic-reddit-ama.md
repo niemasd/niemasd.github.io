@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2020-08-03-ubic-reddit-ama
-venue: "Undergraduate Bioinformatics Club (UBIC)"
+venue: "Undergraduate Bioinformatics Club (UBIC), UC San Diego"
 date: 2020-08-03
 location: "La Jolla, California (virtual, Reddit)"
 ---

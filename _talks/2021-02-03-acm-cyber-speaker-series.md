@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "campus"
 permalink: /talks/2021-02-03-acm-cyber-speaker-series
-venue: "ACM Cyber Speaker Series"
+venue: "Speaker Series, ACM Cyber, UC San Diego"
 date: 2021-02-03
 location: "La Jolla, California (virtual)"
 ---
