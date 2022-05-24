@@ -39,7 +39,7 @@ author_profile: true
     {% assign tmp = '' %}
     {% if post.coursenum %}
       {% assign coursenum_split = post.coursenum | split: ' ' %}
-      {% assign coursenum_numstrip = coursenum_split[0] | prepend: '!' | replace: '!00', '!' | replace: '!0', '!' | remove: '!' %}
+      {% assign coursenum_numstrip = coursenum_split[1] | prepend: '!' | replace: '!00', '!' | replace: '!0', '!' | remove: '!' %}
       {% assign tmp = coursenum_split[0] | append: ' ' | append: coursenum_numstrip | append: ': ' | append: post.title | replace: ' : ', ': ' %}
     {% endif %}
     {% if post.courseurl %}
