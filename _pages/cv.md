@@ -27,6 +27,8 @@ redirect_from:
   </ul>
 </ul>
 
+<center>— <a href="#top">Top</a> —</center>
+
 <h2 id="academic-positions">Academic Positions</h2>
 <ul>
   <li><b><u>Assistant Teaching Professor (2019–Present)</u></b></li>
@@ -35,6 +37,8 @@ redirect_from:
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
   </ul>
 </ul>
+
+<center>— <a href="#top">Top</a> —</center>
 
 <h2 id="institutional-service">Institutional Service</h2>
 <ul>{% for post in site.service reversed %}
@@ -48,3 +52,5 @@ redirect_from:
     </li>
   {% endif %}
 {% endfor %}</ul>
+
+<center>— <a href="#top">Top</a> —</center>
