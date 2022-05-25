@@ -1,5 +1,5 @@
 ---
-title: "Research Committee Member"
+title: "Member, Research Committee"
 collection: awards
 servicetype: institutional
 startdate: '2021-06-09'
