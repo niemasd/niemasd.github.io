@@ -1,5 +1,5 @@
 ---
-title: "Member, Training Committee"
+title: "Member: Training Committee"
 collection: awards
 servicetype: institutional
 startdate: '2021-06-09'
