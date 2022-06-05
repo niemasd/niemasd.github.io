@@ -1,5 +1,5 @@
 ---
-title: "Outstanding Teaching Award"
+title: "Sixth College Outstanding Teaching Award"
 collection: awards
 awardtype: honor
 startdate: 2022-06-11
