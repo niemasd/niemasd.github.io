@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a> – <a href="#reviewer">Reviewer</a></center>
+<center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#reviewer">Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a></center>
 
 <p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions and education history below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
 
@@ -36,6 +36,31 @@ redirect_from:
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
     <li>Minor in <a href="https://economics.ucsd.edu/undergraduate-program/major-minor-requirements/minors.html" target="_blank">Economics</a></li>
   </ul>
+</ul>
+
+<center>— <a href="#top">Top</a> —</center>
+
+<h2 id="reviewer">Reviewer</h2>
+{% assign reviewer_sorted = site.reviewer | sort: 'title' %}
+<ul>
+  <li><b><u>Grants/Awards</u></b></li>
+  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
+    {% if post.reviewertype == 'award' %}
+      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}</ul>
+  <li><b><u>Journals</u></b></li>
+  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
+    {% if post.reviewertype == 'journal' %}
+      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}</ul>
+  <li><b><u>Conferences</u></b></li>
+  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
+    {% if post.reviewertype == 'conference' %}
+      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}</ul>
 </ul>
 
 <center>— <a href="#top">Top</a> —</center>
@@ -68,30 +93,5 @@ redirect_from:
     </li>
   {% endif %}
 {% endfor %}</ul>
-
-<center>— <a href="#top">Top</a> —</center>
-
-<h2 id="reviewer">Reviewer</h2>
-{% assign reviewer_sorted = site.reviewer | sort: 'title' %}
-<ul>
-  <li><b><u>Grants/Awards</u></b></li>
-  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
-    {% if post.reviewertype == 'award' %}
-      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}</ul>
-  <li><b><u>Journals</u></b></li>
-  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
-    {% if post.reviewertype == 'journal' %}
-      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}</ul>
-  <li><b><u>Conferences</u></b></li>
-  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
-    {% if post.reviewertype == 'conference' %}
-      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}</ul>
-</ul>
 
 <center>— <a href="#top">Top</a> —</center>
