@@ -60,10 +60,10 @@ redirect_from:
 <ul>
   <li><b><u>Grants/Awards</u></b></li>
   <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
-  {% endfor %}</ul>
     {% if post.reviewertype == 'award' %}
       <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
     {% endif %}
+  {% endfor %}</ul>
   <li><b><u>Journals</u></b></li>
   <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
     {% if post.reviewertype == 'journal' %}
