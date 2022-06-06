@@ -19,10 +19,10 @@ author_profile: true
 {% assign tmp = '' %}
 {% for endyear in endyears reversed %}
   {% if endyear != "Present" %}
-    {% if endyear != endyears.last %}
+    {% assign tmp = tmp | append: '<a href="#' | append: endyear | append: '">' | append: endyear | append: '</a>' %}
+    {% if endyear != endyears.first %}
       {% assign tmp = tmp | append: ' – ' %}
     {% endif %}
-    {% assign tmp = tmp | append: '<a href="#' | append: endyear | append: '">' | append: endyear | append: '</a>' %}
   {% endif %}
 {% endfor %}
 {{ tmp }}
