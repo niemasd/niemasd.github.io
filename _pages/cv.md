@@ -11,7 +11,7 @@ redirect_from:
 
 <center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#reviewer">Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a></center>
 
-<p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions and education history below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
+<p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions, education history, reviewer history, institutional service, and organization affiliations below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
 
 <h2 id="academic-positions">Academic Positions</h2>
 <ul>
