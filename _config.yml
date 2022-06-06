@@ -190,6 +190,9 @@ collections:
   service:
     output: true
     permalink: /:collection/:path/
+  reviewer:
+    output: true
+    permalink: /:collection/:path/
   students:
     output: true
     permalink: /:collection/:path/
@@ -254,6 +257,15 @@ defaults:
   - scope:
       path: ""
       type: service
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _reviewer
+  - scope:
+      path: ""
+      type: reviewer
     values:
       layout: single
       author_profile: true

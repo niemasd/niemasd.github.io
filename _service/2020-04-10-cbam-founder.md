@@ -1,6 +1,5 @@
 ---
 title: "Founding Director and Mentor"
-collection: awards
 servicetype: institutional
 startdate: '2020-04-10'
 enddate: '2021-06-30'

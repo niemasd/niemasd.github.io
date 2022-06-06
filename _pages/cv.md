@@ -54,3 +54,15 @@ redirect_from:
 {% endfor %}</ul>
 
 <center>— <a href="#top">Top</a> —</center>
+
+<h2 id="reviewer">Reviewer</h2>
+<ul>
+  <li><b><u>Journal</u></b></li>
+  <ul style="font-size:0.75em">{% for post in site.reviewer %}
+    {% if post.reviewertype == 'journal' %}
+      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}</ul>
+</ul>
+
+<center>— <a href="#top">Top</a> —</center>

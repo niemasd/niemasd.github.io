@@ -1,6 +1,5 @@
 ---
 title: "Member: Steering Committee"
-collection: awards
 servicetype: institutional
 startdate: '2020-08-09'
 enddate: '2022-06-11'

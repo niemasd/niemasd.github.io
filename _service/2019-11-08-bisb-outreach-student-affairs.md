@@ -1,6 +1,5 @@
 ---
 title: "Member: Outreach and Student Affairs Committee"
-collection: awards
 servicetype: institutional
 startdate: '2019-11-08'
 enddate: 'Present'
