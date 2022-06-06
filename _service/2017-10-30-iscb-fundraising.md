@@ -1,5 +1,5 @@
 ---
-title: "Member: Fundraising Committee"
+title: "Member: ISCB Fundraising Committee"
 servicetype: organization
 startdate: '2017-10-30'
 enddate: '2019-01-01'
