@@ -1,5 +1,5 @@
 ---
-title: "Member: Outreach and Student Affairs Committee"
+title: "Member: BISB Outreach and Student Affairs Committee"
 servicetype: institutional
 startdate: '2019-11-08'
 enddate: 'Present'

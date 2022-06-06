@@ -1,5 +1,5 @@
 ---
-title: "Member: M.S. Admissions Committee"
+title: "Member: CSE MS Admissions Committee"
 servicetype: institutional
 startdate: '2019-12-02'
 enddate: '2022-06-11'

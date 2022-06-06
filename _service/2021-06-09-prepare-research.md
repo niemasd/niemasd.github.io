@@ -1,5 +1,5 @@
 ---
-title: "Member: Research Committee"
+title: "Member: PREPARE Research Committee"
 servicetype: institutional
 startdate: '2021-06-09'
 enddate: 'Present'
