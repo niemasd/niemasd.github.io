@@ -41,7 +41,8 @@ redirect_from:
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="institutional-service">Institutional Service</h2>
-<ul>{% for post in site.service reversed %}
+{% assign service_sorted = site.service | sort: 'enddate' %}
+<ul>{% for post in service_sorted reversed %}
   {% if post.servicetype == 'institutional' %}
     <li>
       <b><u>{{ post.title }}</u></b>
@@ -56,7 +57,7 @@ redirect_from:
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="organizations">Organizations</h2>
-<ul>{% for post in site.service reversed %}
+<ul>{% for post in service_sorted reversed %}
   {% if post.servicetype == 'organization' %}
     <li>
       <b><u>{{ post.title }}</u></b>
