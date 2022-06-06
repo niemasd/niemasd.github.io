@@ -56,15 +56,16 @@ redirect_from:
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="reviewer">Reviewer</h2>
+{% assign reviewer_sorted = site.reviewer | sort: 'title' %}
 <ul>
   <li><b><u>Journal</u></b></li>
-  <ul style="font-size:0.75em">{% for post in site.reviewer | sort: 'title' %}
+  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
     {% if post.reviewertype == 'journal' %}
       <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}</ul>
   <li><b><u>Conference</u></b></li>
-  <ul style="font-size:0.75em">{% for post in site.reviewer | sort: 'title' %}
+  <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
     {% if post.reviewertype == 'conference' %}
       <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
     {% endif %}
