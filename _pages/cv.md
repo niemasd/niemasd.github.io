@@ -63,6 +63,12 @@ redirect_from:
       <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}</ul>
+  <li><b><u>Conference</u></b></li>
+  <ul style="font-size:0.75em">{% for post in site.reviewer %}
+    {% if post.reviewertype == 'conference' %}
+      <li><a href="{{ post.venueurl }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}</ul>
 </ul>
 
 <center>— <a href="#top">Top</a> —</center>
