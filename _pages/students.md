@@ -28,7 +28,7 @@ author_profile: true
 {{ tmp }}
 </center>
 
-<p style="font-size:0.9em">I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing undergraduate and graduate students. A complete list of my past students can be found below.</p>
+<p style="font-size:0.9em">I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing undergraduate and graduate students. A complete list of my {{ site.students | size }} past students can be found below.</p>
 
 {% for endyear in endyears reversed %}
   {% if endyear == "Present" %}
