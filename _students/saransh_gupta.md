@@ -1,6 +1,6 @@
 ---
 firstname: "Saransh"
-lastname: "Salamat"
+lastname: "Gupta"
 website: "http://acsweb.ucsd.edu/~sag076/"
 role: "Ph.D. Student"
 advisor: "Tajana Šimunić Rosing"
