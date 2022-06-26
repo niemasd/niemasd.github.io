@@ -3,12 +3,22 @@ title: "Seating Chart"
 excerpt: "Seating Chart"
 sitemap: false
 permalink: /seating-chart.html
+dataTable: true
 ---
 
-<div class="datatable-begin"></div>
-First Name | Last Name | Table
----------- | --------- | -----
-{% for person in site.data.seating %}
-{{ person.first }} | {{ person.last }} | {{ person.table }}
-{% endfor %}
-<div class="datatable-end"></div>
+<table class="display">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Table</th>
+    </tr>
+  </thead>
+  {% for person in site.data.seating %}
+    <tr>
+      <td>{{ person.first }}</td>
+      <td>{{ person.last }}</td>
+      <td>{{ person.table }}</td>
+    </tr>
+  {% endfor %}
+</table>
