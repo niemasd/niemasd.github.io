@@ -6,16 +6,12 @@ permalink: /seating-chart.html
 dataTable: true
 ---
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" type="text/css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-
-<table id="seating" class="display" style="width:100%">
+<table id="seating" style="width:100%">
   <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Table</th>
+      <th onclick="sortTable(0)">First Name</th>
+      <th onClick="sortTable(1)">Last Name</th>
+      <th onClick="sortTable(2)">Table</th>
     </tr>
   </thead>
   {% for person in site.data.seating %}
@@ -28,23 +24,28 @@ dataTable: true
 </table>
 
 <script>
-$(document).ready(function () {
-  $('#seating').DataTable({
-    columnDefs: [
-      {
-	    targets: [0],
-		orderData: [0, 1, 2],
-	  },
-      {
-		targets: [1],
-		orderData: [1, 0, 2],
-	  },
-      {
-		targets: [2],
-		orderData: [2, 1, 0],
-	  },
-    ],
-	order: [[1, 'asc']],
-  });
-});
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
+  table = document.getElementById("seating");
+  switching = true;
+  dir = "asc";
+  while(switching) {
+    switching = false;
+    rows = table.rows;
+    for(i = 1; i < (rows.length - 1); ++i) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if((dir == "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) || (dir == "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+          shouldSwitch = true; break;
+      }
+    }
+    if(shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true; ++switchCount;
+    } else if(switchCount == 0 && dir == "asc") {
+      dir = "desc"; switching = true;
+    }
+  }
+}
 </script>
