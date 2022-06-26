@@ -1,0 +1,14 @@
+---
+title: "Seating Chart"
+excerpt: "Seating Chart"
+sitemap: false
+permalink: /seating-chart.html
+---
+
+<div class="datatable-begin"></div>
+First Name | Last Name | Table
+---------- | --------- | -----
+{% for person in site.data.seating %}
+{{ person.first }} | {{ person.last }} | {{ person.table }}
+{% endfor %}
+<div class="datatable-end"></div>
