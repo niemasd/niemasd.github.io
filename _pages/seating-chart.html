@@ -6,6 +6,8 @@ permalink: /seating-chart.html
 dataTable: true
 ---
 
+Click on a header to sort the table.
+
 <table id="seating" style="width:100%">
   <thead>
     <tr>
@@ -24,6 +26,16 @@ dataTable: true
 </table>
 
 <script>
+function compare(x, y) {
+  var elX, elY, i, len;
+  for(i = 0, len = Math.min(x.length, y.length); i < len; ++i) {
+    elX = x[i], elY = y[i];
+    if(elX > elY) return 1;
+    if(elX < elY) return -1;
+  }
+  return y.length - x.length;
+}
+
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
   table = document.getElementById("seating");
@@ -34,9 +46,19 @@ function sortTable(n) {
     rows = table.rows;
     for(i = 1; i < (rows.length - 1); ++i) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      if((dir == "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) || (dir == "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+      x = rows[i].getElementsByTagName("TD");
+      y = rows[i + 1].getElementsByTagName("TD");
+      if(n == 0) {
+        x = [x[0].innerHTML.toLowerCase(), x[1].innerHTML.toLowerCase(), x[2].innerHTML.toLowerCase()];
+        y = [y[0].innerHTML.toLowerCase(), y[1].innerHTML.toLowerCase(), y[2].innerHTML.toLowerCase()];
+      } else if(n == 1) {
+        x = [x[1].innerHTML.toLowerCase(), x[0].innerHTML.toLowerCase(), x[2].innerHTML.toLowerCase()];
+        y = [y[1].innerHTML.toLowerCase(), y[0].innerHTML.toLowerCase(), y[2].innerHTML.toLowerCase()];
+      } else if(n == 2) {
+        x = [x[2].innerHTML.toLowerCase(), x[1].innerHTML.toLowerCase(), x[0].innerHTML.toLowerCase()];
+        y = [y[2].innerHTML.toLowerCase(), y[1].innerHTML.toLowerCase(), y[0].innerHTML.toLowerCase()];
+      }
+      if((dir == "asc" && compare(x,y) > 0) || (dir == "desc" && compare(x,y) < 0)) {
           shouldSwitch = true; break;
       }
     }
