@@ -79,7 +79,7 @@ function searchSeating() {
   filter = input.value.toUpperCase();
   table = document.getElementById("seating");
   tr = table.getElementsByTagName("tr");
-  for(i = 0; i < tr.length; ++i) {
+  for(i = 1; i < tr.length; ++i) {
     found = false;
     td0 = tr[i].getElementsByTagName("td")[0];
     td1 = tr[i].getElementsByTagName("td")[1];
