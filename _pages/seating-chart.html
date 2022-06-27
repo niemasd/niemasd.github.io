@@ -29,9 +29,13 @@ Click on a header to sort the table.
 
 <script>
 function compare(x, y) {
-  var elX, elY, i, len;
+  var elX, elY, i, len, tmpX, tmpY;
   for(i = 0, len = Math.min(x.length, y.length); i < len; ++i) {
     elX = x[i], elY = y[i];
+    tmpX = parseInt(elX, 10);
+    if(!isNaN(tmpX)) elX = tmpX;
+    tmpY = parseInt(elY, 10);
+    if(!isNaN(tmpY)) elY = tmpY;
     if(elX > elY) return 1;
     if(elX < elY) return -1;
   }
@@ -54,8 +58,8 @@ function sortTable(n) {
       yFirst = y[0].innerHTML.toLowerCase();
       xLast = x[1].innerHTML.toLowerCase();
       yLast = y[1].innerHTML.toLowerCase();
-      xTable = parseInt(x[2].innerHTML.toLowerCase(), 10);
-      yTable = parseInt(y[2].innerHTML.toLowerCase(), 10);
+      xTable = x[2].innerHTML.toLowerCase();
+      yTable = y[2].innerHTML.toLowerCase();
       if(n == 0) {
         x = [xFirst, xLast, xTable];
         y = [yFirst, yLast, yTable];
