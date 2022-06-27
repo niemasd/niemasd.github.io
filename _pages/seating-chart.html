@@ -54,8 +54,8 @@ function sortTable(n) {
       yFirst = y[0].innerHTML.toLowerCase();
       xLast = x[1].innerHTML.toLowerCase();
       yLast = y[1].innerHTML.toLowerCase();
-      xTable = parseInt(x[2], 10);
-      yTable = parseInt(y[2], 10);
+      xTable = x[2].innerHTML.toLowerCase();//parseInt(x[2], 10);
+      yTable = y[2].innerHTML.toLowerCase();//parseInt(y[2], 10);
       if(n == 0) {
         x = [xFirst, xLast, xTable];
         y = [yFirst, yLast, yTable];
