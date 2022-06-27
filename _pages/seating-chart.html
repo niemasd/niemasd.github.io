@@ -39,7 +39,7 @@ function compare(x, y) {
 }
 
 function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0;
+  var table, rows, switching, i, x, y, xFirst, xLast, xTable, yFirst, yLast, yTable, shouldSwitch, dir, switchCount = 0;
   table = document.getElementById("seating");
   switching = true;
   dir = "asc";
@@ -50,15 +50,21 @@ function sortTable(n) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD");
       y = rows[i + 1].getElementsByTagName("TD");
+      xFirst = x[0].innerHTML.toLowerCase();
+      yFirst = y[0].innerHTML.toLowerCase();
+      xLast = x[1].innerHTML.toLowerCase();
+      yLast = y[1].innerHTML.toLowerCase();
+      xTable = parseInt(x[2]);
+      yTable = parseInt(y[2]);
       if(n == 0) {
-        x = [x[0].innerHTML.toLowerCase(), x[1].innerHTML.toLowerCase(), x[2].innerHTML.toLowerCase()];
-        y = [y[0].innerHTML.toLowerCase(), y[1].innerHTML.toLowerCase(), y[2].innerHTML.toLowerCase()];
+        x = [xFirst, xLast, xTable];
+        y = [yFirst, yLast, yTable];
       } else if(n == 1) {
-        x = [x[1].innerHTML.toLowerCase(), x[0].innerHTML.toLowerCase(), x[2].innerHTML.toLowerCase()];
-        y = [y[1].innerHTML.toLowerCase(), y[0].innerHTML.toLowerCase(), y[2].innerHTML.toLowerCase()];
+        x = [xLast, xFirst, xTable];
+        y = [yLast, yFirst, yTable];
       } else if(n == 2) {
-        x = [x[2].innerHTML.toLowerCase(), x[1].innerHTML.toLowerCase(), x[0].innerHTML.toLowerCase()];
-        y = [y[2].innerHTML.toLowerCase(), y[1].innerHTML.toLowerCase(), y[0].innerHTML.toLowerCase()];
+        x = [xTable, xLast, xFirst];
+        y = [yTable, yLast, yFirst];
       }
       if((dir == "asc" && compare(x,y) > 0) || (dir == "desc" && compare(x,y) < 0)) {
           shouldSwitch = true; break;
