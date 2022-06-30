@@ -1,7 +1,7 @@
 ---
 title: "Wastewater sequencing uncovers early, cryptic SARS-CoV-2 variant transmission"
 collection: publications
-pubtype: preprint
+pubtype: paper
 permalink: /publication/2022-06-29-wastewater-early-sars-cov-2
 excerpt: 'Wastewater sequencing uncovers early, cryptic SARS-CoV-2 variant transmission'
 date: 2022-06-29
