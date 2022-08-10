@@ -2,6 +2,6 @@
 title: "Member: CSE MS Admissions Committee"
 servicetype: institutional
 startdate: '2019-12-02'
-enddate: '2022-06-11'
+enddate: '2023-06-16'
 group: '<a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering (CSE) Department</a>, <a href="https://ucsd.edu/" target="_blank">UC San Diego</a>'
 ---
