@@ -1,10 +1,10 @@
 ---
 firstname: "Justin"
 lastname: "Morris"
-website: "http://acsweb.ucsd.edu/~j1morris/"
+website: "https://faculty.csusm.edu/jmorris/index.html"
 role: "Ph.D. Student"
 advisor: "Tajana Šimunić Rosing"
 advisorwebsite: "https://cseweb.ucsd.edu/~trosing/"
 startyear: '2019'
-endyear: 'Present'
+endyear: '2022'
 ---
