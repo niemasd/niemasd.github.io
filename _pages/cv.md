@@ -40,7 +40,7 @@ redirect_from:
 
 <center>— <a href="#top">Top</a> —</center>
 
-<h2 id="reviewer">Editor/Reviewer</h2>
+<h2 id="editor-reviewer">Editor/Reviewer</h2>
 {% assign reviewer_sorted = site.reviewer | map: 'title' | sort: 'downcase' %}
 <ul>
   <li><b><u>Grants/Awards</u></b></li>
