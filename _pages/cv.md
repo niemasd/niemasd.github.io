@@ -41,7 +41,7 @@ redirect_from:
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="editor-reviewer">Editor/Reviewer</h2>
-{% assign reviewer_sorted = site.reviewer | sort: 'title' %}
+{% assign reviewer_sorted = site.reviewer | sort_natural: 'title' %}
 <ul>
   <li><b><u>Grants/Awards</u></b></li>
   <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
