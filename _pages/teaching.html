@@ -10,7 +10,7 @@ author_profile: true
 {% include base_path %}
 
 <h2 id="online">Online Courses</h2>
-{% assign online_courses = site.teaching | where: 'location', 'online' | sort: 'startdate' %}
+{% assign online_courses = site.teaching | where: 'location', 'online' | sort_natural: 'startdate' %}
 <ul>{% for post in online_courses reversed %}
   <li>
     {% assign tmp = post.title %}
@@ -31,7 +31,7 @@ author_profile: true
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="ucsd">UC San Diego</h2>
-{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort: 'coursenum' %}
+{% assign ucsd_courses = site.teaching | where: 'location', 'ucsd' | sort_natural: 'coursenum' %}
 <ul>{% for post in ucsd_courses %}
   <li>
     {% assign tmp = '' %}

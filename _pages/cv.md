@@ -66,7 +66,7 @@ redirect_from:
 <center>— <a href="#top">Top</a> —</center>
 
 <h2 id="institutional-service">Institutional Service</h2>
-{% assign service_sorted = site.service | sort: 'enddate' %}
+{% assign service_sorted = site.service | sort_natural: 'enddate' %}
 <ul>{% for post in service_sorted reversed %}
   {% if post.servicetype == 'institutional' %}
     <li>
