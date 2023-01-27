@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#reviewer">Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a> – <a href="#outreach">Outreach</a></center>
+<center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#editor-reviewer">Editor/Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a> – <a href="#outreach">Outreach</a></center>
 
 <p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions, education history, reviewer history, institutional service, and organization affiliations below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
 
@@ -40,8 +40,8 @@ redirect_from:
 
 <center>— <a href="#top">Top</a> —</center>
 
-<h2 id="reviewer">Reviewer</h2>
-{% assign reviewer_sorted = site.reviewer | sort: 'title' %}
+<h2 id="reviewer">Editor/Reviewer</h2>
+{% assign reviewer_sorted = site.reviewer | map: 'title' | sort: 'downcase' %}
 <ul>
   <li><b><u>Grants/Awards</u></b></li>
   <ul style="font-size:0.75em">{% for post in reviewer_sorted %}
