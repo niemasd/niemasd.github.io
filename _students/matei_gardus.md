@@ -4,5 +4,5 @@ lastname: "Gărduș"
 website: "https://stormhub.io/"
 role: "Undergraduate Researcher"
 startyear: '2022'
-endyear: 'Present'
+endyear: '2022'
 ---

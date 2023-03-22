@@ -6,5 +6,5 @@ role: "Ph.D. Student"
 advisor: "Nathan Lewis"
 advisorwebsite: "http://lewislab.ucsd.edu/n/"
 startyear: '2019'
-endyear: 'Present'
+endyear: '2022'
 ---
