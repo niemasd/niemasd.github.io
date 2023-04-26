@@ -15,4 +15,4 @@ The COVID Information Commons is funded by an <a href="https://www.nsf.gov/award
 
 As an NSF COVID RAPID award recipient, I gave a talk titled <i>Massively scalable reference-guided Multiple Sequence Alignment of viral genomes</i>, in which I discussed the research I conducted under my NSF COVID RAPID award.
 
-#<iframe width="560" height="315" src="https://www.youtube.com/embed/6-fDbTY8ySI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3B59NtnJHrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
