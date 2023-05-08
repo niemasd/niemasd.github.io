@@ -1,7 +1,7 @@
 ---
 title: "ViralConsensus: A fast and memory-efficient tool for calling viral consensus genome sequences directly from read alignment data"
 collection: publications
-pubtype: preprint
+pubtype: paper
 permalink: /publication/2023-05-08-viralconsensus
 excerpt: 'ViralConsensus: A fast and memory-efficient tool for calling viral consensus genome sequences directly from read alignment data'
 date: 2023-05-08
