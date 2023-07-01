@@ -15,7 +15,12 @@ redirect_from:
 
 <h2 id="academic-positions">Academic Positions</h2>
 <ul>
-  <li><b><u>Assistant Teaching Professor (2019–Present)</u></b></li>
+  <li><b><u>Associate Teaching Professor (2023–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
+    <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
+  </ul>
+  <li><b><u>Assistant Teaching Professor (2019–2023)</u></b></li>
   <ul style="font-size:0.75em">
     <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
