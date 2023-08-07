@@ -22,4 +22,4 @@ We found the following pairwise TN93 distance thresholds as potential candidates
 This study provides valuable information for epidemic control strategies, and public health efforts in managing infectious diseases caused by these viruses. The identified pairwise distance thresholds for molecular clustering can serve as a foundation for future research and intervention to combat epidemics effectively.
 
 ### Availability and implementation
-All relevant data and results can be found in the following repository: https://github.com/Niema-Lab/ENLACE-2023
+All relevant data and results can be found in the following repository: [https://github.com/Niema-Lab/ENLACE-2023](https://github.com/Niema-Lab/ENLACE-2023)
