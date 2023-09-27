@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2023-09-18-sony-interactive-entertainment
-venue: "San Diego Diplomacy Council"
+venue: "Sony Interactive Entertainment (PlayStation)"
 date: 2023-09-18
 location: "San Mateo, California"
 ---
