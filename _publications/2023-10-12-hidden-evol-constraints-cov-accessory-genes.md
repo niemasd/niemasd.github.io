@@ -1,0 +1,12 @@
+---
+title: "Hidden evolutionary constraints dictate the retention of coronavirus accessory genes"
+collection: publications
+pubtype: preprint
+permalink: /publication/2023-10-12-hidden-evol-constraints-cov-accessory-genes
+excerpt: 'Hidden evolutionary constraints dictate the retention of coronavirus accessory genes'
+date: 2023-10-12
+venue: 'bioRxiv'
+paperurl: 'https://doi.org/10.1101/2023.10.12.561935'
+citation: 'Goldstein SA, Feeley TM, Babler KM, Hilbert ZA, Downhour DM, <b>Moshiri N</b>, Elde NC (2023). "Hidden evolutionary constraints dictate the retention of coronavirus accessory genes." <i>bioRxiv</i>. <a href="https://doi.org/10.1101/2023.10.12.561935" target="_blank">doi:10.1101/2023.10.12.561935</a>'
+---
+Genetic innovation is fundamental to the ability of viruses to adapt in the face of host immunity. Coronaviruses exhibit many mechanisms of innovation given flexibility in genomic composition relative to most RNA virus families (1-5). Examples include the acquisition of unique accessory genes that can originate by capture of cellular genes or through duplication and divergence of existing viral genes (6-8). Accessory genes may be influential in dictating viral host range and cellular tropism, but little is known about how selection acts on these variable regions of virus genomes. We used experimental evolution of mouse hepatitis virus (MHV) with an inactive native phosphodiesterase, NS2, that encodes a complementing cellular AKAP7 gene (9), to simulate the capture of a host gene and found hidden patterns of constraint that determine the fate of coronavirus accessory genes. After courses of serial infection, AKAP7 was retained under strong selection but rapidly lost under relaxed selection. In contrast, the gene encoding inactive NS2, ORF2, remained intact, suggesting it is under cryptic evolutionary constraint. Guided by the retention of ORF2 and hints of similar patterns in related betacoronaviruses, we analyzed the evolution of SARS-CoV-2 ORF8, which arose via gene duplication (6) and contains premature stop codons in several globally successful lineages. As with MHV ORF2, the coding-defective SARS-CoV-2 ORF8 gene remains largely intact, mirroring patterns observed during MHV experimental evolution and extending these findings to viruses currently adapting to humans. Retention of inactive genes challenges assumptions on the dynamics of gene loss in virus genomes and can help guide evolutionary analysis of emerging and pandemic coronaviruses.
