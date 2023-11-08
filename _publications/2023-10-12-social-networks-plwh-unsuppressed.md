@@ -6,7 +6,7 @@ permalink: /publication/2023-10-12-social-networks-plwh-unsuppressed
 excerpt: 'Leveraging social networks for identification of people living with HIV who are virally unsuppressed'
 date: 2023-10-12
 venue: 'AIDS'
-citation: 'Cummins B, Johnson K, Schneider JA, Del Vecchio N, <b>Moshiri N</b>, Wertheim JO, Goyal R, Skaathun B (2023). "Leveraging social networks for identification of people living with HIV who are virally unsuppressed." <i>AIDS</i>. In Press.'
+citation: 'Cummins B, Johnson K, Schneider JA, Del Vecchio N, <b>Moshiri N</b>, Wertheim JO, Goyal R, Skaathun B (2023). "Leveraging social networks for identification of people living with HIV who are virally unsuppressed." <i>AIDS</i>. In Press. <a href="https://doi.org/10.1097/QAD.0000000000003767" target="_blank">doi:10.1097/QAD.0000000000003767</a>'
 ---
 ### Objectives
 This study investigates primary peer-referral engagement (PRE) strategies to assess which strategy results in engaging higher numbers of people living with HIV (PLWH) who are virally unsuppressed.
