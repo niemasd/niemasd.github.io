@@ -2,12 +2,12 @@
 title: "ViralWasm: a client-side user-friendly web application suite for viral genomics"
 collection: publications
 pubtype: paper
-permalink: /publication/2024-01-02-viralwasm
+permalink: /publication/2024-01-10-viralwasm
 excerpt: 'ViralWasm: a client-side user-friendly web application suite for viral genomics'
-date: 2024-01-02
-venue: 'Zenodo'
-paperurl: 'https://doi.org/10.5281/zenodo.8427589'
-citation: 'Ji D, Aboukhalil R, <b>Moshiri N</b> (2023). "ViralWasm: a client-side user-friendly web application suite for viral genomics." <i>Bioinformatics</i>. In Press. <a href="https://doi.org/10.5281/zenodo.8427589" target="_blank">Preprint doi:10.5281/zenodo.8427589</a>'
+date: 2024-01-10
+venue: 'Bioinformatics'
+paperurl: 'https://doi.org/10.1093/bioinformatics/btae018'
+citation: 'Ji D, Aboukhalil R, <b>Moshiri N</b> (2023). "ViralWasm: a client-side user-friendly web application suite for viral genomics." <i>Bioinformatics</i>. btae018. <a href="https://doi.org/10.1093/bioinformatics/btae018" target="_blank">doi:10.1093/bioinformatics/btae018</a>'
 ---
 **Motivation:** The genomic surveillance of viral pathogens such as SARS-CoV-2 and HIV-1 has been critical to modern epidemiology and public health, but the use of sequence analysis pipelines requires computational expertise, and web-based platforms require sending potentially sensitive raw sequence data to remote servers.
 
