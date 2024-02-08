@@ -5,9 +5,18 @@ permalink: /teaching/
 author_profile: true
 ---
 
-<center><a href="#online">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
+<center><a href="#textbooks">Textbooks</a> – <a href="#online">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
 
 {% include base_path %}
+
+<h2 id="textbooks">Textbooks</h2>
+<ul>{% for post in site.publications reversed %}
+  {% if post.pubtype == 'textbook' %}
+    {% include archive-single-cv.html %}
+  {% endif %}
+{% endfor %}</ul>
+
+<center>— <a href="#top">Top</a> —</center>
 
 <h2 id="online">Online Courses</h2>
 {% assign online_courses = site.teaching | where: 'location', 'online' | sort_natural: 'startdate' %}
