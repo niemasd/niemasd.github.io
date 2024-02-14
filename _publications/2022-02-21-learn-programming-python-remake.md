@@ -3,7 +3,6 @@ title: "Learn Programming: Python – Remake"
 collection: publications
 pubtype: textbook
 permalink: /publication/2022-02-21-learn-programming-python-remake
-excerpt: 'An interactive text-based game for learning and practicing how to program in Python.'
 date: 2022-02-21
 venue: 'Steam'
 paperurl: 'https://store.steampowered.com/app/1882420'

@@ -3,7 +3,6 @@ title: "Open Computational Problems in HIV Epidemiology"
 collection: publications
 pubtype: conference
 permalink: /publication/2018-09-28-open-problems-hiv-epidemiology
-excerpt: 'Open Computational Problems in HIV Epidemiology'
 date: 2018-09-28
 venue: 'Workshop on the Future of Algorithms in Biology (FAB) 2018'
 paperurl: 'https://youtu.be/ENKBbV_30kk'

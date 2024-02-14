@@ -3,7 +3,6 @@ title: "A GPU-Powered Phylogenetic Analysis for Large-scale Genomic Sequences"
 collection: publications
 pubtype: conference
 permalink: /publication/2021-05-05-gpu-phylo-dynamics
-excerpt: 'A GPU-Powered Phylogenetic Analysis for Large-scale Genomic Sequences'
 date: 2021-05-05
 venue: '28th International Dynamics & Evolution of Human Viruses'
 citation: 'Kang J, Young C, Morris J, Akel A, Eilert S, Eno J, Curewitz K, <b>Moshiri N</b>, Rosing T (2021). "A GPU-Powered Phylogenetic Analysis for Large-scale Genomic Sequences." <i>28th International Dynamics & Evolution of Human Viruses</i>. Poster.'

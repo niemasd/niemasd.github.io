@@ -3,7 +3,6 @@ title: "ViralMSA: massively scalable reference-guided multiple sequence alignmen
 collection: publications
 pubtype: conference
 permalink: /publication/2020-10-19-viralmsa-covid-dynamics
-excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2020-10-19
 venue: 'COVID-19 Dynamics & Evolution'
 citation: '<b>Moshiri N</b> (2020). "ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes." <i>COVID-19 Dynamics & Evolution</i>. Talk.'

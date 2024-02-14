@@ -3,7 +3,6 @@ title: "An Evaluation of Phylogenetic Workflows in Viral Molecular Epidemiology"
 collection: publications
 pubtype: conference
 permalink: /publication/2021-05-05-phylo-workflow-comparison-dynamics
-excerpt: 'An Evaluation of Phylogenetic Workflows in Viral Molecular Epidemiology'
 date: 2021-05-05
 venue: '28th International Dynamics & Evolution of Human Viruses'
 citation: 'Young C, Meng S, <b>Moshiri N</b> (2021). "An Evaluation of Phylogenetic Workflows in Viral Molecular Epidemiology." <i>28th International Dynamics & Evolution of Human Viruses</i>. Poster.'

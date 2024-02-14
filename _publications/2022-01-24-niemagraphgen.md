@@ -3,7 +3,6 @@ title: "NiemaGraphGen: A memory-efficient global-scale contact network simulatio
 collection: publications
 pubtype: paper
 permalink: /publication/2022-01-24-niemagraphgen
-excerpt: 'NiemaGraphGen: A memory-efficient global-scale contact network simulation toolkit'
 date: 2022-01-24
 venue: 'Gigabyte'
 paperurl: 'https://doi.org/10.46471/gigabyte.37'

@@ -3,7 +3,6 @@ title: "Single-linkage molecular clustering of viral pathogens"
 collection: publications
 pubtype: preprint
 permalink: /publication/2023-08-04-molecular-clustering-enlace-2023
-excerpt: 'Single-linkage molecular clustering of viral pathogens'
 date: 2023-08-04
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/2023.08.03.551813'

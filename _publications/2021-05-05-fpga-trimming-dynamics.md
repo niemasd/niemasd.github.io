@@ -3,7 +3,6 @@ title: "FPGA-based acceleration of primer trimming"
 collection: publications
 pubtype: conference
 permalink: /publication/2021-05-05-fpga-trimming-dynamics
-excerpt: 'FPGA-based acceleration of primer trimming'
 date: 2021-05-05
 venue: '28th International Dynamics & Evolution of Human Viruses'
 citation: 'Khaleghi B, Akel A, Curewitz K, Eno J, Eilert S, <b>Moshiri N</b>, Rosing T (2021). "FPGA-based acceleration of primer trimming." <i>28th International Dynamics & Evolution of Human Viruses</i>. Talk.'

@@ -3,7 +3,6 @@ title: "FPGA Acceleration of Pairwise Distance Calculation for Viral Transmissio
 collection: publications
 pubtype: conference
 permalink: /publication/2021-05-05-tn93-fpga-dynamics
-excerpt: 'FPGA Acceleration of Pairwise Distance Calculation for Viral Transmission Clustering'
 date: 2021-05-05
 venue: '28th International Dynamics & Evolution of Human Viruses'
 citation: 'Salamat S, <b>Moshiri N</b>, Rosing T (2021). "FPGA Acceleration of Pairwise Distance Calculation for Viral Transmission Clustering." <i>28th International Dynamics & Evolution of Human Viruses</i>. Poster.'

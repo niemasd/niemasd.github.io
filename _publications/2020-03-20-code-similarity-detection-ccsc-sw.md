@@ -3,7 +3,6 @@ title: "Automated plagiarism detection in programming courses: a graph theoretic
 collection: publications
 pubtype: conference
 permalink: /publication/2020-03-20-after-ap-cs-ccsc-sw
-excerpt: 'Automated plagiarism detection in programming courses: a graph theoretical approach using MOSS'
 date: 2020-03-20
 venue: 'Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2020'
 citation: 'Lewis M, <b>Moshiri N</b> (2020). "Automated plagiarism detection in programming courses: a graph theoretical approach using MOSS." <i>Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2020</i>. Poster.'

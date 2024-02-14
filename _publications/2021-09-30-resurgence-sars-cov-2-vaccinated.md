@@ -3,7 +3,6 @@ title: "Resurgence of SARS-CoV-2 Infection in a Highly Vaccinated Health System 
 collection: publications
 pubtype: paper
 permalink: /publication/2021-09-30-resurgence-sars-cov-2-vaccinated
-excerpt: 'Resurgence of SARS-CoV-2 Infection in a Highly Vaccinated Health System Workforce'
 date: 2021-09-30
 venue: 'The New England Journal of Medicine'
 paperurl: 'https://doi.org/10.1056/NEJMc2112981'

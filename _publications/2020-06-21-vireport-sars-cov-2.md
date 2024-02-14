@@ -3,7 +3,6 @@ title: "An Analysis of SARS-CoV-2 Using ViReport"
 collection: publications
 pubtype: preprint
 permalink: /publication/2020-06-21-vireport-sars-cov-2
-excerpt: 'An Analysis of SARS-CoV-2 Using ViReport'
 date: 2020-06-21
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/2020.06.20.163162'

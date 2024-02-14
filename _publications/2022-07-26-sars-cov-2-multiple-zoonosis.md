@@ -3,7 +3,6 @@ title: "The molecular epidemiology of multiple zoonotic origins of SARS-CoV-2"
 collection: publications
 pubtype: paper
 permalink: /publication/2022-07-26-sars-cov-2-multiple-zoonosis
-excerpt: 'The molecular epidemiology of multiple zoonotic origins of SARS-CoV-2'
 date: 2022-07-26
 venue: 'Science'
 paperurl: 

@@ -3,7 +3,6 @@ title: "A scalable approach for detecting exam similarity in CS courses"
 collection: publications
 pubtype: conference
 permalink: /publication/2022-03-26-mess-ccsc-sw
-excerpt: 'A scalable approach for detecting exam similarity in CS courses'
 date: 2022-03-26
 venue: 'Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2022'
 citation: '<b>Moshiri N</b> (2022). "A scalable approach for detecting exam similarity in CS courses." <i>Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2022</i>. Talk.'

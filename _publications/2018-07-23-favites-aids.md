@@ -3,7 +3,6 @@ title: "FAVITES: simultaneous simulation of transmission networks, phylogenetic 
 collection: publications
 pubtype: conference
 permalink: /publication/2018-07-23-favites-aids
-excerpt: 'FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences'
 date: 2018-07-23
 venue: 'International AIDS Conference 2018'
 citation: '<b>Moshiri N</b>, Ragonnet-Cronin M, Wertheim JO, Mirarab S (2018). "FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences." <i>International AIDS Conference 2018</i>. Poster.'

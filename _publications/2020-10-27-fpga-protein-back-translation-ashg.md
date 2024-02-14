@@ -3,7 +3,6 @@ title: "FPGA Acceleration of Protein Back-Translation and Alignment"
 collection: publications
 pubtype: conference
 permalink: /publication/2020-10-27-fpga-protein-back-translation-ashg
-excerpt: 'FPGA Acceleration of Protein Back-Translation and Alignment'
 date: 2020-10-27
 venue: 'American Society of Human Genetics (ASHG) 2020'
 citation: 'Salamat S, Kang J, Kim Y, Imani M, <b>Moshiri N</b>, Rosing T (2020). "FPGA Acceleration of Protein Back-Translation and Alignment." <i>American Society of Human Genetics (ASHG) 2020</i>. Poster.'

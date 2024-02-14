@@ -3,7 +3,6 @@ title: "Design and Analysis of Data Structures"
 collection: publications
 pubtype: textbook
 permalink: /publication/2018-05-08-design-and-analysis-of-data-structures
-excerpt: 'Design and Analysis of Data Structures'
 date: 2018-05-08
 venue: 'Amazon KDP'
 paperurl: 'https://www.amazon.com/dp/1981017232'

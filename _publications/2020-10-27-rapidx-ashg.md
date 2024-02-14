@@ -3,7 +3,6 @@ title: "RAPIDx: A ReRAM Processing in-Memory Architecture for DNA Short Read Ali
 collection: publications
 pubtype: conference
 permalink: /publication/2020-10-27-rapidx-ashg
-excerpt: 'RAPIDx: A ReRAM Processing in-Memory Architecture for DNA Short Read Alignment'
 date: 2020-10-27
 venue: 'American Society of Human Genetics (ASHG) 2020'
 citation: 'Gupta S, Imani M, Khaleghi B, <b>Moshiri N</b>, Rosing T (2020). "RAPIDx: A ReRAM Processing in-Memory Architecture for DNA Short Read Alignment." <i>American Society of Human Genetics (ASHG) 2020</i>. Poster.'

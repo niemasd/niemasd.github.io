@@ -3,7 +3,6 @@ title: "An Evaluation of Phylogenetic Workflows in Viral Molecular Epidemiology"
 collection: publications
 pubtype: paper
 permalink: /publication/2022-04-08-phylo-workflow-comparison
-excerpt: 'An Evaluation of Phylogenetic Workflows in Viral Molecular Epidemiology'
 date: 2022-04-08
 venue: 'Viruses'
 paperurl: 'https://doi.org/10.3390/v14040774'

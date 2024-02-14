@@ -3,7 +3,6 @@ title: "ViralWasm: a client-side user-friendly web application suite for viral g
 collection: publications
 pubtype: paper
 permalink: /publication/2024-01-10-viralwasm
-excerpt: 'ViralWasm: a client-side user-friendly web application suite for viral genomics'
 date: 2024-01-10
 venue: 'Bioinformatics'
 paperurl: 'https://doi.org/10.1093/bioinformatics/btae018'

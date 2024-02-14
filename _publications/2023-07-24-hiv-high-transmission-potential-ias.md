@@ -3,7 +3,6 @@ title: "Leveraging social networks for identification of people living with HIV 
 collection: publications
 pubtype: conference
 permalink: /publication/2023-07-24-hiv-high-transmission-potential-ias
-excerpt: 'Leveraging social networks for identification of people living with HIV and high transmission potential'
 date: 2023-07-24
 venue: 'International AIDS Society (IAS) 2023'
 citation: 'Cummins B, Johnson K, Schneider JA, Del Vecchio N, <b>Moshiri N</b>, Wertheim JO, Goyal R, Skaathun B (2023). "Leveraging social networks for identification of people living with HIV and high transmission potential." <i>International AIDS Society (IAS) 2023</i>. Poster.'

@@ -3,7 +3,6 @@ title: "What to do after AP CS? A case study on short technical modules for post
 collection: publications
 pubtype: conference
 permalink: /publication/2020-03-20-after-ap-cs-ccsc-sw
-excerpt: 'What to do after AP CS? A case study on short technical modules for post-AP-exam high school students'
 date: 2020-03-20
 venue: 'Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2020'
 citation: 'Mansuri S, Zhou H, Battu H, Fong A, Ho T, Xiao E, <b>Moshiri N</b> (2020). "What to do after AP CS? A case study on short technical modules for post-AP-exam high school students." <i>Consortium for Computing Sciences in Colleges, Southwest (CCSC-SW) 2020</i>. Poster.'

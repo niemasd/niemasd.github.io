@@ -3,7 +3,6 @@ title: "ViralMSA: massively scalable reference-guided multiple sequence alignmen
 collection: publications
 pubtype: conference
 permalink: /publication/2020-07-22-viralmsa-cra
-excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2020-07-22
 venue: 'Computing Research Association (CRA) Virtual Conference 2020'
 paperurl: 'https://www.youtube.com/watch?v=PrAoks7OhE8&list=PL6AeXx75lHyyqKgfRmlSM4QUEna0dWDza&index=9&t=0s'

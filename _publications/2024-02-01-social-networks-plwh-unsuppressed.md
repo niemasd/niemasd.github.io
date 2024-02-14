@@ -3,7 +3,6 @@ title: "Leveraging social networks for identification of people living with HIV 
 collection: publications
 pubtype: paper
 permalink: /publication/2024-02-01-social-networks-plwh-unsuppressed
-excerpt: 'Leveraging social networks for identification of people living with HIV who are virally unsuppressed'
 date: 2024-02-01
 venue: 'AIDS'
 citation: 'Cummins B, Johnson K, Schneider JA, Del Vecchio N, <b>Moshiri N</b>, Wertheim JO, Goyal R, Skaathun B (2024). "Leveraging social networks for identification of people living with HIV who are virally unsuppressed." <i>AIDS</i>. 38(2):245–254. <a href="https://doi.org/10.1097/QAD.0000000000003767" target="_blank">doi:10.1097/QAD.0000000000003767</a>'

@@ -3,7 +3,6 @@ title: "Swapping Metagenomics Preprocessing Pipeline Components Offers Speed and
 collection: publications
 pubtype: paper
 permalink: /publication/2022-03-16-metagenomics-preprocessing-pipeline
-excerpt: 'Swapping Metagenomics Preprocessing Pipeline Components Offers Speed and Sensitivity Increases'
 date: 2022-03-16
 venue: 'mSystems'
 paperurl: 'https://doi.org/10.1128/msystems.01378-21'

@@ -3,7 +3,6 @@ title: "FAVITES: simultaneous simulation of transmission networks, phylogenetic 
 collection: publications
 pubtype: conference
 permalink: /publication/2018-04-23-favites-hiv-dynamics
-excerpt: 'FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences'
 date: 2018-04-23
 venue: '25th International HIV Dynamics & Evolution'
 citation: '<b>Moshiri N</b>, Ragonnet-Cronin M, Wertheim JO, Mirarab S (2018). "FAVITES: simultaneous simulation of transmission networks, phylogenetic trees and sequences." <i>25th International HIV Dynamics & Evolution</i>. Talk.'

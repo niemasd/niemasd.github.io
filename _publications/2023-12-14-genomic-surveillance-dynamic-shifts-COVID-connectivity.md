@@ -3,7 +3,6 @@ title: "Genomic surveillance reveals dynamic shifts in the connectivity of COVID
 collection: publications
 pubtype: paper
 permalink: /publication/2023-12-14-genomic-surveillance-dynamic-shifts-COVID-connectivity
-excerpt: 'Genomic surveillance reveals dynamic shifts in the connectivity of COVID-19 epidemics'
 date: 2023-12-14
 venue: 'Cell'
 paperurl: 'https://doi.org/10.1016/j.cell.2023.11.024'

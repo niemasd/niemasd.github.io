@@ -3,7 +3,6 @@ title: "Simulacres et Simulation: Using GAMA to debug a real-world genetic-epide
 collection: publications
 pubtype: conference
 permalink: /publication/2022-06-22-gama-real-world-gama-days
-excerpt: 'Simulacres et Simulation: Using GAMA to debug a real-world genetic-epidemiology outbreak simulator'
 date: 2022-06-22
 venue: 'GAMA Days 2022'
 citation: 'Mkandawire W, Butler K, Varilly P, <b>Moshiri N</b>, Colubri A (2022). "Simulacres et Simulation: Using GAMA to debug a real-world genetic-epidemiology outbreak simulator." <i>GAMA Days 2022</i>. Talk.'

@@ -3,7 +3,6 @@ title: "Genetic evidence of susceptible wildlife in SARS-CoV-2 positive samples 
 collection: publications
 pubtype: preprint
 permalink: /publication/2023-03-20-huanan-environmental-report
-excerpt: 'Genetic evidence of susceptible wildlife in SARS-CoV-2 positive samples at the Huanan Wholesale Seafood Market, Wuhan: Analysis and interpretation of data released by the Chinese Center for Disease Control'
 date: 2023-03-20
 venue: 'Zenodo'
 paperurl: 'https://doi.org/10.5281/zenodo.7754298'

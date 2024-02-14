@@ -3,7 +3,6 @@ title: "A Two-State Model of Tree Evolution and Its Applications to <i>Alu</i> R
 collection: publications
 pubtype: conference
 permalink: /publication/2017-07-02-dual-birth-model-smbe
-excerpt: 'A Two-State Model of Tree Evolution and Its Applications to <i>Alu</i> Retrotransposition'
 date: 2017-07-02
 venue: 'Society for Molecular Biology and Evolution (SMBE) 2017'
 citation: '<b>Moshiri N</b>, Mirarab S (2017). "A Two-State Model of Tree Evolution and Its Applications to <i>Alu</i> Retrotransposition." <i>Society for Molecular Biology and Evolution (SMBE) 2017</i>. Poster.'

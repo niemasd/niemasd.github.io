@@ -3,7 +3,6 @@ title: "An analysis of clinical and geographical metadata of over 75,000 records
 collection: publications
 pubtype: preprint
 permalink: /publication/2020-09-23-gisaid-analysis
-excerpt: 'An analysis of clinical and geographical metadata of over 75,000 records in the GISAID COVID-19 database'
 date: 2020-09-23
 venue: 'medRxiv'
 paperurl: 'https://doi.org/10.1101/2020.09.22.20199497'

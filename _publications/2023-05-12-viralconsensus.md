@@ -3,7 +3,6 @@ title: "ViralConsensus: A fast and memory-efficient tool for calling viral conse
 collection: publications
 pubtype: paper
 permalink: /publication/2023-05-12-viralconsensus
-excerpt: 'ViralConsensus: A fast and memory-efficient tool for calling viral consensus genome sequences directly from read alignment data'
 date: 2023-05-12
 venue: 'Bioinformatics'
 paperurl: 'https://doi.org/10.1093/bioinformatics/btad317'

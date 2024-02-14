@@ -3,7 +3,6 @@ title: "Ultra Efficient Acceleration for De Novo Genome Assembly via Near-Memory
 collection: publications
 pubtype: paper
 permalink: /publication/2021-09-26-de-novo-dbg-assembly-acceleration
-excerpt: 'Ultra Efficient Acceleration for De Novo Genome Assembly via Near-Memory Computing'
 date: 2021-09-26
 venue: 'International Conference on Parallel Architectures and Compilation Techniques (PACT) 2021'
 paperurl: 'https://doi.org/10.1109/PACT52795.2021.00022'

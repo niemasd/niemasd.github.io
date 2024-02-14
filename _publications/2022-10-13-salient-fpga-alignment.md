@@ -3,7 +3,6 @@ title: "SALIENT: Ultra-Fast FPGA-based Short Read Alignment"
 collection: publications
 pubtype: paper
 permalink: /publication/2022-10-13-salient-fpga-alignment
-excerpt: 'SALIENT: Ultra-Fast FPGA-based Short Read Alignment'
 date: 2022-10-13
 venue: 'International Conference on Field Programmable Technology (FPT) 2022'
 citation: 'Khaleghi B, Zhang T, Martino C, Armstrong G, Akel A, Curewitz K, Eno J, Eilert S, Knight R, <b>Moshiri N</b>, Rosing T (2022). "SALIENT: Ultra-Fast FPGA-based Short Read Alignment." <i>International Conference on Field Programmable Technology (FPT) 2022</i>. <a href="https://doi.org/10.1109/ICFPT56656.2022.9974548" target="_blank">doi:10.1109/ICFPT56656.2022.9974548</a>'

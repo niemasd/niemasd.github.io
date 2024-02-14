@@ -3,7 +3,6 @@ title: "FPGA Acceleration of Protein Back-Translation and Alignment"
 collection: publications
 pubtype: paper
 permalink: /publication/2021-02-01-fpga-protein-back-translation
-excerpt: 'FPGA Acceleration of Protein Back-Translation and Alignment'
 date: 2021-02-01
 venue: 'IEEE/ACM Design Automation and Test in Europe Conference (DATE) 2021'
 paperurl: 'https://doi.org/10.23919/DATE51398.2021.9474103'

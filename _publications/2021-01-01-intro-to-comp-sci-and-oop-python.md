@@ -3,7 +3,6 @@ title: "Introduction to Computer Science and Object-Oriented Programming: Python
 collection: publications
 pubtype: textbook
 permalink: /publication/2021-01-01-intro-to-comp-sci-and-oop-python
-excerpt: 'Introduction to Computer Science and Object-Oriented Programming: Python'
 date: 2021-01-01
 venue: 'Stepik'
 paperurl: 'https://stepik.org/56730'

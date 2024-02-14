@@ -3,7 +3,6 @@ title: "A linear-time algorithm to sample the dual-birth model"
 collection: publications
 pubtype: preprint
 permalink: /publication/2017-12-01-dual-birth-linear-time
-excerpt: 'A linear-time algorithm to sample the dual-birth model'
 date: 2017-12-01
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/226423'

@@ -3,7 +3,6 @@ title: "Genetic tracing of market wildlife and viruses at the epicenter of the C
 collection: publications
 pubtype: preprint
 permalink: /publication/2023-09-15-genetic-tracing-COVID-epicenter
-excerpt: 'Genetic tracing of market wildlife and viruses at the epicenter of the COVID-19 pandemic'
 date: 2023-09-15
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/2023.09.13.557637'

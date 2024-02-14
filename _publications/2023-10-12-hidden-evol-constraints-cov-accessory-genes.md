@@ -3,7 +3,6 @@ title: "Hidden evolutionary constraints dictate the retention of coronavirus acc
 collection: publications
 pubtype: preprint
 permalink: /publication/2023-10-12-hidden-evol-constraints-cov-accessory-genes
-excerpt: 'Hidden evolutionary constraints dictate the retention of coronavirus accessory genes'
 date: 2023-10-12
 venue: 'bioRxiv'
 paperurl: 'https://doi.org/10.1101/2023.10.12.561935'

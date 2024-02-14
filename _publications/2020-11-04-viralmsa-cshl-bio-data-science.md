@@ -3,7 +3,6 @@ title: "ViralMSA: massively scalable reference-guided multiple sequence alignmen
 collection: publications
 pubtype: conference
 permalink: /publication/2020-11-04-viralmsa-cshl-bio-data-science
-excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2020-11-04
 venue: 'Cold Spring Harbor Laboratory (CSHL) Biological Data Science Meeting 2020'
 paperurl: 'https://meetings.cshl.edu/posters/data20/data2020_AbstractBookVirtual.pdf'

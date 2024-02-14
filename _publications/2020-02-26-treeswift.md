@@ -3,7 +3,6 @@ title: "TreeSwift: A massively scalable Python tree package"
 collection: publications
 pubtype: paper
 permalink: /publication/2020-02-26-treeswift
-excerpt: 'TreeSwift: A massively scalable Python tree package'
 date: 2020-02-26
 venue: 'SoftwareX'
 paperurl: 'https://doi.org/10.1016/j.softx.2020.100436'

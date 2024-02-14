@@ -3,7 +3,6 @@ title: "Learn Programming: Python – Retro"
 collection: publications
 pubtype: textbook
 permalink: /publication/2021-02-18-learn-programming-python-retro
-excerpt: 'An interactive text-based game for learning and practicing how to program in Python.'
 date: 2021-02-18
 venue: 'Steam'
 paperurl: 'https://store.steampowered.com/app/1536770'

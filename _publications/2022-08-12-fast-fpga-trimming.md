@@ -3,7 +3,6 @@ title: "FAST: FPGA-based Acceleration of Genomic Sequence Trimming"
 collection: publications
 pubtype: paper
 permalink: /publication/2022-08-12-fast-fpga-trimming
-excerpt: 'FAST: FPGA-based Acceleration of Genomic Sequence Trimming'
 date: 2022-08-12
 venue: 'IEEE Biomedical Circuits and Systems Conference (BioCAS) 2022'
 citation: 'Khaleghi B, Zhang T, Shao N, Akel A, Curewitz K, Eno J, Eilert S, <b>Moshiri N</b>, Rosing T (2022). "FAST: FPGA-based Acceleration of Genomic Sequence Trimming." <i>IEEE Biomedical Circuits and Systems Conference (BioCAS) 2022</i>. <a href="https://doi.org/10.1109/BioCAS54905.2022.9948621" target="_blank">doi:10.1109/BioCAS54905.2022.9948621</a>'

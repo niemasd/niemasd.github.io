@@ -3,7 +3,6 @@ title: "ViralMSA: massively scalable reference-guided multiple sequence alignmen
 collection: publications
 pubtype: conference
 permalink: /publication/2020-07-19-viralmsa-bcc
-excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2020-07-19
 venue: 'Bioinformatics Community Conference (BCC) 2020'
 paperurl: 'https://sched.co/cvBf'

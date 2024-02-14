@@ -3,7 +3,6 @@ title: "SEPIA: simulation-based evaluation of prioritization algorithms"
 collection: publications
 pubtype: conference
 permalink: /publication/2020-05-11-sepia-hiv-dynamics
-excerpt: 'SEPIA: simulation-based evaluation of prioritization algorithms'
 date: 2020-05-11
 venue: '27th International HIV Dynamics & Evolution'
 citation: 'Almaraz K, Jang T, Lewis M, Ngo T, Song M, <b>Moshiri N</b> (2020). "SEPIA: simulation-based evaluation of prioritization algorithms." <i>27th International HIV Dynamics & Evolution</i>. Talk.'

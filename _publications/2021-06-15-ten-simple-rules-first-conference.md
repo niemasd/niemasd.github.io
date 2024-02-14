@@ -3,7 +3,6 @@ title: "Ten simple rules for attending your first conference"
 collection: publications
 pubtype: paper
 permalink: /publication/2021-06-15-ten-simple-rules-first-conference
-excerpt: 'Ten simple rules for attending your first conference'
 date: 2021-06-15
 venue: 'PLOS Computational Biology'
 paperurl: 'https://doi.org/10.1371/journal.pcbi.1009133'

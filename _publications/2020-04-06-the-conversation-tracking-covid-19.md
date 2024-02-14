@@ -3,7 +3,6 @@ title: "Here’s how scientists are tracking the genetic evolution of COVID-19"
 collection: publications
 pubtype: paper
 permalink: /publication/2020-04-06-the-conversation-tracking-covid-19
-excerpt: 'Here’s how scientists are tracking the genetic evolution of COVID-19'
 date: 2020-04-06
 venue: 'The Conversation'
 paperurl: 'https://theconversation.com/heres-how-scientists-are-tracking-the-genetic-evolution-of-covid-19-134201'

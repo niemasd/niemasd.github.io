@@ -3,7 +3,6 @@ title: "Optimizing high-performance cloud computing to enable real-time high-thr
 collection: publications
 pubtype: conference
 permalink: /publication/2021-05-05-hpc-sars-cov-2-dynamics
-excerpt: 'Optimizing high-performance cloud computing to enable real-time high-throughput SARS-CoV-2 whole genome sequence analysis'
 date: 2021-05-05
 venue: '28th International Dynamics & Evolution of Human Viruses'
 citation: '<b>Moshiri N</b> (2021). "Optimizing high-performance cloud computing to enable real-time high-throughput SARS-CoV-2 whole genome sequence analysis." <i>28th International Dynamics & Evolution of Human Viruses</i>. Poster.'

@@ -3,7 +3,6 @@ title: "ViralMSA: massively scalable reference-guided multiple sequence alignmen
 collection: publications
 pubtype: conference
 permalink: /publication/2022-04-22-viralmsa-sd-epi-exchange
-excerpt: 'ViralMSA: massively scalable reference-guided multiple sequence alignment of viral genomes'
 date: 2022-04-22
 venue: 'San Diego Epidemiology Research Exchange Conference 2022'
 paperurl: 'https://docs.google.com/document/d/e/2PACX-1vTufgGn-94tzBuzs1MXideQPxZApXW0EvSHIyfKQX8xdXPvwVo1H3C4WbWSgmp67BbERnjzc_tkYqdm/pub'

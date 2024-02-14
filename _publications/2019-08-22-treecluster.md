@@ -3,7 +3,6 @@ title: "TreeCluster: Clustering biological sequences using phylogenetic trees"
 collection: publications
 pubtype: paper
 permalink: /publication/2019-08-22-treecluster
-excerpt: 'TreeCluster: Clustering biological sequences using phylogenetic trees'
 date: 2019-08-22
 venue: 'PLoS ONE'
 paperurl: 'https://doi.org/10.1371/journal.pone.0221068'

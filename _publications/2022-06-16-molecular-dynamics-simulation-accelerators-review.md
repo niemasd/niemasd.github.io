@@ -3,7 +3,6 @@ title: "Accelerators for Classical Molecular Dynamics Simulations of Biomolecule
 collection: publications
 pubtype: paper
 permalink: /publication/2022-06-16-molecular-dynamics-simulation-accelerators-review
-excerpt: 'Accelerators for Classical Molecular Dynamics Simulations of Biomolecules'
 date: 2022-06-16
 venue: 'Journal of Chemical Theory and Computation'
 paperurl: 

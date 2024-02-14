@@ -3,7 +3,6 @@ title: "HyperSpec: Ultrafast Mass Spectra Clustering in Hyperdimensional Space"
 collection: publications
 pubtype: paper
 permalink: /publication/2023-05-11-hyperspec
-excerpt: 'HyperSpec: Ultrafast Mass Spectra Clustering in Hyperdimensional Space'
 date: 2023-05-11
 venue: 'Journal of Proteome Research'
 paperurl: 'https://doi.org/10.1021/acs.jproteome.2c00612'

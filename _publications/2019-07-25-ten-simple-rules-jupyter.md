@@ -3,7 +3,6 @@ title: "Ten simple rules for writing and sharing computational analyses in Jupyt
 collection: publications
 pubtype: paper
 permalink: /publication/2019-07-25-ten-simple-rules-jupyter
-excerpt: 'Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks'
 date: 2019-07-25
 venue: 'PLoS Computational Biology'
 paperurl: 'https://doi.org/10.1371/journal.pcbi.1007007'

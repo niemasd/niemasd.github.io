@@ -3,7 +3,6 @@ title: "A Two-State Model of Tree Evolution and Its Applications to <i>Alu</i> R
 collection: publications
 pubtype: paper
 permalink: /publication/2018-05-01-dual-birth-model
-excerpt: 'A Two-State Model of Tree Evolution and Its Applications to <i>Alu</i> Retrotransposition'
 date: 2018-05-01
 venue: 'Systematic Biology'
 paperurl: 'https://doi.org/10.1093/sysbio/syx088'
