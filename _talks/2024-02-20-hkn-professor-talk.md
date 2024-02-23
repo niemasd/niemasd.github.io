@@ -1,5 +1,5 @@
 ---
-title: "Chalk Talk"
+title: "Professor Talk"
 collection: talks
 type: "Talk"
 talktype: "campus"
