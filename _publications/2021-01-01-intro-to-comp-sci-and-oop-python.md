@@ -4,9 +4,9 @@ collection: publications
 pubtype: textbook
 permalink: /publication/2021-01-01-intro-to-comp-sci-and-oop-python
 date: 2021-01-01
-venue: 'Stepik'
-paperurl: 'https://stepik.org/56730'
-citation: 'Mansuri S, <b>Moshiri N</b> (2021). "Introduction to Computer Science and Object-Oriented Programming: Python." <i>Stepik</i>. <a href="https://stepik.org/56730" target="_blank">https://stepik.org/56730</a>'
+venue: 'Cogniterra (Stepik)'
+paperurl: 'https://cogniterra.org/326'
+citation: 'Mansuri S, <b>Moshiri N</b> (2021). "Introduction to Computer Science and Object-Oriented Programming: Python." <i>Cogniterra (Stepik)</i>. <a href="https://cogniterra.org/326" target="_blank">https://cogniterra.org/326</a>'
 ---
 This interactive textbook was written with the intention of introducing beginners to the wonders of the world of Computer Science! The course assumes no prerequisite knowledge, and we hope that, by the end of the course, you will have learned how to think computationally, how to write programs in Python, and how to design classes using the principles of Object-Oriented Programming (OOP).
 
