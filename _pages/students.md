@@ -61,6 +61,13 @@ author_profile: true
       {% endif %}
       {% assign tmp = tmp | append: ' (Advisor: ' | append: tmp2 | append: ')' %}
     {% endif %}
+    {% if student.coadvisor %}
+      {% assign tmp2 = student.coadvisor %}
+      {% if student.coadvisorwebsite %}
+        {% assign tmp2 = '<a href="' | append: student.coadvisorwebsite | append: '" target="_blank">' | append: tmp2 | append: '</a>' %}
+      {% endif %}
+      {% assign tmp = tmp | append: ' (Co-Advisor: ' | append: tmp2 | append: ')' %}
+    {% endif %}
     {% assign tmp = tmp | append: ' (' | append: student.startyear %}
     {% if tmpyear != student.startyear %}
       {% assign tmp = tmp | append: '–' | append: tmpyear %}
