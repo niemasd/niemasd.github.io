@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2024-04-06-diamondhacks
-venue: "DiamondHacks"
+venue: "DiamondHacks 2024"
 date: 2024-04-06
 location: "La Jolla, California"
 ---
