@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter "niemasd"
+  username               : #&twitter "niemasd"
 facebook:
   username               :
   app_id                 :
