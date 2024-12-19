@@ -6,5 +6,5 @@ collection: teaching
 startdate: '2021-07-01'
 enddate: 'Present'
 instructors: '<b>Niema Moshiri</b>, Pavel Pevzner, Mikhail Rayko, Vikram Sirupurapu, and Sabeel Mansuri'
-courseurl: 'https://www.coursera.org/learn/hacking-covid-19--course-3-unraveling-origins-of-covid-19'
+courseurl: 'https://www.coursera.org/learn/covid-19-genome-annotation'
 ---
