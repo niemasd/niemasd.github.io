@@ -6,5 +6,5 @@ role: "Ph.D. Student"
 advisor: "Joel Wertheim"
 advisorwebsite: "https://profiles.ucsd.edu/joel.wertheim"
 startyear: '2021'
-endyear: 'Present'
+endyear: '2024'
 ---
