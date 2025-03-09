@@ -2,11 +2,11 @@
 title: "CompactTree: A lightweight header-only C++ library for ultra-large phylogenetics"
 collection: publications
 pubtype: preprint
-permalink: /publication/2025-03-03-compacttree
-date: 2025-03-03
+permalink: /publication/2025-03-07-compacttree
+date: 2025-03-07
 venue: 'Gigabyte'
-paperurl: 'https://doi.org/10.1101/2024.07.15.603593'
-citation: '<b>Moshiri N</b> (2025). "CompactTree: A lightweight header-only C++ library for ultra-large phylogenetics." <i>Gigabyte</i>. In Press. <a href="https://doi.org/10.1101/2024.07.15.603593" target="_blank">Preprint doi:10.1101/2024.07.15.603593</a>'
+paperurl: 'https://doi.org/10.46471/gigabyte.152'
+citation: '<b>Moshiri N</b> (2025). "CompactTree: A lightweight header-only C++ library for ultra-large phylogenetics." <i>Gigabyte</i>. <a href="https://doi.org/10.46471/gigabyte.152" target="_blank">doi:10.46471/gigabyte.152</a>'
 ---
 **Motivation:** The study of viral and bacterial species requires the ability to load and traverse ultra-large phylogenies with tens of millions of tips, but existing tree libraries struggle to scale to these sizes.
 
