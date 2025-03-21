@@ -1,7 +1,7 @@
 ---
 title: "CompactTree: A lightweight header-only C++ library for ultra-large phylogenetics"
 collection: publications
-pubtype: preprint
+pubtype: paper
 permalink: /publication/2025-03-07-compacttree
 date: 2025-03-07
 venue: 'Gigabyte'
