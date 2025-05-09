@@ -2,10 +2,10 @@
 title: "Phylogeographic and genetic network assessment of COVID-19 mitigation protocols on SARS-CoV-2 transmission in university campus residences"
 collection: publications
 pubtype: paper
-permalink: /publication/2025-03-20-phylogeographic-genetic-network-COVID-mitigation-university-residences
-date: 2025-03-20
+permalink: /publication/2025-05-09-phylogeographic-genetic-network-COVID-mitigation-university-residences
+date: 2025-05-09
 venue: 'eBioMedicine'
-citation: 'Wertheim JO, Vasylyeva TI, Wood RJ, Cantrell K, Piña Contreras S, Feldheim A, Goyal R, Havens JL, Knight R, Laurent LC, <b>Moshiri N</b>, Neuhard R, Sathe S, Satterlund A, Scioscia A, Song AY, Schooley RT, Anderson CM, Martin NK (2025). "Phylogeographic and genetic network assessment of COVID-19 mitigation protocols on SARS-CoV-2 transmission in university campus residences." <i>eBioMedicine</i>. Accepted in Principle.'
+citation: 'Wertheim JO, Vasylyeva TI, Wood RJ, Cantrell K, Piña Contreras S, Feldheim A, Goyal R, Havens JL, Knight R, Laurent LC, <b>Moshiri N</b>, Neuhard R, Sathe S, Satterlund A, Scioscia A, Song AY, Schooley RT, Anderson CM, Martin NK (2025). "Phylogeographic and genetic network assessment of COVID-19 mitigation protocols on SARS-CoV-2 transmission in university campus residences." <i>eBioMedicine</i>. 116:105729. <a href="https://doi.org/10.1016/j.ebiom.2025.105729" target="_blank">doi:10.1016/j.ebiom.2025.105729</a>'
 ---
 **Background.** Congregate living provided an ideal setting for SARS-CoV-2 transmission in which many outbreaks and superspreading events occurred. To avoid large outbreaks, universities turned to remote operations during the initial COVID-19 pandemic waves in 2020 and 2021. In late-2021, the University of California San Diego (UC San Diego) facilitated the return of students to campus with comprehensive testing, vaccination, masking, wastewater surveillance, and isolation policies.
 
