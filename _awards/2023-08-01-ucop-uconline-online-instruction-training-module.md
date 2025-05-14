@@ -6,6 +6,6 @@ startdate: 2023-08-01
 enddate: 2024-07-31
 awarder: 'UC Online, University of California Office of the President'
 amount: '$46,000'
-awardurl: 'https://www.ucop.edu/educational-innovations-services/programs-and-initiatives/ilti/about.html'
+awardurl: 'https://www.ucop.edu/uc-online/index.html'
 team: '<b>Niema Moshiri</b> (PI), Karen Flammer (co-PI)'
 ---
