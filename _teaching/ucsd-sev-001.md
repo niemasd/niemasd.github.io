@@ -1,5 +1,5 @@
 ---
-title: "Seventh College: First Year Experience"
+title: "First Year Experience (Seventh College)"
 coursenum: 'SEV 001'
 location: 'ucsd'
 collection: teaching
