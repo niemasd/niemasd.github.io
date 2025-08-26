@@ -1,11 +1,11 @@
 ---
 title: "Epigenetic motifs distinguishing endogenous from exogenous retroviral integrants"
 collection: publications
-pubtype: preprint
-permalink: /publication/2025-04-30-epigenetic-motifs-endogenous-exogenous-retroviral-integrants
-date: 2025-04-30
-venue: 'bioRxiv'
+pubtype: paper
+permalink: /publication/2025-08-26-epigenetic-motifs-endogenous-exogenous-retroviral-integrants
+date: 2025-08-26
+venue: 'Journal of Virology'
 paperurl: 'https://doi.org/10.1101/2025.04.30.651506'
-citation: 'LaMere S, Xiong H, Wang W, LaMere B, <b>Moshiri N</b> (2025). "Epigenetic motifs distinguishing endogenous from exogenous retroviral integrants." <i>bioRxiv</i>. <a href="https://doi.org/10.1101/2025.04.30.651506" target="_blank">doi:10.1101/2025.04.30.651506</a>'
+citation: 'LaMere S, Xiong H, Wang W, LaMere B, <b>Moshiri N</b> (2025). "Epigenetic motifs distinguishing endogenous from exogenous retroviral integrants." <i>Journal of Virology</i>. In Press. <a href="https://doi.org/10.1101/2025.04.30.651506" target="_blank"> Preprint doi:10.1101/2025.04.30.651506</a>'
 ---
 Retroviruses are subject to epigenetic regulation by the host genome after integrating, similar to vertebrate genes. However, their patterns of integration, and therefore their likely epigenetic regulation, differ between classes. Beta- and gammaretroviruses are two classes of simple retroviruses known to integrate near promoters, and these viruses have a strong tendency to infect germ cells and endogenize. While ancient endogenous retroviruses are often easy to spot due to mutations rendering them non-functional, more recent integrants can maintain the capacity for full viral production, making it sometimes difficult to discern which integrants are exogenous and likely more clinically relevant. Because endogenous retroviruses generally spend a longer time integrated and subject to host epigenetic regulation as proviral DNA, we hypothesized we could show these integrants exhibit sequence differences from their exogenous counterparts, likely resulting from DNA methylation and histone modifications, and that endogenous retroviruses would generally show habituation to host promoters. Therefore, we have used statistical analyses of publicly available sequence data to demonstrate that endogenous retroviral variants exhibit decreased CpG dinucleotide and trinucleotide frequencies over time, and that they will show evidence for loss of histone modification motifs associated with actively transcribed genes. Close examination of these patterns provides further clues for distinguishing endogenous and exogenous retroviral variants, potentially aiding in the study of retroviruses in less well-characterized wildlife species where retroviral outbreaks are responsible for significant disease and decline in populations.
