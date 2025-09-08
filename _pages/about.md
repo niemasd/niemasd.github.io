@@ -15,6 +15,7 @@ redirect_from:
 <li><a href="https://bioinformatics.ucsd.edu/" target="_blank">Bioinformatics and Systems Biology Graduate Program</a></li>
 <li><a href="http://dbmi.ucsd.edu/" target="_blank">Department of Biomedical Informatics</a> (<a href="https://medschool.ucsd.edu/" target="_blank">UCSD School of Medicine</a>)</li>
 <li><a href="https://prepare.ucsd.edu/" target="_blank">Pandemic Response to Emerging Pathogens, Antimicrobial Resistance and Equity (PREPARE) Institute</a></li>
+<li><a href="https://cfar.ucsd.edu/" target="_blank">San Diego Center for AIDS Research (SD CFAR)</a></li>
 </ul>
 
 <p style="font-size:0.9em">In my free time, I love playing video games (JRPGs are my favorites). If you're curious about what I've been playing, you can find an album with my screenshots <a href="https://photos.app.goo.gl/ShMAurvyzm7V7m2n9" target="_blank">here</a>.</p>
