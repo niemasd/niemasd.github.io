@@ -9,12 +9,16 @@ redirect_from:
 
 {% include base_path %}
 
-<center><a href="#academic-positions">Academic Positions</a> – <a href="#education">Education</a> – <a href="#editor-reviewer">Editor/Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a> – <a href="#outreach">Outreach</a></center>
+<center><a href="#positions">Positions</a> – <a href="#education">Education</a> – <a href="#editor-reviewer">Editor/Reviewer</a> – <a href="#institutional-service">Institutional Service</a> – <a href="#organizations">Organizations</a> – <a href="#outreach">Outreach</a></center>
 
 <p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions, education history, reviewer history, institutional service, and organization affiliations below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
 
-<h2 id="academic-positions">Academic Positions</h2>
+<h2 id="positions">Positions</h2>
 <ul>
+  <li><b><u>Consultant (2025–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
+  </ul>
   <li><b><u>Associate Teaching Professor (2023–Present)</u></b></li>
   <ul style="font-size:0.75em">
     <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
