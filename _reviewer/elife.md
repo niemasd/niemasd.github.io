@@ -1,5 +1,5 @@
 ---
-title: "eLife (Guest Editor)"
+title: "eLife (Guest Reviewing Editor)"
 reviewertype: journal
 venueurl: 'https://elifesciences.org'
 ---
