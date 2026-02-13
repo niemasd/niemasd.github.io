@@ -1,5 +1,5 @@
 ---
-title: "Scientific Reports"
+title: "Scientific Reports (Editorial Board Member)"
 reviewertype: journal
-venueurl: 'https://www.nature.com/srep/'
+venueurl: 'https://www.nature.com/srep'
 ---
