@@ -14,11 +14,8 @@ redirect_from:
 <p style="font-size:0.9em">You can download a PDF of my CV <a href="https://github.com/niemasd/curriculum-vitae/releases/latest/download/main.pdf" target="_blank">here</a>. You can find my academic positions, education history, reviewer history, institutional service, and organization affiliations below, and you can find all other information via the links above (e.g. "Awards", "Publications", etc.).</p>
 
 <h2 id="positions">Positions</h2>
+<h3 id="positions-academic">Academic</h3>
 <ul>
-  <li><b><u>Consultant (2025–Present)</u></b></li>
-  <ul style="font-size:0.75em">
-    <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
-  </ul>
   <li><b><u>Associate Teaching Professor (2023–Present)</u></b></li>
   <ul style="font-size:0.75em">
     <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
@@ -28,6 +25,18 @@ redirect_from:
   <ul style="font-size:0.75em">
     <li><a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a></li>
     <li><a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a></li>
+  </ul>
+</ul>
+
+<h3 id="positions-non-academic">Non-Academic</h3>
+<ul>
+  <li><b><u>Consultant (2025–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
+  </ul>
+  <li><b><u>Machine Learning Consultant (2025–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://www.blizzard.com/" target="_blank">Blizzard Entertainment</a></li>
   </ul>
 </ul>
 
