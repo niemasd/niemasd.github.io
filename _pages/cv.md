@@ -30,13 +30,13 @@ redirect_from:
 
 <h3 id="positions-non-academic">Non-Academic</h3>
 <ul>
-  <li><b><u>Consultant (2025–Present)</u></b></li>
-  <ul style="font-size:0.75em">
-    <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
-  </ul>
   <li><b><u>Machine Learning Consultant (2025–Present)</u></b></li>
   <ul style="font-size:0.75em">
     <li><a href="https://www.blizzard.com/" target="_blank">Blizzard Entertainment</a></li>
+  </ul>
+  <li><b><u>Consultant (2025–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
   </ul>
 </ul>
 
