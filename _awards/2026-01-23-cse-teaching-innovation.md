@@ -1,5 +1,5 @@
 ---
-title: "Outstanding Teaching Innovation Award — Computer Science & Engineering"
+title: "Outstanding Teaching Innovation Award"
 collection: awards
 awardtype: honor
 startdate: 2026-01-23
