@@ -2,7 +2,7 @@
 firstname: "Daniel"
 lastname: "Ji"
 website: "https://www.linkedin.com/in/danielji26"
-role: "Undergraduate Researcher"
+role: "M.S. Student, Undergraduate Researcher"
 startyear: '2022'
-endyear: 'Present'
+endyear: '2026'
 ---
