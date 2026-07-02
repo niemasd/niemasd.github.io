@@ -1,5 +1,5 @@
 ---
 title: "Patterns"
 reviewertype: journal
-venueurl: 'https://www.cell.com/patterns'
+venueurl: 'https://www.cell.com/patterns/'
 ---
