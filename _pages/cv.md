@@ -34,6 +34,10 @@ redirect_from:
   <ul style="font-size:0.75em">
     <li><a href="https://sonyinteractive.com/" target="_blank">Sony Interactive Entertainment</a></li>
   </ul>
+  <li><b><u>Program Specialist (2023–Present)</u></b></li>
+  <ul style="font-size:0.75em">
+    <li><a href="https://cdc.gov/" target="_blank">Centers for Disease Control and Prevention (NCHHSTP/DHP/DRB)</a></li>
+  </ul>
   <li><b><u>Machine Learning Consultant (2025–2026)</u></b></li>
   <ul style="font-size:0.75em">
     <li><a href="https://www.blizzard.com/" target="_blank">Blizzard Entertainment</a></li>
