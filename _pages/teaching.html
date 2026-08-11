@@ -13,7 +13,7 @@ author_profile: true
 
 <h2 id="online">Online Courses</h2>
 {% assign online_courses = site.teaching | where: 'location', 'online' | sort_natural: 'startdate' %}
-<ul>{% for post in online_courses reversed %}
+<ol reversed>{% for post in online_courses reversed %}
   <li>
     {% assign tmp = post.title %}
     {% if post.coursenum %}
@@ -28,7 +28,7 @@ author_profile: true
       <li><u>Duration</u>: {{ post.startdate }} to {{ post.enddate }}</li>
     </ul>
   </li>
-{% endfor %}</ul>
+{% endfor %}</ol>
 
 <center>— <a href="#top">Top</a> —</center>
 
