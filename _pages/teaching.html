@@ -5,20 +5,11 @@ permalink: /teaching/
 author_profile: true
 ---
 
-<center><a href="#textbooks">Textbooks</a> – <a href="#online">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
+<a href="#online">Online Courses</a> – <a href="#ucsd">UC San Diego</a></center>
 
 <p style="font-size:0.9em">You can find all of my teaching evaluations in this <a href="https://drive.google.com/drive/folders/1ZCA96Q9h-okc3phkJq-fK9s3W_cdt00M?usp=sharing" target="_blank">Google Drive folder</a>.</p>
 
 {% include base_path %}
-
-<h2 id="textbooks">Textbooks</h2>
-<ul>{% for post in site.publications reversed %}
-  {% if post.pubtype == 'textbook' %}
-    {% include archive-single-cv.html %}
-  {% endif %}
-{% endfor %}</ul>
-
-<center>— <a href="#top">Top</a> —</center>
 
 <h2 id="online">Online Courses</h2>
 {% assign online_courses = site.teaching | where: 'location', 'online' | sort_natural: 'startdate' %}
