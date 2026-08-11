@@ -1,7 +1,7 @@
 ---
 title: "Learn Programming: Python – Remake"
 collection: publications
-pubtype: textbook
+pubtype: book_game
 permalink: /publication/2022-02-21-learn-programming-python-remake
 date: 2022-02-21
 venue: 'Steam'

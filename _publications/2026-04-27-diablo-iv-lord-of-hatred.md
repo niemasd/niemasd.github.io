@@ -1,14 +1,14 @@
 ---
-title: "Learn Programming: Python – Retro"
+title: "Diablo IV: Lord of Hatred"
 collection: publications
 pubtype: book_game
-permalink: /publication/2021-02-18-learn-programming-python-retro
-date: 2021-02-18
-venue: 'Steam'
-paperurl: 'https://store.steampowered.com/app/1536770'
-citation: '<b>Moshiri N</b> (2021). "Learn Programming: Python – Retro." <i>Steam</i>. <a href="https://store.steampowered.com/app/1536770" target="_blank">Steam App: 1536770</a>'
+permalink: /publication/2026-04-27-diablo-iv-lord-of-hatred
+date: 2026-04-27
+venue: 'Blizzard Entertainment'
+paperurl: 'https://www.mobygames.com/game/259985/diablo-iv-lord-of-hatred'
+citation: 'Blizzard Entertainment (2026). "Diablo IV: Lord of Hatred." <i>Blizzard Entertainment</i>. <a href="https://www.mobygames.com/game/259985/diablo-iv-lord-of-hatred" target="_blank">Moby ID: 259985</a>'
 ---
-Welcome to **Learn Programming: Python!** The goal of this game is to introduce beginners to the wonders of the world of Computer Science! The game has have two core components:
+Welcome to **Learn Programming: Python - Remake!** The goal of this game is to introduce beginners to the wonders of the world of Computer Science! The game has have two core components:
 
 * **Lessons:** An interactive course to teach you how to think computationally, how to write programs in Pythons, and how to design classes using the principles of Object-Oriented Programming (OOP).
 * **Challenges:** Multiple choice, short answer, and math problems to test your understanding of Python, computational thinking, and OOP. These challenges are embedded throughout the Lessons, so you can practice your understanding of concepts in real-time under an Active Learning framework.

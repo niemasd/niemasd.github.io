@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Computer Science and Object-Oriented Programming: Python"
 collection: publications
-pubtype: textbook
+pubtype: book_game
 permalink: /publication/2021-01-01-intro-to-comp-sci-and-oop-python
 date: 2021-01-01
 venue: 'Cogniterra (Stepik)'

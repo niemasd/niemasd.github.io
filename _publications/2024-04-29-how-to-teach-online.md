@@ -1,7 +1,7 @@
 ---
 title: "How to Teach Online"
 collection: publications
-pubtype: textbook
+pubtype: book_game
 permalink: /publication/2024-04-29-how-to-teach-online
 date: 2024-04-29
 venue: 'GitHub Pages'

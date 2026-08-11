@@ -1,7 +1,7 @@
 ---
 title: "Design and Analysis of Data Structures"
 collection: publications
-pubtype: textbook
+pubtype: book_game
 permalink: /publication/2018-05-08-design-and-analysis-of-data-structures
 date: 2018-05-08
 venue: 'Amazon KDP'

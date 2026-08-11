@@ -1,7 +1,7 @@
 ---
 title: "Data Structures"
 collection: publications
-pubtype: textbook
+pubtype: book_game
 permalink: /publication/2016-09-01-data-structures
 date: 2016-09-01
 venue: 'Cogniterra (Stepik)'
