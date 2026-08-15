@@ -9,4 +9,4 @@ date: 2026-10-09
 location: "Santa Barbara, California"
 ---
 
-I was invited to give a talk at the Robert Mehrabian College of Engineering at UC Santa Barbara titled <i>A scalable approach for detecting exam similarity</i>.
+I was invited to give a talk at the <a href="https://engineering.ucsb.edu/" target="_blank">Robert Mehrabian College of Engineering</a> at <a href="https://ucsb.edu/" target="_blank">UC Santa Barbara</a> titled <i>A scalable approach for detecting exam similarity</i>.
