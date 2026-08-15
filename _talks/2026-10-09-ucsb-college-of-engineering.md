@@ -4,9 +4,9 @@ collection: talks
 type: "Talk"
 talktype: "invited"
 permalink: /talks/2026-10-09-ucsb-college-of-engineering
-venue: "College of Engineering, UC Santa Barbara"
+venue: "Robert Mehrabian College of Engineering, UC Santa Barbara"
 date: 2026-10-09
 location: "Santa Barbara, California"
 ---
 
-I was invited to give a talk at the UC Santa Barbara College of Engineering titled <i>A scalable approach for detecting exam similarity</i>.
+I was invited to give a talk at the Robert Mehrabian College of Engineering at UC Santa Barbara titled <i>A scalable approach for detecting exam similarity</i>.
