@@ -12,4 +12,4 @@ citation: '<b>Moshiri N</b> (2026). "MultiVirusConsensus: An accurate and effici
 
 **Results:** MultiVirusConsensus (MVC) is an accurate and efficient open-source pipeline for identification and consensus sequence generation of multiple viruses from mixed samples. It utilizes the memory-efficient ViralConsensus tool to simultaneously perform consensus sequence calling on all viruses of interest (1) completely in parallel, and (2) by piping datastreams between tools without writing/reading intermediate files (thus eliminating slowdowns related to slow disk accesses).
 
-**Availability:** MultiVirusConsensus (MVC) is freely available as an open-source software project at: https://github.com/niemasd/MultiVirusConsensus
+**Availability:** MultiVirusConsensus (MVC) is freely available as an open-source software project at: [https://github.com/niemasd/MultiVirusConsensus](https://github.com/niemasd/MultiVirusConsensus)
