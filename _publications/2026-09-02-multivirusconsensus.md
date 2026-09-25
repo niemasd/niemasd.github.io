@@ -2,11 +2,11 @@
 title: "MultiVirusConsensus: An accurate and efficient open-source pipeline for identification and consensus sequence generation of multiple viruses from mixed samples"
 collection: publications
 pubtype: paper
-permalink: /publication/2026-08-28-multivirusconsensus
-date: 2026-08-28
+permalink: /publication/2026-09-02-multivirusconsensus
+date: 2026-09-02
 venue: 'Bioinformatics Advances'
 paperurl: 'https://doi.org/10.1093/bioadv/vbag256'
-citation: '<b>Moshiri N</b> (2026). "MultiVirusConsensus: An accurate and efficient open-source pipeline for identification and consensus sequence generation of multiple viruses from mixed samples." <i>Bioinformatics Advances</i>. vbag256. <a href="https://doi.org/10.1093/bioadv/vbag256" target="_blank">doi:10.1093/bioadv/vbag256</a>'
+citation: '<b>Moshiri N</b> (2026). "MultiVirusConsensus: An accurate and efficient open-source pipeline for identification and consensus sequence generation of multiple viruses from mixed samples." <i>Bioinformatics Advances</i>. 6(1):vbag256. <a href="https://doi.org/10.1093/bioadv/vbag256" target="_blank">doi:10.1093/bioadv/vbag256</a>'
 ---
 **Motivation:** Viral surveillance from mixed samples (e.g. wastewater) has become critical in public health efforts to track and contain pathogens. However, existing open-source bioinformatics tools for viral consensus sequence generation are optimized for individual viruses (rather than multiple potential viruses of interest).
 
