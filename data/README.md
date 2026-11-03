@@ -1,0 +1,1 @@
+This directory contains all of the data for the website (e.g. papers, students, etc.). Each data entry is a folder that only contains files, and each file it contains represents its metadata attributes. Each data type is a folder that contains at least one other folder (and nested folders represent nested data types).

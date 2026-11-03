@@ -167,7 +167,7 @@ def parse_args():
 def load_data(path):
     data = dict()
     for p in path.rglob('*'):
-        if not p.is_file():
+        if not p.is_file() or p.stem.strip().upper() == 'README':
             continue
         curr = data; parts = p.relative_to(path).parts
         for part_ind, part in enumerate(parts):
