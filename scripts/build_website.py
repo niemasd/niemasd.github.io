@@ -69,14 +69,10 @@ def build_home() -> str:
     calendar_html = ''
     if google_calendar_url is not None:
         parsed_url = urlsplit(google_calendar_url)
-        if (
-            parsed_url.scheme != "https"
-            or parsed_url.hostname != "calendar.google.com"
-            or parsed_url.path != "/calendar/embed"
-        ):
+        if parsed_url.scheme != "https" or parsed_url.hostname != "calendar.google.com" or parsed_url.path != "/calendar/embed":
             raise ValueError("site/google_calendar_url.txt must contain a Google Calendar embed URL (https://calendar.google.com/calendar/embed?...).")
         calendar_html = f'<section class="google-calendar"><iframe src="{escape(google_calendar_url, quote=True)}" title="Google Calendar" width="100%" height="600" loading="lazy" style="border: 0;"></iframe></section>'
-    return biography_html + calendar_html + render_generic_body('')
+    return biography_html + calendar_html
 
 # page builder: research
 def build_research():
@@ -88,7 +84,32 @@ def build_research_papers():
 
 # page builder: students
 def build_students():
-    return render_generic_body('') # TODO
+    student_data = {k:v for k, v in DATA['students'].items() if not is_data_type(v)}
+    student_html = dict() # student_html[year] = list of student HTML values
+    for student_key, student_meta in sorted(student_data.items(), key=lambda x: student_data[x[0]]['first_name.txt']):
+        for k in ['first_name.txt', 'last_name.txt', 'start_year.txt', 'role.txt']:
+            if k not in student_meta:
+                raise ValueError(f"Student '{student_key}' is missing required metadata '{k}'")
+        student_name = student_meta['first_name.txt'] + ' ' + student_meta['last_name.txt']
+        start_year = int(student_meta['start_year.txt'])
+        if 'end_year.txt' in student_meta:
+            end_year = int(student_meta['end_year.txt'])
+        else:
+            end_year = date.today().year
+        html = '<li>'
+        if 'url.txt' in student_meta:
+            html += f'''<a href="{student_meta['url.txt']}" {external_link_attributes(True)}><b>{student_name}</b></a>'''
+        else:
+            html += f'<b>{student_name}</b>'
+        html += f" &mdash; {student_meta['role.txt']} ({start_year}&ndash;{end_year})"
+        html += '</li>'
+        if end_year not in student_html:
+            student_html[end_year] = list()
+        student_html[end_year].append(html)
+    parts = [f'<p>I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing graduate, undergraduate, and high school students. A complete list of my past students ({len(student_data)} total) can be found below.</p>']
+    for year, htmls in sorted(student_html.items(), reverse=True):
+        parts.append(f"<h2>{year}</h2><ul>{''.join(htmls)}</ul>")
+    return ''.join(parts)
 
 # page builder functions TODO
 PAGE_BUILDERS = {
@@ -316,7 +337,7 @@ def optional_site_text(filename):
     warn(f"Optional file not found: {source_file}", stacklevel=2)
     return None
 
-# resolve site URL
+# resolve site URL as (href, is_external, is_download) tuple
 def resolve_site_url(value, *, config_file):
     parsed = urlsplit(value)
     if parsed.scheme or parsed.netloc:
