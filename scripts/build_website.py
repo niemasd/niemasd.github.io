@@ -80,11 +80,10 @@ def build_research():
     for research_type in ['papers']: # TODO add 'conferences', 'preprints', 'books', 'games'
         research_html = dict() # research_html[year] = list of research type HTML values
         for entry_key, entry_meta in sorted(DATA['research'][research_type].items(), key=lambda x: x[1]['date.txt'], reverse=True):
-            html = '<li>'
             authors = list()
             for author_row in [l.strip() for l in entry_meta['authors.csv'].splitlines() if len(l.strip()) != 0]:
                 first_name, last_name = [s.strip() for s in author_row.split(',')]
-                abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.split()).upper()}"
+                abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.replace('-',' ').split()).upper()}"
                 if f'{first_name} {last_name}' == SITE_CONFIG['owner_name']:
                     authors.append(f'<b>{abbrev_name}</b>')
                 else:
@@ -92,7 +91,8 @@ def build_research():
             year = int(entry_meta['date.txt'].split('-')[0])
             if year not in research_html:
                 research_html[year] = list()
-            html = f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." <i>{entry_meta['venue.txt']}</i>. '''
+            html = '<li>'
+            html += f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." <i>{entry_meta['venue.txt']}</i>. '''
             if 'volume.txt' in entry_meta:
                 html += entry_meta['volume.txt']
             if 'issue.txt' in entry_meta:
@@ -100,15 +100,15 @@ def build_research():
             if 'pages.txt' in entry_meta:
                 if 'volume.txt' in entry_meta or 'issue.txt' in entry_meta:
                     html += ':'
-                html += entry_meta['pages.txt']
+                html += entry_meta['pages.txt'].replace('-','–')
             if 'volume.txt' in entry_meta or 'issue.txt' in entry_meta or 'pages.txt' in entry_meta:
                 html += '. '
             if 'doi.txt' in entry_meta:
                 html += f'''<a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
-            research_html[year].append(html.strip())
-        out_html += f"<h2>{translate(research_type)}</h2><ol reversed>"
+            html = html.strip() + '</li>'
+            research_html[year].append(html)
+        out_html += f"<h2>{translate(research_type)}</h2>"
         out_html += ''.join(f"<h3>{year}</h3><ul>{''.join(htmls)}</ul>" for year, htmls in sorted(research_html.items(), reverse=True))
-        out_html += '</ol>'
     return out_html
 
 # page builder: students
