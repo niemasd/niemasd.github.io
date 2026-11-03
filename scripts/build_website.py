@@ -560,11 +560,12 @@ def render_breadcrumbs(folder_path):
 
 # get a nav node
 def nav_node(folder_path, current_folder):
+    folder_data = get_data_folder(folder_path)
     name = folder_path.rsplit('/', 1)[-1]
     href = page_url(folder_path, current_folder)
     active = folder_path == current_folder
     is_ancestor = bool(current_folder) and current_folder.startswith(folder_path + '/')
-    children = ordered_child_folders(folder_path)
+    children = [child for child in ordered_child_folders(folder_path) if is_data_type(folder_data[child])]
     active_class = ' active' if active else (' ancestor' if is_ancestor else '')
     current_attr = ' aria-current="page"' if active else ''
     html_parts = ['<li class="nav-item">', '<div class="nav-row">', f'<a class="nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{escape(translate(name))}</a>']
@@ -589,12 +590,12 @@ def render_sidebar_navigation(current_folder):
 # render top navigation
 def render_top_navigation(current_folder):
     items = list()
-    for name in ordered_child_folders(''):
+    for name in [''] + ordered_child_folders(''):
         href = page_url(name, current_folder)
         active = current_folder == name or current_folder.startswith(name + '/')
         active_class = ' active' if active else ''
         current_attr = ' aria-current="location"' if active else ''
-        items.append(f'<li><a class="top-nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{escape(translate(name))}</a></li>')
+        items.append(f'<li><a class="top-nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{"Home" if name == "" else escape(translate(name))}</a></li>')
     return f'<nav class="top-navigation" aria-label="Top-level navigation"><ul>{"".join(items)}</ul></nav>'
 
 # external link attributes
