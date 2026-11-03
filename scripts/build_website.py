@@ -101,15 +101,25 @@ def build_students():
             html += f'''<a href="{student_meta['url.txt']}" {external_link_attributes(True)}><b>{student_name}</b></a>'''
         else:
             html += f'<b>{student_name}</b>'
-        html += f" &mdash; {student_meta['role.txt']} ({start_year}&ndash;{end_year})"
+        html += f" &mdash; {student_meta['role.txt']} "
+        if 'advisor.txt' in student_meta:
+            if 'advisor_url.txt' in student_meta:
+                advisor_html = f'''<a href="{student_meta['advisor_url.txt']}" {external_link_attributes(True)}>{student_meta['advisor.txt']}</a>'''
+            else:
+                advisor_html = student_meta['advisor.txt']
+            html += f"(Advisor: {advisor_html}) "
+        if 'coadvisor.txt' in student_meta:
+            if 'coadvisor_url.txt' in student_meta:
+                coadvisor_html = f'''<a href="{student_meta['coadvisor_url.txt']}" {external_link_attributes(True)}>{student_meta['coadvisor.txt']}</a>'''
+            else:
+                coadvisor_html = student_meta['coadvisor.txt']
+            html += f"(Co-Advisor: {coadvisor_html}) "
+        html += f"({start_year}&ndash;{end_year})"
         html += '</li>'
         if end_year not in student_html:
             student_html[end_year] = list()
         student_html[end_year].append(html)
-    parts = [f'<p>I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing graduate, undergraduate, and high school students. A complete list of my past students ({len(student_data)} total) can be found below.</p>']
-    for year, htmls in sorted(student_html.items(), reverse=True):
-        parts.append(f"<h2>{year}</h2><ul>{''.join(htmls)}</ul>")
-    return ''.join(parts)
+    return ''.join([f'<p>I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing graduate, undergraduate, and high school students. A complete list of my past students ({len(student_data)} total) can be found below.</p>'] + [f"<h2>{year}</h2><ul>{''.join(htmls)}</ul>" for year, htmls in sorted(student_html.items(), reverse=True)])
 
 # page builder functions TODO
 PAGE_BUILDERS = {
