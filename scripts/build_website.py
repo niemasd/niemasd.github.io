@@ -21,7 +21,7 @@ from warnings import warn
 import argparse
 
 # constants
-TEXT_EXTS = {'c', 'cpp', 'css', 'h', 'hpp', 'htm', 'html', 'js', 'md', 'json', 'txt'}
+TEXT_EXTS = {'c', 'cpp', 'css', 'csv', 'h', 'hpp', 'htm', 'html', 'js', 'md', 'json', 'tsv', 'txt'}
 IMAGE_EXTS = {'bmp', 'gif', 'ico', 'jpeg', 'jpg', 'png', 'svg', 'webp'}
 HTTP_SCHEMES = {'http', 'https'}
 MIMES = {
@@ -76,17 +76,46 @@ def build_home() -> str:
 
 # page builder: research
 def build_research():
-    return render_generic_body('') # TODO
-
-# page builder: research/papers
-def build_research_papers():
-    return render_generic_body('') # TODO
+    out_html = ''
+    for research_type in ['papers']: # TODO add 'conferences', 'preprints', 'books', 'games'
+        research_html = dict() # research_html[year] = list of research type HTML values
+        for entry_key, entry_meta in sorted(DATA['research'][research_type].items(), key=lambda x: x[1]['date.txt'], reverse=True):
+            html = '<li>'
+            authors = list()
+            for author_row in [l.strip() for l in entry_meta['authors.csv'].splitlines() if len(l.strip()) != 0]:
+                first_name, last_name = [s.strip() for s in author_row.split(',')]
+                abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.split()).upper()}"
+                if f'{first_name} {last_name}' == SITE_CONFIG['owner_name']:
+                    authors.append(f'<b>{abbrev_name}</b>')
+                else:
+                    authors.append(abbrev_name)
+            year = int(entry_meta['date.txt'].split('-')[0])
+            if year not in research_html:
+                research_html[year] = list()
+            html = f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." <i>{entry_meta['venue.txt']}</i>. '''
+            if 'volume.txt' in entry_meta:
+                html += entry_meta['volume.txt']
+            if 'issue.txt' in entry_meta:
+                html += f"({entry_meta['issue.txt']})"
+            if 'pages.txt' in entry_meta:
+                if 'volume.txt' in entry_meta or 'issue.txt' in entry_meta:
+                    html += ':'
+                html += entry_meta['pages.txt']
+            if 'volume.txt' in entry_meta or 'issue.txt' in entry_meta or 'pages.txt' in entry_meta:
+                html += '. '
+            if 'doi.txt' in entry_meta:
+                html += f'''<a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
+            research_html[year].append(html.strip())
+        out_html += f"<h2>{translate(research_type)}</h2><ol reversed>"
+        out_html += ''.join(f"<h3>{year}</h3><ul>{''.join(htmls)}</ul>" for year, htmls in sorted(research_html.items(), reverse=True))
+        out_html += '</ol>'
+    return out_html
 
 # page builder: students
 def build_students():
     student_data = {k:v for k, v in DATA['students'].items() if not is_data_type(v)}
     student_html = dict() # student_html[year] = list of student HTML values
-    for student_key, student_meta in sorted(student_data.items(), key=lambda x: student_data[x[0]]['first_name.txt']):
+    for student_key, student_meta in sorted(student_data.items(), key=lambda x: x[1]['first_name.txt']):
         for k in ['first_name.txt', 'last_name.txt', 'start_year.txt', 'role.txt']:
             if k not in student_meta:
                 raise ValueError(f"Student '{student_key}' is missing required metadata '{k}'")
@@ -125,7 +154,6 @@ def build_students():
 PAGE_BUILDERS = {
     '': build_home,
     'research': build_research,
-    'research/papers': build_research_papers,
     'students': build_students,
 }
 
@@ -147,7 +175,6 @@ def parse_args():
     parser.add_argument('-i', '--input', required=False, type=str, default=REPO_ROOT_PATH, help="Root of GitHub Repository")
     parser.add_argument('-o', '--output', required=False, type=str, default=REPO_ROOT_PATH / 'html_out', help="Output Directory")
     parser.add_argument('--accent_color', required=False, type=str, default='#526D8A', help="Site Accent Color")
-    parser.add_argument('--generic_fallback', action='store_true', help="Generate Generic Pages if No Builder is Registered")
     parser.add_argument('--overwrite', required=False, type=str, choices=('yes', 'no', 'update'), default='no', help="Overwrite Output")
     args = parser.parse_args()
     args.input = Path(args.input)
@@ -731,10 +758,9 @@ def build_all_pages():
             body_html = builder()
             if not isinstance(body_html, str):
                 raise TypeError(f"Custom builder for {folder_path!r} must return an HTML string; got {type(body_html).__name__}.")
-        elif GENERIC_FALLBACK:
-            body_html = render_generic_body(folder_path)
         else:
-            raise RuntimeError(f"No custom page builder is registered for {folder_path!r}, and GENERIC_FALLBACK is disabled.")
+            warn(f"No custom page builder is registered for {folder_path!r}.", stacklevel=2)
+            continue
         page_directory = OUT_DIR / Path(folder_path)
         page_directory.mkdir(parents=True, exist_ok=True)
         output_file = page_directory / 'index.html'
@@ -754,12 +780,11 @@ def build_website():
 
 # main logic
 def main():
-    global REPO_ROOT_PATH, OUT_DIR, DATA, SITE, ACCENT_COLOR, GENERIC_FALLBACK
+    global REPO_ROOT_PATH, OUT_DIR, DATA, SITE, ACCENT_COLOR
     args = parse_args()
     REPO_ROOT_PATH = args.input
     OUT_DIR = args.output
     ACCENT_COLOR = args.accent_color
-    GENERIC_FALLBACK = args.generic_fallback
     DATA = load_data(path=REPO_ROOT_PATH / 'data')
     SITE = load_data(path=REPO_ROOT_PATH / 'site')
     build_website()
