@@ -398,8 +398,8 @@ def prepare_site_config():
     owner_name = ' '.join(part for part in (first_name, last_name) if part)
     site_title = optional_site_text('title.txt') or owner_name or 'Academic Website'
     position = optional_site_text('position.txt')
-    institution = optional_site_text('institution.txt')
     department = optional_site_text('department.txt')
+    institution = optional_site_text('institution.txt')
     email = optional_site_text('email.txt')
     site_root = (REPO_ROOT_PATH / 'site').resolve()
     photo_source = optional_site_match('photo', IMAGE_EXTS, 'profile photo')
@@ -465,8 +465,8 @@ def prepare_site_config():
         'owner_name': owner_name,
         'site_title': site_title,
         'position': position,
-        'institution': institution,
         'department': department,
+        'institution': institution,
         'email': email,
         'photo_path': photo_destination,
         'favicon_path': favicon_destination,
@@ -649,10 +649,10 @@ def render_profile(current_folder):
         identity_parts.append(f'<div class="profile-name">{escape(owner_name)}</div>')
     if SITE_CONFIG['position']:
         identity_parts.append(f'<div class="profile-position">{escape(SITE_CONFIG["position"])}</div>')
-    if SITE_CONFIG['institution']:
-        identity_parts.append(f'<div class="profile-institution">{escape(SITE_CONFIG["institution"])}</div>')
     if SITE_CONFIG['department']:
         identity_parts.append(f'<div class="profile-department">{escape(SITE_CONFIG["department"])}</div>')
+    if SITE_CONFIG['institution']:
+        identity_parts.append(f'<div class="profile-institution">{escape(SITE_CONFIG["institution"])}</div>')
     contact_parts = list()
     if SITE_CONFIG['email']:
         email_value = SITE_CONFIG['email']
