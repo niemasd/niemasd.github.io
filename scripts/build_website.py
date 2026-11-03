@@ -586,10 +586,13 @@ def nav_node(folder_path, current_folder):
     href = page_url(folder_path, current_folder)
     active = folder_path == current_folder
     is_ancestor = bool(current_folder) and current_folder.startswith(folder_path + '/')
-    children = [child for child in ordered_child_folders(folder_path) if is_data_type(folder_data[child])]
+    if folder_path == '':
+        children = list()
+    else:
+        children = [child for child in ordered_child_folders(folder_path) if is_data_type(folder_data[child])]
     active_class = ' active' if active else (' ancestor' if is_ancestor else '')
     current_attr = ' aria-current="page"' if active else ''
-    html_parts = ['<li class="nav-item">', '<div class="nav-row">', f'<a class="nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{escape(translate(name))}</a>']
+    html_parts = ['<li class="nav-item">', '<div class="nav-row">', f'<a class="nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{"Home" if name == "" else escape(translate(name))}</a>']
     if children:
         nav_id = 'nav-' + sha1(folder_path.encode('utf-8')).hexdigest()[:12]
         required_open = is_ancestor
@@ -606,7 +609,7 @@ def nav_node(folder_path, current_folder):
 
 # render sidebar navigation
 def render_sidebar_navigation(current_folder):
-    return f'<nav class="sidebar-nav" aria-label="Site navigation"><ul class="nav-tree">{"".join(nav_node(name, current_folder) for name in ordered_child_folders(""))}</ul></nav>'
+    return f'<nav class="sidebar-nav" aria-label="Site navigation"><ul class="nav-tree">{"".join(nav_node(name, current_folder) for name in [""] + ordered_child_folders(""))}</ul></nav>'
 
 # render top navigation
 def render_top_navigation(current_folder):
