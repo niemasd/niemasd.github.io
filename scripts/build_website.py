@@ -107,8 +107,11 @@ def build_research():
                 html += f'''<a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
             html = html.strip() + '</li>'
             research_html[year].append(html)
+        list_start = dict(); curr_start = 0
+        for year, htmls in sorted(research_html.items()):
+            curr_start += len(htmls); list_start[year] = curr_start
         out_html += f"<h2>{translate(research_type)}</h2>"
-        out_html += ''.join(f"<h3>{year}</h3><ul>{''.join(htmls)}</ul>" for year, htmls in sorted(research_html.items(), reverse=True))
+        out_html += ''.join(f"<h3>{year}</h3><ol reversed start={list_start[year]}>{''.join(htmls)}</ol>" for year, htmls in sorted(research_html.items(), reverse=True))
     return out_html
 
 # page builder: students

@@ -1,0 +1,1 @@
+ViralConsensus: a fast and memory-efficient tool for calling viral consensus genome sequences directly from read alignment data
