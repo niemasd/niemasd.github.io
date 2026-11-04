@@ -1,0 +1,1 @@
+RapidOMS: FPGA-based Open Modification Spectral Library Searching with HD Computing
