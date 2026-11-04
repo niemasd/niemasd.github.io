@@ -5,7 +5,6 @@ Build personal website
 
 # imports
 from datetime import date
-from hashlib import sha1
 from html import escape
 from json import JSONDecodeError, loads as jloads
 from markdown import Markdown
@@ -619,37 +618,18 @@ def render_breadcrumbs(folder_path):
     parts.append('</ol></nav>')
     return ''.join(parts)
 
-# get a nav node
-def nav_node(folder_path, current_folder):
-    folder_data = get_data_folder(folder_path)
-    name = folder_path.rsplit('/', 1)[-1]
-    href = page_url(folder_path, current_folder)
-    active = folder_path == current_folder
-    is_ancestor = bool(current_folder) and current_folder.startswith(folder_path + '/')
-    if folder_path == '':
-        children = list()
-    else:
-        children = [child for child in ordered_child_folders(folder_path) if is_data_type(folder_data[child])]
-    active_class = ' active' if active else (' ancestor' if is_ancestor else '')
-    current_attr = ' aria-current="page"' if active else ''
-    html_parts = ['<li class="nav-item">', '<div class="nav-row">', f'<a class="nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{"Home" if name == "" else escape(translate(name))}</a>']
-    if children:
-        nav_id = 'nav-' + sha1(folder_path.encode('utf-8')).hexdigest()[:12]
-        required_open = is_ancestor
-        expanded = 'true' if required_open else 'false'
-        disabled = ' disabled' if required_open else ''
-        label = 'Collapse' if required_open else 'Expand'
-        html_parts.append(f'<button class="nav-toggle" type="button" data-nav-toggle data-nav-id="{escape(folder_path, quote=True)}" data-nav-label="{escape(translate(name), quote=True)}" aria-controls="{nav_id}" aria-expanded="{expanded}" aria-label="{label} {escape(translate(name), quote=True)}" data-required-open="{str(required_open).lower()}"{disabled}><span aria-hidden="true">⌄</span></button>')
-        hidden = '' if required_open else ' hidden'
-        html_parts.append(f'<ul class="nav-children" id="{nav_id}"{hidden}>')
-        html_parts.extend(nav_node(join_folder_key(folder_path, child), current_folder) for child in children)
-        html_parts.append('</ul>')
-    html_parts.append('</div></li>')
-    return ''.join(html_parts)
-
 # render sidebar navigation
 def render_sidebar_navigation(current_folder):
-    return f'<nav class="sidebar-nav" aria-label="Site navigation"><ul class="nav-tree">{"".join(nav_node(name, current_folder) for name in [""] + ordered_child_folders(""))}</ul></nav>'
+    items = list()
+    for name in [''] + ordered_child_folders(''):
+        href = page_url(name, current_folder)
+        active = current_folder == name
+        is_ancestor = bool(name) and current_folder.startswith(name + '/')
+        active_class = ' active' if active else (' ancestor' if is_ancestor else '')
+        current_attr = ' aria-current="page"' if active else ''
+        label = 'Home' if name == '' else escape(translate(name))
+        items.append(f'<li class="nav-item"><div class="nav-row"><a class="nav-link{active_class}" href="{escape(href, quote=True)}"{current_attr}>{label}</a></div></li>')
+    return f'<nav class="sidebar-nav" aria-label="Site navigation"><ul class="nav-tree">{"".join(items)}</ul></nav>'
 
 # render top navigation
 def render_top_navigation(current_folder):
