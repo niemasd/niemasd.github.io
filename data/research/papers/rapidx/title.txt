@@ -1,0 +1,1 @@
+RAPIDx: High-Performance ReRAM Processing In-Memory Accelerator for Sequence Alignment

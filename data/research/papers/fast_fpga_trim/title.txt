@@ -1,0 +1,1 @@
+FAST: FPGA-based Acceleration of Genomic Sequence Trimming
