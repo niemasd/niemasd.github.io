@@ -1,0 +1,1 @@
+A linear-time algorithm to sample the dual-birth model

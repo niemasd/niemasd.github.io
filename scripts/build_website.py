@@ -74,7 +74,7 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: research
-def build_research(research_types=['papers', 'conferences']): # TODO add 'preprints', 'books', 'games'
+def build_research(research_types=['papers', 'conferences', 'preprints']): # TODO add 'books', 'games'
     out_html = f'''<center>{' – '.join(f'<a href="#{research_type}">{translate(research_type)}</a>' for research_type in research_types)}</center>'''
     for research_type in research_types:
         research_html = dict() # research_html[year] = list of research type HTML values
@@ -91,7 +91,8 @@ def build_research(research_types=['papers', 'conferences']): # TODO add 'prepri
             if year not in research_html:
                 research_html[year] = list()
             html = '<li>'
-            html += f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." <i>{entry_meta['venue.txt']}</i>. '''
+            html += f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." '''
+            html += f'''<i>{entry_meta['venue.txt']}</i>. '''
             if 'volume.txt' in entry_meta:
                 html += entry_meta['volume.txt']
             if 'issue.txt' in entry_meta:
@@ -108,6 +109,8 @@ def build_research(research_types=['papers', 'conferences']): # TODO add 'prepri
                 html += f''' <a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>Link</a>.'''
             if 'doi.txt' in entry_meta:
                 html += f''' <a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
+            if 'arxiv.txt' in entry_meta:
+                html += f''' <a href="https://arxiv.org/abs/{entry_meta['arxiv.txt']}" {external_link_attributes(True)}>arXiv:{entry_meta['arxiv.txt']}</a>'''
             html = html.strip() + '</li>'
             research_html[year].append(html)
         list_start = dict(); curr_start = 0
