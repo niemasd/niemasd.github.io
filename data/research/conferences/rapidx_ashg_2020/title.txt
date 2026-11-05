@@ -1,0 +1,1 @@
+RAPIDx: A ReRAM Processing in-Memory Architecture for DNA Short Read Alignment

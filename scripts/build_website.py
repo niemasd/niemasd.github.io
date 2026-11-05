@@ -76,7 +76,7 @@ def build_home() -> str:
 # page builder: research
 def build_research():
     out_html = ''
-    for research_type in ['papers']: # TODO add 'conferences', 'preprints', 'books', 'games'
+    for research_type in ['papers', 'conferences']: # TODO add 'preprints', 'books', 'games'
         research_html = dict() # research_html[year] = list of research type HTML values
         for entry_key, entry_meta in sorted(DATA['research'][research_type].items(), key=lambda x: x[1]['date.txt'], reverse=True):
             authors = list()
@@ -101,9 +101,13 @@ def build_research():
                     html += ':'
                 html += entry_meta['pages.txt'].replace('-','–')
             if 'volume.txt' in entry_meta or 'issue.txt' in entry_meta or 'pages.txt' in entry_meta:
-                html += '. '
+                html += '.'
+            if 'type.txt' in entry_meta:
+                html += f" {entry_meta['type.txt']}."
+            if 'url.txt' in entry_meta:
+                html += f''' <a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>Link</a>.'''
             if 'doi.txt' in entry_meta:
-                html += f'''<a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
+                html += f''' <a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
             html = html.strip() + '</li>'
             research_html[year].append(html)
         list_start = dict(); curr_start = 0
