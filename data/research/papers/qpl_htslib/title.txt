@@ -1,0 +1,1 @@
+QPL-enabled HTSlib library: accelerating sequence file compression using Intel IAA
