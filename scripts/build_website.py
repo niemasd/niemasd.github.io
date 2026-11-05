@@ -74,7 +74,7 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: research
-def build_research(research_types=['papers', 'conferences', 'preprints', 'books', 'games']):
+def build_research(research_types=['papers', 'talks', 'conferences', 'preprints', 'books', 'games']):
     out_html = f'''<center>{' – '.join(f'<a href="#{research_type}">{translate(research_type)}</a>' for research_type in research_types)}</center>'''
     for research_type in research_types:
         research_html = dict() # research_html[year] = list of research type HTML values
@@ -92,7 +92,10 @@ def build_research(research_types=['papers', 'conferences', 'preprints', 'books'
                 research_html[year] = list()
             html = '<li>'
             html += f'''{', '.join(authors)} ({year}). "{entry_meta['title.txt']}." '''
-            html += f'''<i>{entry_meta['venue.txt']}</i>. '''
+            html += f"<i>{entry_meta['venue.txt']}</i>"
+            if 'location.txt' in entry_meta:
+                html += f", {entry_meta['location.txt']}"
+            html += '. '
             if 'volume.txt' in entry_meta:
                 html += entry_meta['volume.txt']
             if 'issue.txt' in entry_meta:
@@ -671,7 +674,7 @@ def render_profile(current_folder):
     photo_html = ''
     if photo:
         photo_href = asset_url(photo, current_folder)
-        photo_html = (f'<img class="profile-photo" src="{escape(photo_href, quote=True)}" alt="{escape(owner_name or "Profile photo", quote=True)}">')
+        photo_html = (f'<a href="/"><img class="profile-photo" src="{escape(photo_href, quote=True)}" alt="{escape(owner_name or "Profile photo", quote=True)}"></a>')
     identity_parts = list()
     if owner_name:
         identity_parts.append(f'<div class="profile-name">{escape(owner_name)}</div>')
@@ -721,7 +724,7 @@ def render_page(folder_path, body_html):
     mobile_photo = ''
     if SITE_CONFIG['photo_path']:
         mobile_photo_href = asset_url(SITE_CONFIG['photo_path'], folder_path)
-        mobile_photo = f'<img class="mobile-profile-photo" src="{escape(mobile_photo_href, quote=True)}" alt="" loading="lazy">'
+        mobile_photo = f'<a href="/"><img class="mobile-profile-photo" src="{escape(mobile_photo_href, quote=True)}" alt="" loading="lazy"></a>'
     mobile_name = escape(owner_name or SITE_CONFIG['site_title'])
     return f'<!doctype html><html lang="en" style="--accent-color: {accent}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>{escape(document_title)}</title>{favicon_html}<link rel="stylesheet" href="{escape(stylesheet_href, quote=True)}"><link rel="stylesheet" href="{escape(pygments_href, quote=True)}"><script src="{escape(script_href, quote=True)}" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a><div class="site-layout"><aside class="site-sidebar" id="site-sidebar" aria-label="Profile and site navigation"><div class="sidebar-inner"><div class="sidebar-mobile-controls"><span class="sidebar-menu-label">Menu</span><button class="sidebar-close" id="sidebar-close" type="button" aria-label="Close navigation">×</button></div><section class="profile-panel" aria-label="Profile">{profile_html}</section><div class="sidebar-tools"><button class="theme-toggle theme-toggle-desktop" type="button" data-theme-toggle><span class="theme-toggle-label">Change theme</span></button></div>{sidebar_nav}</div></aside><button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Close navigation" tabindex="-1"></button><div class="main-column"><header class="mobile-header"><div class="mobile-identity">{mobile_photo}<span>{mobile_name}</span></div><div class="mobile-header-actions"><button class="theme-toggle theme-toggle-mobile" type="button" data-theme-toggle aria-label="Change color theme">Theme</button><button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-controls="site-sidebar" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button></div></header>{top_nav}<main id="main-content" class="main-content" tabindex="-1"><div class="content-narrow page-heading">{breadcrumbs}<h1>{escape(heading)}</h1></div><div class="content-body">{body_html}</div></main><footer class="site-footer"><div class="content-narrow">{footer_html}</div></footer></div></div></body></html>'
 
