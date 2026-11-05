@@ -74,7 +74,7 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: research
-def build_research(research_types=['papers', 'conferences', 'preprints']): # TODO add 'books', 'games'
+def build_research(research_types=['papers', 'conferences', 'preprints', 'books', 'games']):
     out_html = f'''<center>{' – '.join(f'<a href="#{research_type}">{translate(research_type)}</a>' for research_type in research_types)}</center>'''
     for research_type in research_types:
         research_html = dict() # research_html[year] = list of research type HTML values
@@ -82,7 +82,7 @@ def build_research(research_types=['papers', 'conferences', 'preprints']): # TOD
             authors = list()
             for author_row in [l.strip() for l in entry_meta['authors.csv'].splitlines() if len(l.strip()) != 0]:
                 first_name, last_name = [s.strip() for s in author_row.split(',')]
-                abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.replace('-',' ').split()).upper()}"
+                abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.replace('-',' ').split()).upper()}".strip()
                 if f'{first_name} {last_name}' == SITE_CONFIG['owner_name']:
                     authors.append(f'<b>{abbrev_name}</b>')
                 else:
@@ -105,12 +105,18 @@ def build_research(research_types=['papers', 'conferences', 'preprints']): # TOD
                 html += '.'
             if 'type.txt' in entry_meta:
                 html += f" {entry_meta['type.txt']}."
+            for ID_type, ID_fn, ID_url_base in [
+                ('doi', 'doi.txt', 'https://doi.org/'),
+                ('arXiv', 'arxiv.txt', 'https://arxiv.org/abs/'),
+                ('ISBN', 'isbn.txt', 'http://books.google.com/books?vid=ISBN'),
+                ('ASIN', 'asin.txt', 'https://www.amazon.com/dp/'),
+                ('MobyGames', 'mobygames.txt', 'https://www.mobygames.com/game/'),
+                ('Steam', 'steam.txt', 'https://store.steampowered.com/app/'),
+            ]:
+                if ID_fn in entry_meta:
+                    html += f''' <a href="{ID_url_base}{entry_meta[ID_fn]}" {external_link_attributes(True)}>{ID_type}:{entry_meta[ID_fn]}</a>.'''
             if 'url.txt' in entry_meta:
                 html += f''' <a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>Link</a>.'''
-            if 'doi.txt' in entry_meta:
-                html += f''' <a href="https://doi.org/{entry_meta['doi.txt']}" {external_link_attributes(True)}>doi:{entry_meta['doi.txt']}</a>'''
-            if 'arxiv.txt' in entry_meta:
-                html += f''' <a href="https://arxiv.org/abs/{entry_meta['arxiv.txt']}" {external_link_attributes(True)}>arXiv:{entry_meta['arxiv.txt']}</a>'''
             html = html.strip() + '</li>'
             research_html[year].append(html)
         list_start = dict(); curr_start = 0
