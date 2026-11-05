@@ -74,9 +74,9 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: research
-def build_research():
-    out_html = ''
-    for research_type in ['papers', 'conferences']: # TODO add 'preprints', 'books', 'games'
+def build_research(research_types=['papers', 'conferences']): # TODO add 'preprints', 'books', 'games'
+    out_html = f'''<center>{' – '.join(f'<a href="#{research_type}">{translate(research_type)}</a>' for research_type in research_types)}</center>'''
+    for research_type in research_types:
         research_html = dict() # research_html[year] = list of research type HTML values
         for entry_key, entry_meta in sorted(DATA['research'][research_type].items(), key=lambda x: x[1]['date.txt'], reverse=True):
             authors = list()
@@ -113,8 +113,9 @@ def build_research():
         list_start = dict(); curr_start = 0
         for year, htmls in sorted(research_html.items()):
             curr_start += len(htmls); list_start[year] = curr_start
-        out_html += f"<h2>{translate(research_type)}</h2>"
-        out_html += ''.join(f"<h3>{year}</h3><ol reversed start={list_start[year]}>{''.join(htmls)}</ol>" for year, htmls in sorted(research_html.items(), reverse=True))
+        out_html += f'<h2 id="{research_type}">{translate(research_type)}</h2>'
+        out_html += f'''<center>{' – '.join(f'<a href="#{research_type}-{year}">{year}</a>' for year in sorted(research_html.keys(), reverse=True))}</center>'''
+        out_html += ''.join(f'''<h3 id="{research_type}-{year}">{year}</h3><ol reversed start={list_start[year]}>{''.join(htmls)}</ol><center>— <a href="#main-content">Top</a> —</center>''' for year, htmls in sorted(research_html.items(), reverse=True))
     return out_html
 
 # page builder: students
@@ -154,7 +155,11 @@ def build_students():
         if end_year not in student_html:
             student_html[end_year] = list()
         student_html[end_year].append(html)
-    return ''.join([f'<p>I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing graduate, undergraduate, and high school students. A complete list of my past students ({len(student_data)} total) can be found below.</p>'] + [f"<h2>{year}</h2><ul>{''.join(htmls)}</ul>" for year, htmls in sorted(student_html.items(), reverse=True)])
+        out_html = f'<p>I have been <i>incredibly</i> fortunate to have gotten the opportunity to mentor such amazing graduate, undergraduate, and high school students. A complete list of my past students ({len(student_data)} total) can be found below.</p>'
+        out_html += f'''<center>{' – '.join(f'<a href="#{year}">{year}</a>' for year in sorted(student_html.keys(), reverse=True))}</center>'''
+        for year, htmls in sorted(student_html.items(), reverse=True):
+            out_html += f'''<h2 id="{year}">{year}</h2><ul>{''.join(htmls)}</ul><center>— <a href="#main-content">Top</a> —</center>'''
+    return out_html
 
 # page builder functions TODO
 PAGE_BUILDERS = {
