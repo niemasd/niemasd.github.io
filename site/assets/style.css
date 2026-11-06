@@ -764,3 +764,7 @@ iframe {
     min-height: 600px;
     border: 0;
 }
+
+li {
+  margin: 10px 0;
+}

@@ -82,7 +82,7 @@ def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
     out_html = f"<center>{build_top_header_links([(f'#{award_type}', translate(award_type)) for award_type in award_types])}</center>"
     for award_type in award_types:
         award_html = dict() # award_html[year] = list of award type HTML values
-        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: x[1]['start_date.txt'], reverse=True):
+        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1]['end_date.txt']), reverse=True):
             team = list()
             for team_row in [l.strip() for l in entry_meta['team.csv'].splitlines() if len(l.strip()) != 0]:
                 first_name, last_name, role = [s.strip() for s in team_row.split(',')]
@@ -94,16 +94,14 @@ def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
             if start_year not in award_html:
                 award_html[start_year] = list()
             html = '<li>'
-            #html += f'''{entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}: {', '.join(team)}. "{entry_meta['title.txt']}." '''
             html += f"<b>{entry_meta['title.txt']}</b> ({entry_meta['amount.txt']})"
             html += '<ul>'
             html += f"<li><u>Duration</u>: {entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}</li>"
-            html += f"<li><u>Funder</u>: {entry_meta['funder.txt']}</li>"
-            if 'program.txt' in entry_meta:
-                html += f"<li><u>Program</u>: {entry_meta['program.txt']}</li>"
+            for k in ['awarder', 'program', 'award_num']:
+                if f'{k}.txt' in entry_meta:
+                    html += f"<li><u>{translate(k)}</u>: {entry_meta[f'{k}.txt']}</li>"
             html += f"<li><u>Team</u>: {', '.join(team)}</li>"
             html += '</ul>'
-            pass # TODO fill in list item for award
             html = html.strip() + '</li>'
             award_html[start_year].append(html)
         list_start = dict(); curr_start = 0
