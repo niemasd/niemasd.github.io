@@ -77,6 +77,43 @@ def build_home() -> str:
         calendar_html = f'<section class="google-calendar"><iframe src="{escape(google_calendar_url, quote=True)}" title="Google Calendar" width="100%" height="600" loading="lazy" style="border: 0;"></iframe></section>'
     return biography_html + calendar_html
 
+# page builder: awards
+def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
+    out_html = f"<center>{build_top_header_links([(f'#{award_type}', translate(award_type)) for award_type in award_types])}</center>"
+    for award_type in award_types:
+        award_html = dict() # award_html[year] = list of award type HTML values
+        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: x[1]['start_date.txt'], reverse=True):
+            team = list()
+            for team_row in [l.strip() for l in entry_meta['team.csv'].splitlines() if len(l.strip()) != 0]:
+                first_name, last_name, role = [s.strip() for s in team_row.split(',')]
+                name = f'{first_name} {last_name}'
+                if name == SITE_CONFIG['owner_name']:
+                    name = f'<b>{name}</b>'
+                team.append(f'{name} ({role})')
+            start_year = int(entry_meta['start_date.txt'].split('-')[0])
+            if start_year not in award_html:
+                award_html[start_year] = list()
+            html = '<li>'
+            #html += f'''{entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}: {', '.join(team)}. "{entry_meta['title.txt']}." '''
+            html += f"<b>{entry_meta['title.txt']}</b> ({entry_meta['amount.txt']})"
+            html += '<ul>'
+            html += f"<li><u>Duration</u>: {entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}</li>"
+            html += f"<li><u>Funder</u>: {entry_meta['funder.txt']}</li>"
+            if 'program.txt' in entry_meta:
+                html += f"<li><u>Program</u>: {entry_meta['program.txt']}</li>"
+            html += f"<li><u>Team</u>: {', '.join(team)}</li>"
+            html += '</ul>'
+            pass # TODO fill in list item for award
+            html = html.strip() + '</li>'
+            award_html[start_year].append(html)
+        list_start = dict(); curr_start = 0
+        for year, htmls in sorted(award_html.items()):
+            curr_start += len(htmls); list_start[year] = curr_start
+        out_html += f'<h2 id="{award_type}">{translate(award_type)}</h2>'
+        out_html += f"<center>{build_top_header_links([(f'#{award_type}-{year}', year) for year in sorted(award_html.keys(), reverse=True)])}</center>"
+        out_html += ''.join(f'''<h3 id="{award_type}-{year}">{year}</h3><ol reversed start={list_start[year]}>{''.join(htmls)}</ol><center>— <a href="#main-content">Top</a> —</center>''' for year, htmls in sorted(award_html.items(), reverse=True))
+    return out_html
+
 # page builder: research
 def build_research(research_types=['papers', 'talks', 'conferences', 'preprints', 'books', 'games']):
     out_html = f"<center>{build_top_header_links([(f'#{research_type}', translate(research_type)) for research_type in research_types])}</center>"
@@ -180,6 +217,7 @@ def build_students():
 # page builder functions TODO
 PAGE_BUILDERS = {
     '': build_home,
+    'awards': build_awards,
     'research': build_research,
     'students': build_students,
 }
@@ -187,7 +225,6 @@ PAGE_BUILDERS = {
 # page order
 PAGE_ORDER = {
     '': ['awards', 'research', 'students'],
-    'research': ['papers', 'preprints'],
 }
 
 # copy a file
