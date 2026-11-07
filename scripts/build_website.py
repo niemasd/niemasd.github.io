@@ -82,7 +82,7 @@ def build_awards(award_types=['funding', 'honors', 'conferences']):
     out_html = f"<center>{build_top_header_links([(f'#{award_type}', translate(award_type)) for award_type in award_types])}</center>"
     for award_type in award_types:
         award_html = dict() # award_html[year] = list of award type HTML values
-        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', float('inf'))), reverse=True):
+        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', '9999-99-99')), reverse=True):
             start_year = int(entry_meta['start_date.txt'].split('-')[0])
             if start_year not in award_html:
                 award_html[start_year] = list()
@@ -221,17 +221,42 @@ def build_students():
             out_html += f'''<h2 id="{year}">{year}</h2><ul>{''.join(htmls)}</ul><center>— <a href="#main-content">Top</a> —</center>'''
     return out_html
 
+# page builder: positions
+def build_positions(position_types=['education']): # TODO add 'academic', 'non-academic', 'education', 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
+    out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
+    for position_type in position_types:
+        out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
+        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', '9999-99-99')), reverse=True):
+            out_html += '<li>'
+            if position_type == 'education':
+                title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b> ({entry_meta['start_date.txt'].split('-')[0].strip()}–{entry_meta['end_date.txt'].split('-')[0].strip()})"
+            else:
+                raise NotImplementedError(f"TODO: {position_type}")
+            out_html += title
+            if position_type in {'education'}: # position types with sub-lists
+                out_html += '<ul>'
+                for k in ['institution.txt', 'minor.txt']:
+                    if k in entry_meta:
+                        out_html += f"<li><u>{translate(k.split('.')[0].strip())}</u>: {entry_meta[k]}</li>"
+                if 'committee.csv' in entry_meta:
+                    out_html += f"<li><u>Committee</u>: {', '.join('%s %s (%s)' % tuple(l.split(',')) for l in entry_meta['committee.csv'].splitlines() if len(l.strip()) != 0)}</li>"
+                out_html += '</ul>'
+            out_html += '</li>'
+        out_html += '<center>— <a href="#main-content">Top</a> —</center>'
+    return out_html
+
 # page builder functions TODO
 PAGE_BUILDERS = {
     '': build_home,
     'awards': build_awards,
+    'positions': build_positions,
     'research': build_research,
     'students': build_students,
 }
 
 # page order
 PAGE_ORDER = {
-    '': ['awards', 'research', 'students'],
+    '': ['awards', 'research', 'positions', 'students'],
 }
 
 # copy a file
