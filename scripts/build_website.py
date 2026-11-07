@@ -78,21 +78,11 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: awards
-def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
+def build_awards(award_types=['funding', 'honors']): # TODO add 'conferences'
     out_html = f"<center>{build_top_header_links([(f'#{award_type}', translate(award_type)) for award_type in award_types])}</center>"
     for award_type in award_types:
         award_html = dict() # award_html[year] = list of award type HTML values
-        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1]['end_date.txt']), reverse=True):
-            team = list()
-            for team_row in [l.strip() for l in entry_meta['team.csv'].splitlines() if len(l.strip()) != 0]:
-                try:
-                    first_name, last_name, role = [s.strip() for s in team_row.split(',')]
-                except Exception as e:
-                    warn(f"Failed to parse: {team_row}"); raise e
-                name = f'{first_name} {last_name}'
-                if name == SITE_CONFIG['owner_name']:
-                    name = f'<b>{name}</b>'
-                team.append(f'{name} ({role})')
+        for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', float('inf'))), reverse=True):
             start_year = int(entry_meta['start_date.txt'].split('-')[0])
             if start_year not in award_html:
                 award_html[start_year] = list()
@@ -101,11 +91,25 @@ def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
             if 'amount.txt' in entry_meta:
                 html += f" ({entry_meta['amount.txt']})"
             html += '<ul>'
-            html += f"<li><u>Duration</u>: {entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}</li>"
+            if 'end_date.txt' in entry_meta:
+                html += f"<li><u>Duration</u>: {entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}</li>"
+            else:
+                html += f"<li><u>Date</u>: {entry_meta['start_date.txt']}</li>"
             for k in ['awarder', 'program', 'award_num']:
                 if f'{k}.txt' in entry_meta:
                     html += f"<li><u>{translate(k)}</u>: {entry_meta[f'{k}.txt']}</li>"
-            html += f"<li><u>Team</u>: {', '.join(team)}</li>"
+            if 'team.csv' in entry_meta:
+                team = list()
+                for team_row in [l.strip() for l in entry_meta['team.csv'].splitlines() if len(l.strip()) != 0]:
+                    try:
+                        first_name, last_name, role = [s.strip() for s in team_row.split(',')]
+                    except Exception as e:
+                        warn(f"Failed to parse: {team_row}"); raise e
+                    name = f'{first_name} {last_name}'
+                    if name == SITE_CONFIG['owner_name']:
+                        name = f'<b>{name}</b>'
+                    team.append(f'{name} ({role})')
+                html += f"<li><u>Team</u>: {', '.join(team)}</li>"
             html += '</ul>'
             html = html.strip() + '</li>'
             award_html[start_year].append(html)
