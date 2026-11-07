@@ -85,7 +85,10 @@ def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
         for entry_key, entry_meta in sorted(DATA['awards'][award_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1]['end_date.txt']), reverse=True):
             team = list()
             for team_row in [l.strip() for l in entry_meta['team.csv'].splitlines() if len(l.strip()) != 0]:
-                first_name, last_name, role = [s.strip() for s in team_row.split(',')]
+                try:
+                    first_name, last_name, role = [s.strip() for s in team_row.split(',')]
+                except Exception as e:
+                    warn(f"Failed to parse: {team_row}"); raise e
                 name = f'{first_name} {last_name}'
                 if name == SITE_CONFIG['owner_name']:
                     name = f'<b>{name}</b>'
