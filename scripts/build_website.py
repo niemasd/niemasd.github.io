@@ -78,7 +78,7 @@ def build_home() -> str:
     return biography_html + calendar_html
 
 # page builder: awards
-def build_awards(award_types=['funding', 'honors']): # TODO add 'conferences'
+def build_awards(award_types=['funding', 'honors', 'conferences']):
     out_html = f"<center>{build_top_header_links([(f'#{award_type}', translate(award_type)) for award_type in award_types])}</center>"
     for award_type in award_types:
         award_html = dict() # award_html[year] = list of award type HTML values
