@@ -94,7 +94,9 @@ def build_awards(award_types=['funding']): # TODO add 'honors', 'conferences'
             if start_year not in award_html:
                 award_html[start_year] = list()
             html = '<li>'
-            html += f"<b>{entry_meta['title.txt']}</b> ({entry_meta['amount.txt']})"
+            html += f"<b>{entry_meta['title.txt']}</b>"
+            if 'amount.txt' in entry_meta:
+                html += f" ({entry_meta['amount.txt']})"
             html += '<ul>'
             html += f"<li><u>Duration</u>: {entry_meta['start_date.txt']} to {entry_meta['end_date.txt']}</li>"
             for k in ['awarder', 'program', 'award_num']:
