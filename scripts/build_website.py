@@ -226,6 +226,7 @@ def build_positions(position_types=['education']): # TODO add 'academic', 'non-a
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
+        out_html += '<ul>'
         for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', '9999-99-99')), reverse=True):
             out_html += '<li>'
             if position_type == 'education':
@@ -242,6 +243,7 @@ def build_positions(position_types=['education']): # TODO add 'academic', 'non-a
                     out_html += f"<li><u>Committee</u>: {', '.join('%s %s (%s)' % tuple(l.split(',')) for l in entry_meta['committee.csv'].splitlines() if len(l.strip()) != 0)}</li>"
                 out_html += '</ul>'
             out_html += '</li>'
+        out_html += '</ul>'
         out_html += '<center>— <a href="#main-content">Top</a> —</center>'
     return out_html
 
