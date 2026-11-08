@@ -222,12 +222,12 @@ def build_students():
     return out_html
 
 # page builder: positions
-def build_positions(position_types=['academic', 'education']): # TODO add 'non-academic', 'education', 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
+def build_positions(position_types=['academic', 'non_academic', 'education']): # TODO add 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
         out_html += '<ul>'
-        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', '9999-99-99')), reverse=True):
+        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1].get('end_date.txt', '9999-99-99'), x[1]['start_date.txt']), reverse=True):
             out_html += '<li>'
             if 'title.txt' in entry_meta:
                 title = f"<b>{entry_meta['title.txt']}</b>"
@@ -242,7 +242,7 @@ def build_positions(position_types=['academic', 'education']): # TODO add 'non-a
             else:
                 end_year = 'Present'
             out_html += f" ({start_year}–{end_year})"
-            if position_type in {'academic', 'education'}: # position types with sub-lists
+            if position_type in {'academic', 'non_academic', 'education'}: # position types with sub-lists
                 out_html += '<ul>'
                 for k in ['institution.txt', 'department.txt', 'minor.txt']:
                     if k in entry_meta:
