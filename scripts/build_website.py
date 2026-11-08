@@ -227,7 +227,21 @@ def build_positions(position_types=['education', 'academic', 'non_academic', 'ed
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
         out_html += '<ul>'
-        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1].get('end_date.txt', '9999-99-99'), x[1].get('start_date.txt', '0000-00-00')), reverse=True):
+        def sort_helper(x):
+            if 'start_date.txt' in x[1]:
+                start_year, start_month, start_day = [int(s) for s in x[1]['start_date.txt'].split('-')]
+            else:
+                start_year, start_month, start_day = [0]*3
+            if 'end_date.txt' in x[1]:
+                end_year, end_month, end_day = [int(s) for s in x[1]['end_date.txt'].split('-')]
+            else:
+                end_year, end_month, end_day = 9999, 99, 99
+            if 'institution.txt' in x[1]:
+                institution = x[1]['institution.txt'].lower()
+            else:
+                institution = ''
+            return (-end_year, -end_month, -end_day, -start_year, -start_month, -start_day, institution)
+        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=sort_helper):
             out_html += '<li>'
             if position_type == 'education':
                 title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b>"
