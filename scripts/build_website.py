@@ -222,26 +222,29 @@ def build_students():
     return out_html
 
 # page builder: positions
-def build_positions(position_types=['academic', 'non_academic', 'education']): # TODO add 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
+def build_positions(position_types=['education', 'academic', 'non_academic', 'editor']): # TODO add 'reviewer', 'institutional', 'organizations', 'outreach'
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
         out_html += '<ul>'
-        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1].get('end_date.txt', '9999-99-99'), x[1]['start_date.txt']), reverse=True):
+        for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1].get('end_date.txt', '9999-99-99'), x[1].get('start_date.txt', '0000-00-00')), reverse=True):
             out_html += '<li>'
-            if 'title.txt' in entry_meta:
-                title = f"<b>{entry_meta['title.txt']}</b>"
-            elif position_type == 'education':
+            if position_type == 'education':
                 title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b>"
+            elif position_type in {'editor', 'reviewer'}:
+                title = f'''<a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>{entry_meta['institution.txt']}</a> ({entry_meta['title.txt']})'''
+            elif 'title.txt' in entry_meta:
+                title = f"<b>{entry_meta['title.txt']}</b>"
             else:
                 raise NotImplementedError(f"TODO: {position_type}")
             out_html += title
-            start_year = int(entry_meta['start_date.txt'].split('-')[0])
-            if 'end_date.txt' in entry_meta:
-                end_year = int(entry_meta['end_date.txt'].split('-')[0])
-            else:
-                end_year = 'Present'
-            out_html += f" ({start_year}–{end_year})"
+            if 'start_date.txt' in entry_meta:
+                start_year = int(entry_meta['start_date.txt'].split('-')[0])
+                if 'end_date.txt' in entry_meta:
+                    end_year = int(entry_meta['end_date.txt'].split('-')[0])
+                else:
+                    end_year = 'Present'
+                out_html += f" ({start_year}–{end_year})"
             if position_type in {'academic', 'non_academic', 'education'}: # position types with sub-lists
                 out_html += '<ul>'
                 for k in ['institution.txt', 'department.txt', 'minor.txt']:
