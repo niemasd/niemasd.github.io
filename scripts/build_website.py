@@ -222,7 +222,7 @@ def build_students():
     return out_html
 
 # page builder: positions
-def build_positions(position_types=['education', 'academic', 'non_academic', 'editor']): # TODO add 'reviewer', 'institutional', 'organizations', 'outreach'
+def build_positions(position_types=['education', 'academic', 'non_academic', 'editor', 'reviewer']): # TODO add 'institutional', 'organizations', 'outreach'
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
@@ -240,13 +240,19 @@ def build_positions(position_types=['education', 'academic', 'non_academic', 'ed
                 institution = x[1]['institution.txt'].lower()
             else:
                 institution = ''
-            return (-end_year, -end_month, -end_day, -start_year, -start_month, -start_day, institution)
+            if 'title.txt' in x[1]:
+                title = x[1]['title.txt'].lower()
+            else:
+                title = ''
+            return (-end_year, -end_month, -end_day, -start_year, -start_month, -start_day, institution, title)
         for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=sort_helper):
             out_html += '<li>'
             if position_type == 'education':
                 title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b>"
             elif position_type in {'editor', 'reviewer'}:
-                title = f'''<a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>{entry_meta['institution.txt']}</a> ({entry_meta['title.txt']})'''
+                title = f'''<a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>{entry_meta['institution.txt']}</a>'''
+                if 'title.txt' in entry_meta:
+                    title += f" ({entry_meta['title.txt']})"
             elif 'title.txt' in entry_meta:
                 title = f"<b>{entry_meta['title.txt']}</b>"
             else:
