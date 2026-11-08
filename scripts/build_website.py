@@ -222,21 +222,29 @@ def build_students():
     return out_html
 
 # page builder: positions
-def build_positions(position_types=['education']): # TODO add 'academic', 'non-academic', 'education', 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
+def build_positions(position_types=['academic', 'education']): # TODO add 'non-academic', 'education', 'editor', 'reviewer', 'institutional', 'organizations', 'outreach'
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
         out_html += '<ul>'
         for entry_key, entry_meta in sorted(DATA['positions'][position_type].items(), key=lambda x: (x[1]['start_date.txt'], x[1].get('end_date.txt', '9999-99-99')), reverse=True):
             out_html += '<li>'
-            if position_type == 'education':
-                title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b> ({entry_meta['start_date.txt'].split('-')[0].strip()}–{entry_meta['end_date.txt'].split('-')[0].strip()})"
+            if 'title.txt' in entry_meta:
+                title = f"<b>{entry_meta['title.txt']}</b>"
+            elif position_type == 'education':
+                title = f"<b>{entry_meta['degree.txt']}</b> in <b>{entry_meta['major.txt']}</b>"
             else:
                 raise NotImplementedError(f"TODO: {position_type}")
             out_html += title
-            if position_type in {'education'}: # position types with sub-lists
+            start_year = int(entry_meta['start_date.txt'].split('-')[0])
+            if 'end_date.txt' in entry_meta:
+                end_year = int(entry_meta['end_date.txt'].split('-')[0])
+            else:
+                end_year = 'Present'
+            out_html += f" ({start_year}–{end_year})"
+            if position_type in {'academic', 'education'}: # position types with sub-lists
                 out_html += '<ul>'
-                for k in ['institution.txt', 'minor.txt']:
+                for k in ['institution.txt', 'department.txt', 'minor.txt']:
                     if k in entry_meta:
                         out_html += f"<li><u>{translate(k.split('.')[0].strip())}</u>: {entry_meta[k]}</li>"
                 if 'committee.csv' in entry_meta:
@@ -247,7 +255,7 @@ def build_positions(position_types=['education']): # TODO add 'academic', 'non-a
         out_html += '<center>— <a href="#main-content">Top</a> —</center>'
     return out_html
 
-# page builder functions TODO
+# page builder functions
 PAGE_BUILDERS = {
     '': build_home,
     'awards': build_awards,
