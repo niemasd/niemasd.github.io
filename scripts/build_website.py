@@ -222,7 +222,7 @@ def build_students():
     return out_html
 
 # page builder: positions
-def build_positions(position_types=['education', 'academic', 'non_academic', 'editor', 'reviewer', 'organizations']): # TODO add 'institutional', 'outreach'
+def build_positions(position_types=['education', 'academic', 'non_academic', 'editor', 'reviewer', 'organizations', 'institutional', 'outreach']):
     out_html = f"<center>{build_top_header_links([(f'#{position_type}', translate(position_type)) for position_type in position_types])}</center>"
     for position_type in position_types:
         out_html += f'<h2 id="{position_type}">{translate(position_type)}</h2>'
@@ -264,10 +264,13 @@ def build_positions(position_types=['education', 'academic', 'non_academic', 'ed
                     end_year = int(entry_meta['end_date.txt'].split('-')[0])
                 else:
                     end_year = 'Present'
-                out_html += f" ({start_year}–{end_year})"
-            if position_type in {'academic', 'non_academic', 'education', 'organizations'}: # position types with sub-lists
+                if start_year == end_year:
+                    out_html += f" ({start_year})"
+                else:
+                    out_html += f" ({start_year}–{end_year})"
+            if position_type in {'academic', 'non_academic', 'education', 'organizations', 'institutional', 'outreach'}: # position types with sub-lists
                 out_html += '<ul>'
-                for k in ['institution.txt', 'department.txt', 'organization.txt', 'minor.txt']:
+                for k in ['institution.txt', 'department.txt', 'program.txt', 'organization.txt', 'minor.txt']:
                     if k in entry_meta:
                         out_html += f"<li><u>{translate(k.split('.')[0].strip())}</u>: {entry_meta[k]}</li>"
                 if 'committee.csv' in entry_meta:
