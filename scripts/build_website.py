@@ -29,6 +29,14 @@ MIMES = {
     'svg':  'image/svg+xml',
     'webp': 'image/webp',
 }
+QUARTER_TO_NUM = {
+    'Winter': 1,
+    'Spring': 2,
+    'Summer': 3,
+    'Summer Session I': 3.1,
+    'Summer Session II': 3.2,
+    'Fall': 4,
+}
 
 REPO_ROOT_PATH = Path(argv[0]).expanduser().parent.parent.resolve()
 REQUIRED_FRONTEND_FILES = (
@@ -281,6 +289,78 @@ def build_positions(position_types=['education', 'academic', 'non_academic', 'ed
         out_html += '<center>— <a href="#main-content">Top</a> —</center>'
     return out_html
 
+# page builder: teaching
+def build_teaching(teaching_types=['ucsd', 'online']):
+    out_html = f'<p>You can find all of my teaching evaluations in <a href="https://drive.google.com/drive/folders/1ZCA96Q9h-okc3phkJq-fK9s3W_cdt00M?usp=sharing" {external_link_attributes(True)}>this Google Drive folder</a>.</p>'
+    out_html += f"<center>{build_top_header_links([(f'#{teaching_type}', translate(teaching_type)) for teaching_type in teaching_types])}</center>"
+    for teaching_type in teaching_types:
+        out_html += f'<h2 id="{teaching_type}">{translate(teaching_type)}</h2>'
+        out_html += '<ul>'
+        def sort_helper(x):
+            if 'course_num.txt' in x[1]:
+                if ' ' in x[1]['course_num.txt']:
+                    dept, num = [s.strip().upper() for s in x[1]['course_num.txt'].split(' ')]
+                    num_digits = ''
+                    for c in num:
+                        if '0' <= c <= '9':
+                            num_digits += c
+                        else:
+                            break
+                    num_digits = int(num_digits)
+                    num_letters = ''
+                    for c in num[::-1]:
+                        if '0' <= c <= '9':
+                            break
+                        else:
+                            num_letters += c
+                    num_letters = num_letters[::-1].strip()
+                else:
+                    dept = x[1]['course_num.txt']; num_digits = 0; num_letters = ''
+                return (dept, num_digits, num_letters, x[1]['title.txt'])
+            else:
+                return ('', 0, '', x[1]['title.txt'])
+        for entry_key, entry_meta in sorted(DATA['teaching'][teaching_type].items(), key=sort_helper):
+            out_html += '<li>'
+            title = entry_meta['title.txt']
+            if 'course_num.txt' in entry_meta:
+                title = f"{entry_meta['course_num.txt']}: {title}"
+            if 'url.txt' in entry_meta:
+                title = f'''<a href="{entry_meta['url.txt']}" {external_link_attributes(True)}>{title}</a>'''
+            out_html += f"<b>{title}</b>"
+            out_html += '<ul>'
+            if 'instructors.csv' in entry_meta:
+                instructors = list()
+                for instructor_row in [l.strip() for l in entry_meta['instructors.csv'].splitlines() if len(l.strip()) != 0]:
+                    try:
+                        first_name, last_name = [s.strip() for s in instructor_row.split(',')]
+                    except Exception as e:
+                        warn(f"Failed to parse: {instructor_row}"); raise e
+                    name = f'{first_name} {last_name}'
+                    if name == SITE_CONFIG['owner_name']:
+                        name = f'<b>{name}</b>'
+                    instructors.append(name)
+                out_html += f"<li><u>Instructors</u>: {', '.join(instructors)}</li>"
+            if 'quarters.csv' in entry_meta:
+                quarters = list()
+                def quarter_sort_helper(row):
+                    year, quarter, url = [s.strip() for s in row.split(',')]
+                    return (year, QUARTER_TO_NUM[quarter])
+                for quarter_row in sorted((l.strip() for l in entry_meta['quarters.csv'].splitlines() if len(l.strip()) != 0), key=quarter_sort_helper, reverse=True):
+                    try:
+                        year, quarter, url = [s.strip() for s in quarter_row.split(',')]
+                    except Exception as e:
+                        warn(f"Failed to parse: {quarter_row}"); raise e
+                    quarter_str = f'{quarter} {year}'
+                    if url != '':
+                        quarter_str = f'<a href="{url}" {external_link_attributes(True)}>{quarter_str}</a>'
+                    quarters.append(quarter_str)
+                out_html += f"<li><u>Quarters</u>: {', '.join(quarters)}</li>"
+            out_html += '</ul>'
+            out_html += '</li>'
+        out_html += '</ul>'
+        out_html += '<center>— <a href="#main-content">Top</a> —</center>'
+    return out_html
+
 # page builder functions
 PAGE_BUILDERS = {
     '': build_home,
@@ -288,11 +368,12 @@ PAGE_BUILDERS = {
     'positions': build_positions,
     'research': build_research,
     'students': build_students,
+    'teaching': build_teaching,
 }
 
 # page order
 PAGE_ORDER = {
-    '': ['awards', 'research', 'positions', 'students'],
+    '': ['awards', 'research', 'teaching', 'positions', 'students'],
 }
 
 # copy a file
