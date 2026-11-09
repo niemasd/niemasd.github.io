@@ -10,6 +10,15 @@ import argparse
 
 # constants
 TEXT_EXTS = {'c', 'cpp', 'css', 'csv', 'h', 'hpp', 'htm', 'html', 'js', 'md', 'json', 'tsv', 'txt'}
+TRANSLATE = {
+    'Computer Science & Engineering (CSE)': 'Computer Science & Engineering',
+    'Future Technology Group (FTG)': 'Future Technology Group',
+    'University of California, San Diego (UCSD)': 'UC San Diego',
+}
+
+# translate a string
+def translate(s):
+    return TRANSLATE.get(s, s)
 
 # parse user args
 def parse_args():
@@ -60,6 +69,7 @@ def build_front_matter():
     out += 'header-includes:\n'
     out += '  - |\n'
     out += '    \\setkomafont{disposition}{\\normalcolor\\rmfamily\\bfseries}\n'
+    out += '    \\usepackage{enumitem}\\setlist[itemize]{itemsep=0.25em, topsep=0.25em}\\providecommand{\\tightlist}{}\\renewcommand{\\tightlist}{}\n'
     out += '---\n'
     return out
 
@@ -72,14 +82,37 @@ def build_personal_info(site_data):
     out += '\\quad | \\quad\n'
     out += '\\href{' + site_data['url.txt'] + '}{' + site_data['url.txt'] + '}\n'
     out += '\\end{center}\n'
-    out += '\\vspace{0.5em}\n'
     out += '```\n'
     return out
 
+# helper for sorting entries with start and end dates
+def sort_helper_dates(x):
+    if 'start_date.txt' in x:
+        start_year, start_month, start_day = [int(s) for s in x['start_date.txt'].split('-')]
+    else:
+        start_year, start_month, start_day = [0]*3
+    if 'end_date.txt' in x:
+        end_year, end_month, end_day = [int(s) for s in x['end_date.txt'].split('-')]
+    else:
+        end_year, end_month, end_day = [9999, 99, 99]
+    return (end_year, end_month, end_day, start_year, start_month, start_day)
+
 # build education section
 def build_education(edu_data):
-    out = '# Education\n'
-    out += 'TODO\n'
+    out = '# Education\n\n'
+    for entry in sorted(edu_data.values(), key=sort_helper_dates, reverse=True):
+        out += f"* **{entry['degree.txt']}**, {entry['major.txt']}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n\n"
+    return out
+
+# build (non-)academic positions
+def build_positions(positions_data, header_text):
+    out = f'# {header_text}\n\n'
+    for entry in sorted(positions_data.values(), key=sort_helper_dates, reverse=True):
+        if 'end_date.txt' in entry:
+            end_year = entry['end_date.txt'].split('-')[0]
+        else:
+            end_year = 'Present'
+        out += f"* **{entry['title.txt']}**, {translate(entry['department.txt'])}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{end_year})\n\n"
     return out
 
 # build CV markdown
@@ -89,6 +122,8 @@ def build_cv_markdown(repo_path):
     out = f'{build_front_matter()}\n'
     out += f'{build_personal_info(site_data)}\n'
     out += f"{build_education(data['positions']['education'])}\n"
+    out += f"{build_positions(data['positions']['academic'], 'Academic Positions')}\n"
+    out += f"{build_positions(data['positions']['non_academic'], 'Non-Academic Positions')}\n"
     pass # TODO
     return out
 
