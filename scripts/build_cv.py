@@ -145,13 +145,13 @@ def build_positions(positions_data, header_text):
 def build_funding(funding_data):
     out = '# Funding\n\n'
     for entry in sorted(funding_data.values(), key=sort_helper_start_dates, reverse=True):
-        out += f"* {entry['title.txt']} (**{entry['amount.txt']}**; {entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n"
-        out += f"  * *{translate(entry['awarder.txt'])}"
+        out += f"* {translate(entry['awarder.txt'])}"
         if 'program.txt' in entry:
             out += f" {translate(entry['program.txt'])}"
         if 'award_num.txt' in entry:
             out += f" {entry['award_num.txt']}"
-        out += '*\n'
+        out += f" (**{entry['amount.txt']}**; {entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n"
+        out += f"  * *{entry['title.txt']}*\n"
     return out
 
 # build honors section
@@ -164,38 +164,41 @@ def build_honors(honors_data):
         out += f", *{translate(entry['awarder.txt'])}* ({entry['start_date.txt'].split('-')[0]})\n"
     return out
 
-# build research section (papers, talks, conferences, preprints, books, games)
-def build_research(research_data, header, owner_name=None):
-    out = f'# {header}\n\n'
-    for entry in sorted(research_data.values(), key=lambda x: x['date.txt'], reverse=True):
-        out += f'''* {parse_authors(entry['authors.csv'], owner_name=owner_name)} ({entry['date.txt'].split('-')[0]}). "{entry['title.txt']}." *{entry['venue.txt']}*'''
-        if 'location.txt' in entry:
-            out += f", {entry['location.txt']}"
-        out += '. '
-        if 'volume.txt' in entry:
-            out += entry['volume.txt']
-        if 'issue.txt' in entry:
-            out += f"({entry['issue.txt']})"
-        if 'pages.txt' in entry:
-            if 'volume.txt' in entry or 'issue.txt' in entry:
-                out += ':'
-            out += entry['pages.txt'].replace('-','–')
-        if 'volume.txt' in entry or 'issue.txt' in entry or 'pages.txt' in entry:
-            out += '.'
-        if 'type.txt' in entry:
-            out += f" {entry['type.txt']}."
-        for ID_type, ID_fn, ID_url_base in [
-            ('doi', 'doi.txt', 'https://doi.org/'),
-            ('arXiv', 'arxiv.txt', 'https://arxiv.org/abs/'),
-            ('ISBN', 'isbn.txt', 'http://books.google.com/books?vid=ISBN'),
-            ('ASIN', 'asin.txt', 'https://www.amazon.com/dp/'),
-            ('MobyGames', 'mobygames.txt', 'https://www.mobygames.com/game/'),
-            ('Steam', 'steam.txt', 'https://store.steampowered.com/app/'),
-        ]:
-            if ID_fn in entry:
-                out += f" [{ID_type}:{entry[ID_fn]}]({ID_url_base}{entry[ID_fn]})."
-        if 'url.txt' in entry:
-            out += f" [Link]({entry['url.txt']})."
+# build research section
+def build_research(research_data, owner_name=None):
+    out = f'# Research\n\n'
+    for k in ['papers', 'talks', 'conferences', 'preprints', 'books', 'games']:
+        out += f'## {k.title()}\n\n'
+        for entry in sorted(research_data[k].values(), key=lambda x: x['date.txt'], reverse=True):
+            out += f'''* {parse_authors(entry['authors.csv'], owner_name=owner_name)} ({entry['date.txt'].split('-')[0]}). "{entry['title.txt']}." *{entry['venue.txt']}*'''
+            if 'location.txt' in entry:
+                out += f", {entry['location.txt']}"
+            out += '. '
+            if 'volume.txt' in entry:
+                out += entry['volume.txt']
+            if 'issue.txt' in entry:
+                out += f"({entry['issue.txt']})"
+            if 'pages.txt' in entry:
+                if 'volume.txt' in entry or 'issue.txt' in entry:
+                    out += ':'
+                out += entry['pages.txt'].replace('-','–')
+            if 'volume.txt' in entry or 'issue.txt' in entry or 'pages.txt' in entry:
+                out += '.'
+            if 'type.txt' in entry:
+                out += f" {entry['type.txt']}."
+            for ID_type, ID_fn, ID_url_base in [
+                ('doi', 'doi.txt', 'https://doi.org/'),
+                ('arXiv', 'arxiv.txt', 'https://arxiv.org/abs/'),
+                ('ISBN', 'isbn.txt', 'http://books.google.com/books?vid=ISBN'),
+                ('ASIN', 'asin.txt', 'https://www.amazon.com/dp/'),
+                ('MobyGames', 'mobygames.txt', 'https://www.mobygames.com/game/'),
+                ('Steam', 'steam.txt', 'https://store.steampowered.com/app/'),
+            ]:
+                if ID_fn in entry:
+                    out += f" [{ID_type}:{entry[ID_fn]}]({ID_url_base}{entry[ID_fn]})."
+            if 'url.txt' in entry:
+                out += f" [Link]({entry['url.txt']})."
+            out += '\n'
         out += '\n'
     return out
 
@@ -214,8 +217,7 @@ def build_cv_markdown(repo_path):
     out += f"{build_positions(data['positions']['non_academic'], 'Non-Academic Positions')}\n"
     out += f"{build_funding(data['awards']['funding'])}\n"
     out += f"{build_honors(data['awards']['honors'])}\n"
-    for k in ['papers', 'talks', 'conferences', 'preprints', 'books', 'games']:
-        out += f"{build_research(data['research'][k], header=k.title(), owner_name=owner_name)}\n"
+    out += f"{build_research(data['research'], owner_name=owner_name)}\n"
     pass # TODO
     return out
 
