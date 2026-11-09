@@ -15,9 +15,12 @@ TRANSLATE = {
     'Collaborative Program Grant for Multidisciplinary Teams (RM1)': 'RM1',
     'Education Projects (R25)': 'R25',
     'Google Cloud Platform (GCP) Research Credits Program': 'GCP Research Credits Program',
+    'institutional': 'Institutional Service',
     'National Institutes of Health (NIH)': 'NIH',
     'National Science Foundation (NSF)': 'NSF',
+    'online': 'Online',
     'Specialized Center - Cooperative Agreements (U54)': 'U54',
+    'ucsd': 'UC San Diego',
     'University of California - Hispanic-Serving Institution (UC-HSI) Doctoral Diversity Initiative (DDI)': 'UC-HSI DDI',
     'University of California Office of the President (UCOP)': 'UCOP',
     'University of California, San Diego (UCSD)': 'UC San Diego',
@@ -57,6 +60,31 @@ def sort_helper_start_dates(x):
     return sort_helper_dates(x, end_first=False)
 def sort_helper_end_dates(x):
     return sort_helper_dates(x, end_first=True)
+
+# helper for sorting courses
+def sort_helper_courses(x):
+    if 'course_num.txt' in x:
+        if ' ' in x['course_num.txt']:
+            dept, num = [s.strip().upper() for s in x['course_num.txt'].split(' ')]
+            num_digits = ''
+            for c in num:
+                if '0' <= c <= '9':
+                    num_digits += c
+                else:
+                    break
+            num_digits = int(num_digits)
+            num_letters = ''
+            for c in num[::-1]:
+                if '0' <= c <= '9':
+                    break
+                else:
+                    num_letters += c
+            num_letters = num_letters[::-1].strip()
+        else:
+            dept = x['course_num.txt']; num_digits = 0; num_letters = ''
+        return (dept, num_digits, num_letters, x['title.txt'])
+    else:
+        return ('', 0, '', x['title.txt'])
 
 # parse user args
 def parse_args():
@@ -138,7 +166,12 @@ def build_positions(positions_data, header_text):
             end_year = entry['end_date.txt'].split('-')[0]
         else:
             end_year = 'Present'
-        out += f"* **{entry['title.txt']}**, {translate(entry['department.txt'])}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{end_year})\n"
+        out += f"* **{entry['title.txt']}**"
+        if 'department.txt' in entry:
+            out += f", {translate(entry['department.txt'])}"
+        if 'institution.txt' in entry:
+            out += f", *{translate(entry['institution.txt'])}*"
+        out += f" ({entry['start_date.txt'].split('-')[0]}–{end_year})\n"
     return out
 
 # build funding section
@@ -202,6 +235,30 @@ def build_research(research_data, owner_name=None):
         out += '\n'
     return out
 
+# build teaching section
+def build_teaching(teaching_data):
+    out = f'# Teaching\n\n'
+    for k in ['ucsd', 'online']:
+        out += f'## {translate(k)}\n\n'
+        for entry in sorted(teaching_data[k].values(), key=sort_helper_courses):
+            title = entry['title.txt']
+            if 'course_num.txt' in entry:
+                title = f"{entry['course_num.txt']}: {title}"
+            if 'url.txt' in entry:
+                title = f"[{title}]({entry['url.txt']})"
+            out += f"* {title}\n"
+        out += '\n'
+    return out
+
+def build_editor_reviewer(editor_reviewer_data, header):
+    out = f'# {header}\n\n'
+    for entry in sorted(editor_reviewer_data.values(), key=lambda x: x['institution.txt'].lower()):
+        out += f"* [{entry['institution.txt']}]({entry['url.txt']})"
+        if 'title.txt' in entry:
+            out += f" ({entry['title.txt']})"
+        out += '\n'
+    return out
+
 # build CV markdown
 def build_cv_markdown(repo_path):
     # load data and set things up
@@ -218,6 +275,11 @@ def build_cv_markdown(repo_path):
     out += f"{build_funding(data['awards']['funding'])}\n"
     out += f"{build_honors(data['awards']['honors'])}\n"
     out += f"{build_research(data['research'], owner_name=owner_name)}\n"
+    out += f"{build_teaching(data['teaching'])}\n"
+    for k in ['editor', 'reviewer']:
+        out += f"{build_editor_reviewer(data['positions'][k], k.title())}\n"
+    for k in ['organizations', 'institutional', 'outreach']:
+        out += f"{build_positions(data['positions'][k], translate(k).title())}\n"
     pass # TODO
     return out
 
