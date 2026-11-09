@@ -42,7 +42,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build website
         run: |
-          scripts/build_website.py --overwrite yes -o html
+          ./scripts/build_website.py --overwrite yes -o html && \
+          ./scripts/build_cv.py -o cv.md && \
+          ./pandoc -o html/cv.pdf --pdf-engine=xelatex --from markdown cv.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
