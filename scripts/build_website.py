@@ -38,7 +38,7 @@ QUARTER_TO_NUM = {
     'Fall': 4,
 }
 
-REPO_ROOT_PATH = Path(argv[0]).expanduser().parent.parent.resolve()
+REPO_ROOT_PATH = Path(argv[0]).expanduser().resolve().parent.parent
 REQUIRED_FRONTEND_FILES = (
     Path('style.css'),
     Path('site.js'),
