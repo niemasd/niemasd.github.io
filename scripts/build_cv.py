@@ -11,14 +11,52 @@ import argparse
 # constants
 TEXT_EXTS = {'c', 'cpp', 'css', 'csv', 'h', 'hpp', 'htm', 'html', 'js', 'md', 'json', 'tsv', 'txt'}
 TRANSLATE = {
-    'Computer Science & Engineering (CSE)': 'Computer Science & Engineering',
-    'Future Technology Group (FTG)': 'Future Technology Group',
+    'Centers for Disease Control and Prevention (CDC)': 'CDC',
+    'Collaborative Program Grant for Multidisciplinary Teams (RM1)': 'RM1',
+    'Education Projects (R25)': 'R25',
+    'Google Cloud Platform (GCP) Research Credits Program': 'GCP Research Credits Program',
+    'National Institutes of Health (NIH)': 'NIH',
+    'National Science Foundation (NSF)': 'NSF',
+    'Specialized Center - Cooperative Agreements (U54)': 'U54',
+    'University of California - Hispanic-Serving Institution (UC-HSI) Doctoral Diversity Initiative (DDI)': 'UC-HSI DDI',
+    'University of California Office of the President (UCOP)': 'UCOP',
     'University of California, San Diego (UCSD)': 'UC San Diego',
 }
 
 # translate a string
 def translate(s):
-    return TRANSLATE.get(s, s)
+    return TRANSLATE.get(s, s.split(' (')[0])
+
+# parse author list
+def parse_authors(authors_text, owner_name=None):
+    authors = list()
+    for author_row in [l.strip() for l in authors_text.splitlines() if len(l.strip()) != 0]:
+        first_name, last_name = [s.strip() for s in author_row.split(',')]
+        abbrev_name = f"{last_name} {''.join(s[0] for s in first_name.replace('-',' ').split()).upper()}".strip()
+        if f'{first_name} {last_name}' == owner_name:
+            authors.append(f'**{abbrev_name}**')
+        else:
+            authors.append(abbrev_name)
+    return ', '.join(authors)
+
+# helper for sorting entries with start and end dates
+def sort_helper_dates(x, end_first=True):
+    if 'start_date.txt' in x:
+        start_year, start_month, start_day = [int(s) for s in x['start_date.txt'].split('-')]
+    else:
+        start_year, start_month, start_day = [0]*3
+    if 'end_date.txt' in x:
+        end_year, end_month, end_day = [int(s) for s in x['end_date.txt'].split('-')]
+    else:
+        end_year, end_month, end_day = [9999, 99, 99]
+    if end_first:
+        return (end_year, end_month, end_day, start_year, start_month, start_day)
+    else:
+        return (start_year, start_month, start_day, end_year, end_month, end_day)
+def sort_helper_start_dates(x):
+    return sort_helper_dates(x, end_first=False)
+def sort_helper_end_dates(x):
+    return sort_helper_dates(x, end_first=True)
 
 # parse user args
 def parse_args():
@@ -76,54 +114,108 @@ def build_front_matter():
 # build personal information section
 def build_personal_info(site_data):
     out = '```{=latex}\n'
-    out += '\\begin{center}\n'
-    out += '{\\LARGE\\bfseries ' + site_data['first_name.txt'] + ' ' + site_data['last_name.txt'] + '}\\\\[6pt]\n'
+    out += '\\noindent\n'
+    out += '{\\LARGE\\bfseries ' + site_data['first_name.txt'] + ' ' + site_data['last_name.txt'] + '}\n'
+    out += '\\hfill\n'
     out += '\\href{mailto:' + site_data['email.txt'] + '}{' + site_data['email.txt'] + '}\n'
     out += '\\quad | \\quad\n'
     out += '\\href{' + site_data['url.txt'] + '}{' + site_data['url.txt'] + '}\n'
-    out += '\\end{center}\n'
     out += '```\n'
     return out
-
-# helper for sorting entries with start and end dates
-def sort_helper_dates(x):
-    if 'start_date.txt' in x:
-        start_year, start_month, start_day = [int(s) for s in x['start_date.txt'].split('-')]
-    else:
-        start_year, start_month, start_day = [0]*3
-    if 'end_date.txt' in x:
-        end_year, end_month, end_day = [int(s) for s in x['end_date.txt'].split('-')]
-    else:
-        end_year, end_month, end_day = [9999, 99, 99]
-    return (end_year, end_month, end_day, start_year, start_month, start_day)
 
 # build education section
 def build_education(edu_data):
     out = '# Education\n\n'
-    for entry in sorted(edu_data.values(), key=sort_helper_dates, reverse=True):
-        out += f"* **{entry['degree.txt']}**, {entry['major.txt']}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n\n"
+    for entry in sorted(edu_data.values(), key=sort_helper_end_dates, reverse=True):
+        out += f"* **{entry['degree.txt']}**, {entry['major.txt']}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n"
     return out
 
 # build (non-)academic positions
 def build_positions(positions_data, header_text):
     out = f'# {header_text}\n\n'
-    for entry in sorted(positions_data.values(), key=sort_helper_dates, reverse=True):
+    for entry in sorted(positions_data.values(), key=sort_helper_end_dates, reverse=True):
         if 'end_date.txt' in entry:
             end_year = entry['end_date.txt'].split('-')[0]
         else:
             end_year = 'Present'
-        out += f"* **{entry['title.txt']}**, {translate(entry['department.txt'])}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{end_year})\n\n"
+        out += f"* **{entry['title.txt']}**, {translate(entry['department.txt'])}, *{translate(entry['institution.txt'])}* ({entry['start_date.txt'].split('-')[0]}–{end_year})\n"
+    return out
+
+# build funding section
+def build_funding(funding_data):
+    out = '# Funding\n\n'
+    for entry in sorted(funding_data.values(), key=sort_helper_start_dates, reverse=True):
+        out += f"* {entry['title.txt']} (**{entry['amount.txt']}**; {entry['start_date.txt'].split('-')[0]}–{entry['end_date.txt'].split('-')[0]})\n"
+        out += f"  * *{translate(entry['awarder.txt'])}"
+        if 'program.txt' in entry:
+            out += f" {translate(entry['program.txt'])}"
+        if 'award_num.txt' in entry:
+            out += f" {entry['award_num.txt']}"
+        out += '*\n'
+    return out
+
+# build honors section
+def build_honors(honors_data):
+    out = '# Honors and Awards\n\n'
+    for entry in sorted(honors_data.values(), key=sort_helper_start_dates, reverse=True):
+        out += f"* **{entry['title.txt']}**"
+        if 'program.txt' in entry:
+            out += f", {translate(entry['program.txt'])}"
+        out += f", *{translate(entry['awarder.txt'])}* ({entry['start_date.txt'].split('-')[0]})\n"
+    return out
+
+# build research section (papers, talks, conferences, preprints, books, games)
+def build_research(research_data, header, owner_name=None):
+    out = f'# {header}\n\n'
+    for entry in sorted(research_data.values(), key=lambda x: x['date.txt'], reverse=True):
+        out += f'''* {parse_authors(entry['authors.csv'], owner_name=owner_name)} ({entry['date.txt'].split('-')[0]}). "{entry['title.txt']}." *{entry['venue.txt']}*'''
+        if 'location.txt' in entry:
+            out += f", {entry['location.txt']}"
+        out += '. '
+        if 'volume.txt' in entry:
+            out += entry['volume.txt']
+        if 'issue.txt' in entry:
+            out += f"({entry['issue.txt']})"
+        if 'pages.txt' in entry:
+            if 'volume.txt' in entry or 'issue.txt' in entry:
+                out += ':'
+            out += entry['pages.txt'].replace('-','–')
+        if 'volume.txt' in entry or 'issue.txt' in entry or 'pages.txt' in entry:
+            out += '.'
+        if 'type.txt' in entry:
+            out += f" {entry['type.txt']}."
+        for ID_type, ID_fn, ID_url_base in [
+            ('doi', 'doi.txt', 'https://doi.org/'),
+            ('arXiv', 'arxiv.txt', 'https://arxiv.org/abs/'),
+            ('ISBN', 'isbn.txt', 'http://books.google.com/books?vid=ISBN'),
+            ('ASIN', 'asin.txt', 'https://www.amazon.com/dp/'),
+            ('MobyGames', 'mobygames.txt', 'https://www.mobygames.com/game/'),
+            ('Steam', 'steam.txt', 'https://store.steampowered.com/app/'),
+        ]:
+            if ID_fn in entry:
+                out += f" [{ID_type}:{entry[ID_fn]}]({ID_url_base}{entry[ID_fn]})."
+        if 'url.txt' in entry:
+            out += f" [Link]({entry['url.txt']})."
+        out += '\n'
     return out
 
 # build CV markdown
 def build_cv_markdown(repo_path):
+    # load data and set things up
     site_data = load_data(repo_path / 'site')
     data = load_data(repo_path / 'data')
+    owner_name = site_data['first_name.txt'] + ' ' + site_data['last_name.txt']
+
+    # build CV markdown
     out = f'{build_front_matter()}\n'
     out += f'{build_personal_info(site_data)}\n'
     out += f"{build_education(data['positions']['education'])}\n"
     out += f"{build_positions(data['positions']['academic'], 'Academic Positions')}\n"
     out += f"{build_positions(data['positions']['non_academic'], 'Non-Academic Positions')}\n"
+    out += f"{build_funding(data['awards']['funding'])}\n"
+    out += f"{build_honors(data['awards']['honors'])}\n"
+    for k in ['papers', 'talks', 'conferences', 'preprints', 'books', 'games']:
+        out += f"{build_research(data['research'][k], header=k.title(), owner_name=owner_name)}\n"
     pass # TODO
     return out
 
